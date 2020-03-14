@@ -12,5 +12,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: https://chanceli.com/sitemap.xml
-Sitemap: https://chanceli.com/baidusitemap.xml
+Sitemap: https://objc.vip/sitemap.xml
+Sitemap: https://objc.vip/baidusitemap.xml
