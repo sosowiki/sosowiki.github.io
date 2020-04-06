@@ -19,7 +19,7 @@
 <meta property="og:description" content="Flutter笔记之环境配置">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://objc.vip/images/MojaveDay.jpg">
-<meta property="og:updated_time" content="2020-04-06T15:49:41.407Z">
+<meta property="og:updated_time" content="2020-04-06T15:57:15.066Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Flutter笔记之环境配置">
 <meta name="twitter:description" content="Flutter笔记之环境配置">
@@ -153,7 +153,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分钟 读完 (大约 516 个字)
+                    3 分钟 读完 (大约 468 个字)
                 </span>
                 
                 
@@ -175,10 +175,10 @@
 <p>输入<code>echo $PATH</code>,查看环境变量，发现添加成功。 </p>
 <p>输入<code>flutter-h</code>查看是否配置成功。</p>
 <p>运行<code>flutter doctor</code>检测环境。</p>
-<h2 id="Android-Studio-3-6-1-Android-sdkmanager-tool-not-found-的问题"><a href="#Android-Studio-3-6-1-Android-sdkmanager-tool-not-found-的问题" class="headerlink" title="Android Studio 3.6.1 Android sdkmanager tool not found 的问题"></a>Android Studio 3.6.1 Android sdkmanager tool not found 的问题</h2><h3 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h3><p>执行<code>flutter doctor</code>后提示 Android license status unknown.<br>执行 <code>flutter doctor --android-licenses</code>后提示<br>Android sdkmanager tool not found<br><img src="https://upload-images.jianshu.io/upload_images/822370-5784e8fb7b4f6ab6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图1 Android sdkmanager tool not found"></p>
-<h3 id="问题原因："><a href="#问题原因：" class="headerlink" title="问题原因："></a>问题原因：</h3><p>Android Studio 3.6.1版本没有tools文件夹。sdkmanager是在Android/sdk/cmdline-tools/latest/bin/sdkmanager路径下。<br><img src="https://upload-images.jianshu.io/upload_images/822370-e0cce095d45cbb1d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图2 新版本没有tools文件夹"></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/822370-6ec14663f7f1940f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图3 新版本sdkmanager的路径"></p>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>找到偏好设置里Android SDK下的隐藏废弃包取消掉，下载废弃的Android SDK Tools（Obsolete）。<br>Preferences-Appearance &amp; Behavior-System Settings-Android SDK-SDK Tools<br>把 Hide Obsolete Packages 前边的对勾取消掉。这时候会显示出隐藏的废弃包Android SDK Tools（Obsolete）。勾选上后，点击Apply下载Android SDK Tools。下载完成后问题得以解决。<br><img src="https://upload-images.jianshu.io/upload_images/822370-025669fcc27d6819.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图4 下载 Android SDK Tools（Obsolete）"></p>
+<h2 id="Android-Studio-3-6-1-Android-sdkmanager-tool-not-found-的问题"><a href="#Android-Studio-3-6-1-Android-sdkmanager-tool-not-found-的问题" class="headerlink" title="Android Studio 3.6.1 Android sdkmanager tool not found 的问题"></a>Android Studio 3.6.1 Android sdkmanager tool not found 的问题</h2><h3 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h3><p>执行<code>flutter doctor</code>后提示 Android license status unknown.<br>执行 <code>flutter doctor --android-licenses</code>后提示<br>Android sdkmanager tool not found<br><img src="https://objc.vip/images/flutter/1.jpg" alt="图1 Android sdkmanager tool not found"></p>
+<h3 id="问题原因："><a href="#问题原因：" class="headerlink" title="问题原因："></a>问题原因：</h3><p>Android Studio 3.6.1版本没有tools文件夹。sdkmanager是在Android/sdk/cmdline-tools/latest/bin/sdkmanager路径下。<br><img src="https://objc.vip/images/flutter/2.jpg" alt="图2 新版本没有tools文件夹"></p>
+<p><img src="https://objc.vip/images/flutter/3.jpg" alt="图3 新版本sdkmanager的路径"></p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>找到偏好设置里Android SDK下的隐藏废弃包取消掉，下载废弃的Android SDK Tools（Obsolete）。<br>Preferences-Appearance &amp; Behavior-System Settings-Android SDK-SDK Tools<br>把 Hide Obsolete Packages 前边的对勾取消掉。这时候会显示出隐藏的废弃包Android SDK Tools（Obsolete）。勾选上后，点击Apply下载Android SDK Tools。下载完成后问题得以解决。<br><img src="https://objc.vip/images/flutter/4.jpg" alt="图4 下载 Android SDK Tools（Obsolete）"></p>
 <p>参考链接：<a href="https://flutterchina.club/setup-macos/" target="_blank" rel="noopener">入门: 在macOS上搭建Flutter开发环境 - Flutter中文网</a></p>
 
         </div>
