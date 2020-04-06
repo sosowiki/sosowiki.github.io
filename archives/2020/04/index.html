@@ -7,22 +7,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>【算法】二分查找 - OBJC.VIP</title>
+<title>归档: 2020/4 - OBJC.VIP</title>
 
 
-    <meta name="description" content="二分查找也称折半查找（Binary Search），它是一种效率较高的查找方法。但是，折半查找要求线性表必须采用顺序存储结构，而且表中元素按关键字有序排列。">
-<meta name="keywords" content="算法">
-<meta property="og:type" content="article">
-<meta property="og:title" content="【算法】二分查找">
-<meta property="og:url" content="http://objc.vip/二分查找/index.html">
+    <meta name="description" content="Objective-C 私享菜 - 成为更好的苹果开发者">
+<meta name="keywords" content="Objective-C,iOS,objc">
+<meta property="og:type" content="website">
+<meta property="og:title" content="OBJC.VIP">
+<meta property="og:url" content="http://objc.vip/archives/2020/04/index.html">
 <meta property="og:site_name" content="OBJC.VIP">
-<meta property="og:description" content="二分查找也称折半查找（Binary Search），它是一种效率较高的查找方法。但是，折半查找要求线性表必须采用顺序存储结构，而且表中元素按关键字有序排列。">
+<meta property="og:description" content="Objective-C 私享菜 - 成为更好的苹果开发者">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://objc.vip/images/og_image.png">
-<meta property="og:updated_time" content="2019-09-06T08:35:24.442Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【算法】二分查找">
-<meta name="twitter:description" content="二分查找也称折半查找（Binary Search），它是一种效率较高的查找方法。但是，折半查找要求线性表必须采用顺序存储结构，而且表中元素按关键字有序排列。">
+<meta name="twitter:title" content="OBJC.VIP">
+<meta name="twitter:description" content="Objective-C 私享菜 - 成为更好的苹果开发者">
 <meta name="twitter:image" content="http://objc.vip/images/og_image.png">
 
 
@@ -93,7 +92,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="【算法】二分查找" height="28">
+                <img src="/images/logo.svg" alt="OBJC.VIP" height="28">
             
             </a>
         </div>
@@ -131,79 +130,41 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-12 has-order-2 column-main"><div class="card">
-    
-    <div class="card-content article ">
+                <div class="column is-12 has-order-2 column-main">
+
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="tag is-link">
+        四月 2020
+        </h3>
+        <div class="timeline">
         
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-02-05T07:47:00.000Z">2018-02-05</time>
+            <article class="media">
                 
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/算法/">算法</a>
+                <a href="/Flutter笔记之环境配置/" class="media-left">
+                    <p class="image is-64x64">
+                        <img class="thumbnail" src="/images/MojaveDay.jpg" alt="Flutter笔记之环境配置">
+                    </p>
+                </a>
+                
+                <div class="media-content">
+                    <div class="content">
+                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2020-04-06T15:34:00.000Z">2020-04-06</time>
+                        <a href="/Flutter笔记之环境配置/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Flutter笔记之环境配置</a>
+                        <div class="level article-meta is-mobile">
+                            <div class="level-left">
+                                
+                                <div class="level-item is-size-7 is-uppercase">
+                                <a class="has-link-grey -link" href="/categories/Flutter/">Flutter</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 283 个字)
-                </span>
-                
-                
-            </div>
+            </article>
+        
         </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                【算法】二分查找
-            
-        </h1>
-        <div class="content">
-            <p>二分查找也称折半查找（Binary Search），它是一种效率较高的查找方法。但是，折半查找要求线性表必须采用顺序存储结构，而且表中元素按关键字有序排列。</p>
-<a id="more"></a>
-<h1 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h1><p>首先，假设表中元素是按升序排列，将表中间位置记录的关键字与查找关键字比较，如果两者相等，则查找成功；否则利用中间位置记录将表分成前、后两个子表，如果中间位置记录的关键字大于查找关键字，则进一步查找前一子表，否则进一步查找后一子表。重复以上过程，直到找到满足条件的记录，使查找成功，或直到子表不存在为止，此时查找不成功。</p>
-<h1 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h1><p>O(log2n)</p>
-<h1 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h1><figure class="highlight swift hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">binarySearch</span>&lt;T: Comparable&gt;<span class="hljs-params">(<span class="hljs-number">_</span> a: [T], key: T)</span></span> -&gt; <span class="hljs-type">Int</span>? &#123;    </span><br><span class="line">    <span class="hljs-keyword">var</span> lowerBound = <span class="hljs-number">0</span>    </span><br><span class="line">    <span class="hljs-keyword">var</span> upperBound = a.<span class="hljs-built_in">count</span>    </span><br><span class="line">    <span class="hljs-keyword">while</span> lowerBound &lt; upperBound &#123;        </span><br><span class="line">        <span class="hljs-keyword">let</span> midIndex = lowerBound + (upperBound - lowerBound) / <span class="hljs-number">2</span>        </span><br><span class="line">        <span class="hljs-keyword">if</span> a[midIndex] == key &#123;            </span><br><span class="line">            <span class="hljs-keyword">return</span> midIndex        </span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> a[midIndex] &lt; key &#123;            </span><br><span class="line">            lowerBound = midIndex + <span class="hljs-number">1</span>        </span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> &#123;            </span><br><span class="line">            upperBound = midIndex        </span><br><span class="line">        &#125;    </span><br><span class="line">    &#125;    </span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-        </div>
-        
-        <div class="level is-size-7 is-uppercase">
-            <div class="level-start">
-                <div class="level-item">
-                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/算法/">算法</a>
-                </div>
-            </div>
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-<div class="card card-transparent">
-    <div class="level post-navigation is-flex-wrap is-mobile">
-        
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/斐波那切数列/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">【算法】斐波那切数列</span>
-            </a>
-        </div>
-        
-        
-        <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/选择排序/">
-                <span class="level-item">【算法】选择排序</span>
-                <i class="level-item fas fa-chevron-right"></i>
-            </a>
-        </div>
-        
     </div>
 </div>
 
@@ -220,7 +181,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="【算法】二分查找" height="28">
+                    <img src="/images/logo.svg" alt="OBJC.VIP" height="28">
                 
                 </a>
                 <p class="is-size-7">
