@@ -12,5 +12,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: https://objc.vip/sitemap.xml
-Sitemap: https://objc.vip/baidusitemap.xml
+Sitemap: https://soso.wiki/sitemap.xml
+Sitemap: https://soso.wiki/baidusitemap.xml
