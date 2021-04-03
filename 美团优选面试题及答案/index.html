@@ -19,7 +19,7 @@
 <meta property="og:description" content="美团优选面试题">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://soso.wiki/images/og_image.png">
-<meta property="og:updated_time" content="2021-04-03T15:12:17.703Z">
+<meta property="og:updated_time" content="2021-04-03T17:06:11.925Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="美团优选面试题及答案">
 <meta name="twitter:description" content="美团优选面试题">
@@ -147,7 +147,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分钟 读完 (大约 526 个字)
+                    5 分钟 读完 (大约 712 个字)
                 </span>
                 
                 
@@ -162,24 +162,21 @@
         <div class="content">
             <p>美团优选面试题<br><a id="more"></a></p>
 <p>技术栈是怎么选择的？为什么选择<code>Flutter</code>，没有选择<code>RN</code></p>
-<p>1.链表环的入口结点（限制15分钟）</p>
-<p>2.首页的轮播图，滑动主区域 timer会不会停止？</p>
-<p>Timer会停止。因为滑动时Runloop的mode切换到了UITrackingRunLoopMode。同一时间只能有一种mode。除非是把timer添加到CommonMode里了。</p>
-<p>3.滑动屏幕，从响应者链的角度和手势的角度来分析系统做了什么事情</p>
-<p>4.网络请求回来后，回到主线程刷新UI，为什么有时候会延迟？</p>
-<p>主线程的RunLoop可能当时在处理的任务比较重，需要执行完后再执行刷新UI操作。</p>
-<p>5.performSelector了解吗？performSelector:afterDelay:怎么确保执行的线程不被销毁。</p>
-<p>在子线程调用方法前去开启Runloop，[NSRunLoop currentRunloop]，添加port，Run。</p>
+<h4 id="1-链表环的入口结点（限制15分钟）"><a href="#1-链表环的入口结点（限制15分钟）" class="headerlink" title="1.链表环的入口结点（限制15分钟）"></a>1.链表环的入口结点（限制15分钟）</h4><p>算法1：遍历链表，使用Set去存一下</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">detectCycle</span>(<span class="hljs-params"> head </span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> visited = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>();</span><br><span class="line">    <span class="hljs-keyword">while</span> (head != <span class="hljs-literal">null</span>) &#123;</span><br><span class="line">        <span class="hljs-keyword">if</span> (visited.has(head)) &#123;</span><br><span class="line">            <span class="hljs-keyword">return</span> head;</span><br><span class="line">        &#125;</span><br><span class="line">        visited.add(head);</span><br><span class="line">        head = head.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>算法2：快慢指针</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">detectCycle</span>(<span class="hljs-params"> head </span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">if</span> (!head) <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;</span><br><span class="line">    <span class="hljs-keyword">let</span> slow = head, fast = head;</span><br><span class="line">    <span class="hljs-keyword">while</span>(fast.next &amp;&amp; fast.next.next) &#123;</span><br><span class="line">        fast = fast.next.next</span><br><span class="line">        slow = slow.next</span><br><span class="line">        <span class="hljs-keyword">if</span> (slow == fast) &#123;</span><br><span class="line">            <span class="hljs-keyword">var</span> a = head;</span><br><span class="line">            <span class="hljs-keyword">while</span> (slow != a) &#123;</span><br><span class="line">                a = a.next</span><br><span class="line">                slow = slow.next</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="hljs-keyword">return</span> a;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="2-首页的轮播图，滑动主区域-timer会不会停止？"><a href="#2-首页的轮播图，滑动主区域-timer会不会停止？" class="headerlink" title="2.首页的轮播图，滑动主区域 timer会不会停止？"></a>2.首页的轮播图，滑动主区域 timer会不会停止？</h4><p>Timer会停止。因为滑动时Runloop的mode切换到了UITrackingRunLoopMode。同一时间只能有一种mode。除非是把timer添加到CommonMode里了。</p>
+<h4 id="3-滑动屏幕，从响应者链的角度和手势的角度来分析系统做了什么事情"><a href="#3-滑动屏幕，从响应者链的角度和手势的角度来分析系统做了什么事情" class="headerlink" title="3.滑动屏幕，从响应者链的角度和手势的角度来分析系统做了什么事情"></a>3.滑动屏幕，从响应者链的角度和手势的角度来分析系统做了什么事情</h4><h4 id="4-网络请求回来后，回到主线程刷新UI，为什么有时候会延迟？"><a href="#4-网络请求回来后，回到主线程刷新UI，为什么有时候会延迟？" class="headerlink" title="4.网络请求回来后，回到主线程刷新UI，为什么有时候会延迟？"></a>4.网络请求回来后，回到主线程刷新UI，为什么有时候会延迟？</h4><p>主线程的RunLoop可能当时在处理的任务比较重，需要执行完后再执行刷新UI操作。</p>
+<h4 id="5-performSelector了解吗？performSelector-afterDelay-怎么确保执行的线程不被销毁。"><a href="#5-performSelector了解吗？performSelector-afterDelay-怎么确保执行的线程不被销毁。" class="headerlink" title="5.performSelector了解吗？performSelector:afterDelay:怎么确保执行的线程不被销毁。"></a>5.performSelector了解吗？performSelector:afterDelay:怎么确保执行的线程不被销毁。</h4><p>在子线程调用方法前去开启Runloop，[NSRunLoop currentRunloop]，添加port，Run。</p>
 <p>port的生命周期结束，runloop也没了，那怎么保证runloop没销毁？</p>
-<p>6.谈谈autorelease和autoreleasepool</p>
-<p>7.student类在读书方法里加代码，不改变原方法</p>
-<p>可以使用runtime 或者子类。</p>
-<p>iOS系统中有没有用类似的方法实现？</p>
-<p>KVO</p>
-<p>8.KVO实现原理，KVO打印实例对象的class为什么能够做到还是原本类。</p>
+<h4 id="6-谈谈autorelease和autoreleasepool"><a href="#6-谈谈autorelease和autoreleasepool" class="headerlink" title="6.谈谈autorelease和autoreleasepool"></a>6.谈谈autorelease和autoreleasepool</h4><h4 id="7-student类在读书方法里加代码，不改变原方法"><a href="#7-student类在读书方法里加代码，不改变原方法" class="headerlink" title="7.student类在读书方法里加代码，不改变原方法"></a>7.student类在读书方法里加代码，不改变原方法</h4><p>可以使用runtime 或者子类。</p>
+<h5 id="iOS系统中有没有用类似的方法实现？"><a href="#iOS系统中有没有用类似的方法实现？" class="headerlink" title="iOS系统中有没有用类似的方法实现？"></a>iOS系统中有没有用类似的方法实现？</h5><p>KVO</p>
+<h4 id="8-KVO实现原理，KVO打印实例对象的class为什么能够做到还是原本类。"><a href="#8-KVO实现原理，KVO打印实例对象的class为什么能够做到还是原本类。" class="headerlink" title="8.KVO实现原理，KVO打印实例对象的class为什么能够做到还是原本类。"></a>8.KVO实现原理，KVO打印实例对象的class为什么能够做到还是原本类。</h4><p>1) 利用RuntimeAPI动态生成一个子类，并且让instance对象的isa指向这个全新的子类<br>2) 当修改instance对象的属性时，会调用Foundation的_NSSetXXXValueAndNotify函数</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">willChangeValueForKey:</span><br><span class="line">父类原来的setter</span><br><span class="line">didChangeValueForKey:</span><br><span class="line">内部会触发监听器（Oberser）的监听方法( observeValueForKeyPath:ofObject:change:context:）</span><br></pre></td></tr></table></figure>
+<p>注意事项：需要调用set方法触发KVO</p>
 <p>实现了class方法，返回了父类。</p>
-<p>9.http get和post区别</p>
-<p>Get是安全的、幂等的、可缓存的、Get参数一般拼接在url的query参数里，有长度限制</p>
+<h4 id="9-http-get和post区别"><a href="#9-http-get和post区别" class="headerlink" title="9.http get和post区别"></a>9.http get和post区别</h4><p>Get是安全的、幂等的、可缓存的、Get参数一般拼接在url的query参数里，有长度限制</p>
 <p>Post是不安全的、非幂等的、不可缓存的，Post的参数一般放在请求体里，相对安全。</p>
 <p>https的过程？</p>
 <p>https是绝对的安全吗？怎么保证安全性？</p>
@@ -216,7 +213,7 @@
         <div class="level-start">
             <a class="level level-item has-link-grey  article-nav-prev" href="/iOS面试技术点/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">iOS面试技术点</span>
+                <span class="level-item">iOS 面试技术点</span>
             </a>
         </div>
         
