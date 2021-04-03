@@ -19,7 +19,7 @@
 <meta property="og:description" content="好未来面试题">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://soso.wiki/images/og_image.png">
-<meta property="og:updated_time" content="2021-04-03T10:24:42.466Z">
+<meta property="og:updated_time" content="2021-04-03T14:36:36.600Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="好未来面试题及答案">
 <meta name="twitter:description" content="好未来面试题">
@@ -147,7 +147,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 362 个字)
+                    4 分钟 读完 (大约 651 个字)
                 </span>
                 
                 
@@ -163,15 +163,30 @@
             <p>好未来面试题</p>
 <a id="more"></a>
 <h2 id="1-一面"><a href="#1-一面" class="headerlink" title="1. 一面"></a>1. 一面</h2><p>1、说一下optional。?!  ?? 是什么意思？有几种解包方式？</p>
-<p>解包方式：if let、guard、?? 等。</p>
+<p>解包方式：if let、guard、!强制解包、?? 等。</p>
+<p>?!</p>
+<p>??  <code>let a = b ?? c</code> 如果b不为nil，则a = b;否则a = c;</p>
 <p>2、说一下闭包。</p>
+<p>闭包是能够读取其他函数内部变量的函数，可以理解成定义在一个函数内部的函数。</p>
+<p>可以用typealias起别名</p>
+<figure class="highlight swift hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">typealias</span> testBlock = (<span class="hljs-type">String</span>) -&gt; <span class="hljs-type">Void</span></span><br><span class="line"><span class="hljs-keyword">let</span> aaa: testBlock = &#123;str <span class="hljs-keyword">in</span></span><br><span class="line">    <span class="hljs-built_in">print</span>(str)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>值捕获</p>
+<p>闭包可以捕获上下文中的常量和变量</p>
+<p>逃逸闭包</p>
+<p>当一个闭包作为参数传入函数中，这个闭包需要等函数执行结束返回后执行，这种情况就称作这个闭包在函数中逃逸。在涉及异步操作时经常用到，特别是网络请求后要进行请求成功后的回调时，闭包就要逃逸掉，这时就要在闭包形参前加上<code>@escaping</code>关键字。</p>
 <p>3、比较代理、通知、KVO？这三个谁的效率最高，谁的效率最低？</p>
-<p>KVO 效率最低，因为 Runtime。</p>
+<p>KVO 效率最低，因为使用到了 Runtime。</p>
+<p>代理效率最高，因为是一对一。</p>
 <p>4、NSString 和 String 的区别？</p>
 <p>String 是值类型，NSString 是引用类型。</p>
 <p>5、Swift 跟 OC 的区别？OC 是面向对象的，Swift 呢？（面向对象、面向协议、响应式编程）解释一下面向协议编程？</p>
 <p>OC 是动态的语言，Swift 是静态的语言。</p>
 <p>6、说一下 MRC ？自动释放池？自动释放池什么时候释放？</p>
+<p>iOS 在主线程的Runloop中注册了2个Observer</p>
+<p>第1个Observer监听了kCFRunLoopEntry事件，会调用objc_autoreleasePoolPush()</p>
+<p>第2个Observer</p>
+<p>监听了kCFRunLoopBeforeWaiting事件，会调用objc_autoreleasePoolPop()、objc_autoreleasePoolPush()</p>
+<p>监听了kCFRunLoopBeforeExit事件，会调用objc_autoreleasePoolPop()</p>
 <p>7、说一下多线程？</p>
 <p>8、分别用 OC 和 Swift 手写一下单例。</p>
 <p>9、SnaptKit 内部看过吗？</p>
@@ -207,6 +222,13 @@
 
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/小米面试题/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">小米面试题及答案</span>
+            </a>
+        </div>
         
         
         <div class="level-end">
