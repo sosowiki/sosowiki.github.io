@@ -19,7 +19,7 @@
 <meta property="og:description" content="小米面试题">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://soso.wiki/images/og_image.png">
-<meta property="og:updated_time" content="2021-04-04T02:58:44.340Z">
+<meta property="og:updated_time" content="2021-04-06T08:51:57.888Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小米面试题及答案">
 <meta name="twitter:description" content="小米面试题">
@@ -147,7 +147,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    9 分钟 读完 (大约 1342 个字)
+                    19 分钟 读完 (大约 2856 个字)
                 </span>
                 
                 
@@ -178,7 +178,53 @@
 <p>备忘录模式：保存对象当前的状态，并在日后可以恢复的模式。用 UserDefaults 来读写，同时配合栈可以存储一系列状态。它经常用于初始化、重启、App 前后台状态改变等场景。</p>
 <p>工厂模式</p>
 <p>单例模式</p>
-<h4 id="2-什么是队列？同步异步是什么？GCD与NSOperation的相同与不同，使用场景。"><a href="#2-什么是队列？同步异步是什么？GCD与NSOperation的相同与不同，使用场景。" class="headerlink" title="2.什么是队列？同步异步是什么？GCD与NSOperation的相同与不同，使用场景。"></a>2.什么是队列？同步异步是什么？GCD与NSOperation的相同与不同，使用场景。</h4><h4 id="3-Block，本质，指针引用，值引用，变量捕获（static和auto），-weak-block"><a href="#3-Block，本质，指针引用，值引用，变量捕获（static和auto），-weak-block" class="headerlink" title="3.Block，本质，指针引用，值引用，变量捕获（static和auto），__weak __block"></a>3.Block，本质，指针引用，值引用，变量捕获（static和auto），<code>__weak</code> <code>__block</code></h4><figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">NSMutableArray</span> *array = <span class="hljs-literal">nil</span>;</span><br><span class="line"><span class="hljs-keyword">void</span>(^Block)(<span class="hljs-keyword">void</span>) = ^&#123;</span><br><span class="line">	array = [<span class="hljs-built_in">NSMutableArray</span> array];</span><br><span class="line">&#125;</span><br><span class="line">Block();</span><br></pre></td></tr></table></figure>
+<h4 id="2-什么是队列？同步异步是什么？GCD与NSOperation的相同与不同，使用场景。"><a href="#2-什么是队列？同步异步是什么？GCD与NSOperation的相同与不同，使用场景。" class="headerlink" title="2.什么是队列？同步异步是什么？GCD与NSOperation的相同与不同，使用场景。"></a>2.什么是队列？同步异步是什么？GCD与NSOperation的相同与不同，使用场景。</h4><p>GCD的队列可以分为2大类型<br>并发队列（Concurrent Dispatch Queue）</p>
+<ul>
+<li><p>可以让多个任务并发（同时）执行（自动开启多个线程同时执行任务）</p>
+</li>
+<li><p>并发功能只有在异步（dispatch_async）函数下才有效</p>
+</li>
+</ul>
+<p>串行队列（Serial Dispatch Queue）</p>
+<ul>
+<li>让任务一个接着一个地执行（一个任务执行完毕后，再执行下一个任务）</li>
+</ul>
+<p>同步和异步主要影响：能不能开启新的线程</p>
+<ul>
+<li>同步：在当前线程中执行任务，不具备开启新线程的能力</li>
+<li>异步：在新的线程中执行任务，具备开启新线程的能力</li>
+</ul>
+<p>并发和串行主要影响：任务的执行方式</p>
+<ul>
+<li>并发：多个任务并发（同时）执行</li>
+<li>串行：一个任务执行完毕后，再执行下一个任务</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>并发队列</th>
+<th>手动创建的串行队列</th>
+<th>主队列</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>同步（sync）</td>
+<td>没有开启新线程，串行执行任务</td>
+<td>没有开启新线程，串行执行任务</td>
+<td>没有开启新线程，串行执行任务</td>
+</tr>
+<tr>
+<td>异步（async）</td>
+<td>有开启新线程，并发执行任务</td>
+<td>有开启新线程，串行执行任务</td>
+<td>没有开启新线程，串行执行任务</td>
+</tr>
+</tbody>
+</table>
+<p>使用sync函数往当前串行队列中添加任务，会卡住当前的串行队列（产生死锁）</p>
+<h4 id="3-Block，本质，指针引用，值引用，变量捕获（static和auto），-weak-block"><a href="#3-Block，本质，指针引用，值引用，变量捕获（static和auto），-weak-block" class="headerlink" title="3.Block，本质，指针引用，值引用，变量捕获（static和auto），__weak __block"></a>3.Block，本质，指针引用，值引用，变量捕获（static和auto），<code>__weak</code> <code>__block</code></h4><figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">NSMutableArray</span> *array = <span class="hljs-literal">nil</span>;</span><br><span class="line"><span class="hljs-keyword">void</span>(^Block)(<span class="hljs-keyword">void</span>) = ^&#123;</span><br><span class="line">	array = [<span class="hljs-built_in">NSMutableArray</span> array];</span><br><span class="line">&#125;</span><br><span class="line">Block();</span><br></pre></td></tr></table></figure>
 <h5 id="有什么问题？"><a href="#有什么问题？" class="headerlink" title="有什么问题？"></a>有什么问题？</h5><p>局部变量是值捕获，不能在block内部修改。</p>
 <figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">NSMutableArray</span> *array = [<span class="hljs-built_in">NSMutableArray</span> array];</span><br><span class="line"><span class="hljs-keyword">void</span>(^Block)(<span class="hljs-keyword">void</span>) = ^&#123;</span><br><span class="line">	[array addOject:<span class="hljs-string">"1"</span>]:</span><br><span class="line">&#125;</span><br><span class="line">Block();</span><br></pre></td></tr></table></figure>
 <h5 id="有什么问题？-1"><a href="#有什么问题？-1" class="headerlink" title="有什么问题？"></a>有什么问题？</h5><p>没问题，可以添加元素</p>
@@ -204,7 +250,41 @@
 <li>减少类、分类的数量，合并Category和功能类似的类。删除不必要的方法和类、分类。</li>
 <li>将不必须在+load中做的事延时到+initialize中。</li>
 </ol>
-<h4 id="6-谈谈https"><a href="#6-谈谈https" class="headerlink" title="6.谈谈https"></a>6.谈谈https</h4><h4 id="7-说说响应链"><a href="#7-说说响应链" class="headerlink" title="7.说说响应链"></a>7.说说响应链</h4><h4 id="8-你知道哪些锁？（自旋锁，互斥锁）使用场景都有哪些？"><a href="#8-你知道哪些锁？（自旋锁，互斥锁）使用场景都有哪些？" class="headerlink" title="8.你知道哪些锁？（自旋锁，互斥锁）使用场景都有哪些？"></a>8.你知道哪些锁？（自旋锁，互斥锁）使用场景都有哪些？</h4>
+<h4 id="6-谈谈https"><a href="#6-谈谈https" class="headerlink" title="6.谈谈https"></a>6.谈谈https</h4><p><img src="/images/network/https-2.jpeg" alt="https流程"></p>
+<p>一个HTTPS请求实际上包含了两次HTTP传输：</p>
+<p>1）客户端发起一个http请求，连接到服务器的443端口。</p>
+<p>2）服务端把自己的信息以数字证书的形式返回给客户端（证书内容有密钥公钥，网站地址，证书颁发机构，失效日期等）。证书中有一个公钥来加密信息，私钥由服务器持有。</p>
+<p>3）验证证书的合法性</p>
+<p>客户端收到服务器的响应后会先验证证书的合法性（证书中包含的地址与正在访问的地址是否一致，证书是否过期）。</p>
+<p>4）生成随机密码（RSA签名）</p>
+<p>如果验证通过，或用户接受了不受信任的证书，浏览器就会生成一个随机的对称密钥（session key）并用公钥加密，让服务端用私钥解密，解密后就用这个对称密钥进行传输了，并且能够说明服务端确实是私钥的持有者。</p>
+<p>5）生成对称加密算法</p>
+<p>验证完服务端身份后，客户端生成一个对称加密的算法和对应密钥，以公钥加密之后发送给服务端。此时被黑客截获也没用，因为只有服务端的私钥才可以对其进行解密。之后客户端与服务端可以用这个对称加密算法来加密和解密通信内容了。</p>
+<p>6）客户端会发起HTTPS中的第二个HTTP请求，将加密之后的客户端密钥发送给服务器。</p>
+<p>7）服务器接收到客户端发来的密文之后，会用自己的私钥对其进行非对称解密，解密之后的明文就是客户端密钥，然后用客户端密钥对数据进行对称加密，这样数据就变成了密文。</p>
+<p>8）然后服务器将加密后的密文发送给客户端。</p>
+<p>9）客户端收到服务器发送来的密文，用客户端密钥对其进行对称解密，得到服务器发送的数据。这样HTTPS中的第二个HTTP请求结束，整个HTTPS传输完成。</p>
+<h4 id="7-说说响应链"><a href="#7-说说响应链" class="headerlink" title="7.说说响应链"></a>7.说说响应链</h4><p>能够响应触摸事件的例如UIView，UIButton，UIViewController，UIApplication，Appdelegate等都继承自UIResponder类，一个页面上通常会有许许多多个这种类型的对象，都可以对点击事件作出响应。为了避免冲突，这就需要有一个先后顺序，也就是响应的优先级。Hit-Testing的目的就是找到具有最高优先级的响应对象。<br>寻找的具体流程如下：</p>
+<ol>
+<li>UIApplication首先将事件队列中的事件取出，传递给窗口对象。如果有多个窗口，则优先询问windows数组的最后一个窗口。</li>
+<li>如果窗口不能响应事件，则将事件传递给倒数第二个窗口，以此类推。如果窗口能够响应事件，则再依次询问该窗口的子视图。</li>
+<li>重复步骤2。</li>
+<li>若视图的所有子视图均不是最佳响应者，则自身就是最合适的响应者。<br>另外需要注意的是，一下几种状态的视图无法响应事件：</li>
+</ol>
+<ul>
+<li>不允许交互的视图：userInteractionEnabled = NO</li>
+<li>隐藏的视图：hidden = YES</li>
+<li>透明度alpha&lt;0.01的视图</li>
+</ul>
+<p>怎么样验证一下上面所说的Hit-Testing的顺序呢，看一下UIView的API，里面会有一个hitTest：withEvent：方法，这个方法的主要作用就是查询并返回事件在当前视图中的响应者，每个被询问到的视图对象都会调用这个方法来返回当前视图层的响应者。</p>
+<ul>
+<li>如果当前视图无法响应事件，则返回nil。</li>
+<li>如果当前视图可以响应事件，但子视图不能响应事件，则返回自身作为当前视图的响应者。</li>
+<li>如果当前视图可以响应事件，同时有子视图可以响应事件，则返回该子视图作为当前视图的响应者。</li>
+</ul>
+<h4 id="8-你知道哪些锁？（自旋锁，互斥锁）使用场景都有哪些？"><a href="#8-你知道哪些锁？（自旋锁，互斥锁）使用场景都有哪些？" class="headerlink" title="8.你知道哪些锁？（自旋锁，互斥锁）使用场景都有哪些？"></a>8.你知道哪些锁？（自旋锁，互斥锁）使用场景都有哪些？</h4><p>os_unfair_lock<br>OSSpinLock<br>dispatch_semaphore<br>pthread_mutex<br>NSLock<br>NSCondition<br>pthread_mutex(recursive)<br>NSRecursiveLock<br>NSConditionLock<br>@synchronized</p>
+<p>线程同步</p>
+
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -237,8 +317,8 @@
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/好未来面试题及答案/">
-                <span class="level-item">好未来面试题及答案</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/滴滴出行面试题及答案/">
+                <span class="level-item">滴滴出行面试题及答案</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>

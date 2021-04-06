@@ -19,7 +19,7 @@
 <meta property="og:description" content="好未来面试题">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://soso.wiki/images/og_image.png">
-<meta property="og:updated_time" content="2021-04-03T16:38:44.358Z">
+<meta property="og:updated_time" content="2021-04-06T06:57:35.088Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="好未来面试题及答案">
 <meta name="twitter:description" content="好未来面试题">
@@ -147,7 +147,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    6 分钟 读完 (大约 969 个字)
+                    7 分钟 读完 (大约 1064 个字)
                 </span>
                 
                 
@@ -202,7 +202,9 @@
 <p><a href="https://www.jianshu.com/p/bc498acf2406/" target="_blank" rel="noopener">OC中链式语法的使用及原理</a></p>
 <h2 id="2-二面"><a href="#2-二面" class="headerlink" title="2. 二面"></a>2. 二面</h2><p>主要是手写算法题：</p>
 <h3 id="1、用两个栈实现队列。"><a href="#1、用两个栈实现队列。" class="headerlink" title="1、用两个栈实现队列。"></a>1、用两个栈实现队列。</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> inStack = [];</span><br><span class="line"><span class="hljs-keyword">var</span> outStack = [];</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">push</span>(<span class="hljs-params">node</span>)</span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    inStack.push(node);</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">pop</span>(<span class="hljs-params"></span>)</span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">if</span> (outStack.length == <span class="hljs-number">0</span>) &#123;</span><br><span class="line">        <span class="hljs-keyword">while</span>(inStack.length != <span class="hljs-number">0</span>) &#123;</span><br><span class="line">            outStack.push(inStack.pop());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">return</span> outStack.pop();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="2、从扑克牌中抽出5张，写一个方法判断是不是顺子。（如34567）大小王是万能的，可以替代任意数字。"><a href="#2、从扑克牌中抽出5张，写一个方法判断是不是顺子。（如34567）大小王是万能的，可以替代任意数字。" class="headerlink" title="2、从扑克牌中抽出5张，写一个方法判断是不是顺子。（如34567）大小王是万能的，可以替代任意数字。"></a>2、从扑克牌中抽出5张，写一个方法判断是不是顺子。（如34567）大小王是万能的，可以替代任意数字。</h3><h2 id="3-三面"><a href="#3-三面" class="headerlink" title="3. 三面"></a>3. 三面</h2><p>项目经理聊项目</p>
+<h3 id="2、从扑克牌中抽出5张，写一个方法判断是不是顺子。（如34567）大小王是万能的，可以替代任意数字。"><a href="#2、从扑克牌中抽出5张，写一个方法判断是不是顺子。（如34567）大小王是万能的，可以替代任意数字。" class="headerlink" title="2、从扑克牌中抽出5张，写一个方法判断是不是顺子。（如34567）大小王是万能的，可以替代任意数字。"></a>2、从扑克牌中抽出5张，写一个方法判断是不是顺子。（如34567）大小王是万能的，可以替代任意数字。</h3><p><a href="https://leetcode-cn.com/problems/bu-ke-pai-zhong-de-shun-zi-lcof/" target="_blank" rel="noopener">剑指 Offer 61. 扑克牌中的顺子</a></p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> isStraight = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">nums</span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">let</span> repeat = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>();</span><br><span class="line">    <span class="hljs-keyword">let</span> max = <span class="hljs-number">0</span>, min = <span class="hljs-number">14</span>;</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="hljs-keyword">if</span> (nums[i] == <span class="hljs-number">0</span>) <span class="hljs-keyword">continue</span>; <span class="hljs-comment">// 跳过大小王</span></span><br><span class="line">        max = <span class="hljs-built_in">Math</span>.max(max, nums[i]); <span class="hljs-comment">// 最大牌</span></span><br><span class="line">        min = <span class="hljs-built_in">Math</span>.min(min, nums[i]); <span class="hljs-comment">// 最小牌</span></span><br><span class="line">        <span class="hljs-keyword">if</span> (repeat.has(nums[i])) &#123;</span><br><span class="line">            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        repeat.add(nums[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">return</span> max - min &lt; <span class="hljs-number">5</span>; <span class="hljs-comment">// 最大牌 - 最小牌 &lt; 5 则可构成顺子</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="3-三面"><a href="#3-三面" class="headerlink" title="3. 三面"></a>3. 三面</h2><p>项目经理聊项目</p>
 <h2 id="4-四面"><a href="#4-四面" class="headerlink" title="4. 四面"></a>4. 四面</h2><p>HR问了很多问题，包括个人优缺点，闲暇时间会做什么，在前公司3年的成长等等。</p>
 
         </div>
@@ -229,9 +231,9 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/小米面试题/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/滴滴出行面试题及答案/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">小米面试题及答案</span>
+                <span class="level-item">滴滴出行面试题及答案</span>
             </a>
         </div>
         
