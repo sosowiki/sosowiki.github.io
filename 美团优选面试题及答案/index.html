@@ -19,7 +19,7 @@
 <meta property="og:description" content="美团优选面试题">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://soso.wiki/images/og_image.png">
-<meta property="og:updated_time" content="2021-04-06T06:27:33.761Z">
+<meta property="og:updated_time" content="2021-04-06T06:31:40.823Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="美团优选面试题及答案">
 <meta name="twitter:description" content="美团优选面试题">
@@ -161,8 +161,7 @@
         </h1>
         <div class="content">
             <p>美团优选面试题<br><a id="more"></a></p>
-<p>技术栈是怎么选择的？为什么选择<code>Flutter</code>，没有选择<code>RN</code></p>
-<p><a href="https://www.jianshu.com/p/85a77bb8d926" target="_blank" rel="noopener"> Flutter 与 React Native 的对比分析</a></p>
+<h4 id="技术栈是怎么选择的？为什么选择Flutter，没有选择RN"><a href="#技术栈是怎么选择的？为什么选择Flutter，没有选择RN" class="headerlink" title="技术栈是怎么选择的？为什么选择Flutter，没有选择RN"></a>技术栈是怎么选择的？为什么选择<code>Flutter</code>，没有选择<code>RN</code></h4><p><a href="https://www.jianshu.com/p/85a77bb8d926" target="_blank" rel="noopener"> Flutter 与 React Native 的对比分析</a></p>
 <h3 id="1-链表环的入口结点（限制15分钟）"><a href="#1-链表环的入口结点（限制15分钟）" class="headerlink" title="1.链表环的入口结点（限制15分钟）"></a>1.链表环的入口结点（限制15分钟）</h3><p>算法1：遍历链表，使用Set去存一下</p>
 <figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">detectCycle</span>(<span class="hljs-params"> head </span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> visited = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>();</span><br><span class="line">    <span class="hljs-keyword">while</span> (head != <span class="hljs-literal">null</span>) &#123;</span><br><span class="line">        <span class="hljs-keyword">if</span> (visited.has(head)) &#123;</span><br><span class="line">            <span class="hljs-keyword">return</span> head;</span><br><span class="line">        &#125;</span><br><span class="line">        visited.add(head);</span><br><span class="line">        head = head.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>算法2：快慢指针</p>
@@ -244,7 +243,7 @@
 <h3 id="9-http-get和post区别"><a href="#9-http-get和post区别" class="headerlink" title="9.http get和post区别"></a>9.http get和post区别</h3><p>Get是安全的、幂等的、可缓存的、Get参数一般拼接在url的query参数里，有长度限制。</p>
 <p>Post是不安全的、非幂等的、不可缓存的，Post的参数一般放在请求体里，相对安全。</p>
 <h4 id="https的过程？"><a href="#https的过程？" class="headerlink" title="https的过程？"></a>https的过程？</h4><p><img src="/images/network/https.png" alt="https流程"></p>
-<p><img src="/images/network/https-2.webp" alt="https流程"></p>
+<p><img src="/images/network/https-2.jpeg" alt="https流程"></p>
 <p>一个HTTPS请求实际上包含了两次HTTP传输：</p>
 <p>1）客户端发起一个http请求，连接到服务器的443端口。</p>
 <p>2）服务端把自己的信息以数字证书的形式返回给客户端（证书内容有密钥公钥，网站地址，证书颁发机构，失效日期等）。证书中有一个公钥来加密信息，私钥由服务器持有。</p>
