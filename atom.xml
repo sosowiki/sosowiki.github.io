@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://soso.wiki/"/>
-  <updated>2021-04-04T14:58:58.824Z</updated>
+  <updated>2021-04-14T05:42:58.440Z</updated>
   <id>http://soso.wiki/</id>
   
   <author>
@@ -15,6 +15,78 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>美团优选面试题2及答案</title>
+    <link href="http://soso.wiki/%E7%BE%8E%E5%9B%A2%E4%BC%98%E9%80%89%E9%9D%A2%E8%AF%95%E9%A2%982/"/>
+    <id>http://soso.wiki/美团优选面试题2/</id>
+    <published>2021-04-14T05:38:00.000Z</published>
+    <updated>2021-04-14T05:42:58.440Z</updated>
+    
+    <content type="html"><![CDATA[<p>美团优选面试题2<br><a id="more"></a></p><p>介绍值得说的项目</p><h4 id="1-打印结果"><a href="#1-打印结果" class="headerlink" title="1.打印结果"></a>1.打印结果</h4><figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="hljs-keyword">void</span>)someMethod &#123;</span><br><span class="line">  <span class="hljs-keyword">int</span> i = <span class="hljs-number">10</span>;</span><br><span class="line">   <span class="hljs-built_in">dispatch_async</span>(dispatch_get_main_queue(), ^&#123;</span><br><span class="line">       <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"%d"</span>,i);</span><br><span class="line">   &#125;);</span><br><span class="line">   i = <span class="hljs-number">20</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="hljs-keyword">void</span>)someMethod &#123;</span><br><span class="line">  <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> i = <span class="hljs-number">10</span>;</span><br><span class="line">   <span class="hljs-built_in">dispatch_async</span>(dispatch_get_main_queue(), ^&#123;</span><br><span class="line">       <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"%d"</span>,i);</span><br><span class="line">   &#125;);</span><br><span class="line">   i = <span class="hljs-number">20</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="hljs-keyword">void</span>)someMethod &#123;</span><br><span class="line">  __block <span class="hljs-keyword">int</span> i = <span class="hljs-number">10</span>;</span><br><span class="line">   <span class="hljs-built_in">dispatch_async</span>(dispatch_get_main_queue(), ^&#123;</span><br><span class="line">       <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"%d"</span>,i);</span><br><span class="line">   &#125;);</span><br><span class="line">   i = <span class="hljs-number">20</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="hljs-keyword">void</span>)someMethod &#123;</span><br><span class="line">   <span class="hljs-keyword">int</span> i = <span class="hljs-number">10</span>;</span><br><span class="line">   <span class="hljs-built_in">dispatch_sync</span>(dispatch_get_main_queue(), ^&#123;</span><br><span class="line">       <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"%d"</span>,i);</span><br><span class="line">   &#125;);</span><br><span class="line">   i = <span class="hljs-number">20</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="2-load和initialize的区别？-load的调用时机"><a href="#2-load和initialize的区别？-load的调用时机" class="headerlink" title="2.+load和initialize的区别？+load的调用时机"></a>2.+load和initialize的区别？+load的调用时机</h4><p>1.调用方式</p><p>(1)load是根据函数地址直接调用。</p><p>(2)initialize是通过objc_msgSend调用。</p><p>2.调用时刻(什么时候会调用)</p><p>(1)load是runtime加载类、分类的时候调用(只会调用一次)</p><p>(2)initialize是类第一次接收到消息的时候调用，每一个类只会initialize一次(父类的initialize方法可能会被调用多次)。</p><h4 id="3-App启动-pre-main做了什么事情"><a href="#3-App启动-pre-main做了什么事情" class="headerlink" title="3.App启动 pre-main做了什么事情"></a>3.App启动 pre-main做了什么事情</h4><h4 id="4-KVO的实现原理。"><a href="#4-KVO的实现原理。" class="headerlink" title="4.KVO的实现原理。"></a>4.KVO的实现原理。</h4><h4 id="5-KVC的实现原理，是直接访问成员变量赋值吗？"><a href="#5-KVC的实现原理，是直接访问成员变量赋值吗？" class="headerlink" title="5.KVC的实现原理，是直接访问成员变量赋值吗？"></a>5.KVC的实现原理，是直接访问成员变量赋值吗？</h4><h4 id="6-Category添加一个属性系统做了什么？怎么添加属性？为什么不能添加成员变量。关联对象存在哪里？"><a href="#6-Category添加一个属性系统做了什么？怎么添加属性？为什么不能添加成员变量。关联对象存在哪里？" class="headerlink" title="6.Category添加一个属性系统做了什么？怎么添加属性？为什么不能添加成员变量。关联对象存在哪里？"></a>6.Category添加一个属性系统做了什么？怎么添加属性？为什么不能添加成员变量。关联对象存在哪里？</h4><h4 id="7-isa指向，元类对象isa指向哪里？NSObject的isa指向哪里？isa的结构"><a href="#7-isa指向，元类对象isa指向哪里？NSObject的isa指向哪里？isa的结构" class="headerlink" title="7.isa指向，元类对象isa指向哪里？NSObject的isa指向哪里？isa的结构"></a>7.isa指向，元类对象isa指向哪里？NSObject的isa指向哪里？isa的结构</h4><h4 id="8-有做过卡顿检测吗？Runloop检测卡顿怎么知道是哪个方法卡？方法卡了多长时间？"><a href="#8-有做过卡顿检测吗？Runloop检测卡顿怎么知道是哪个方法卡？方法卡了多长时间？" class="headerlink" title="8.有做过卡顿检测吗？Runloop检测卡顿怎么知道是哪个方法卡？方法卡了多长时间？"></a>8.有做过卡顿检测吗？Runloop检测卡顿怎么知道是哪个方法卡？方法卡了多长时间？</h4><h4 id="9-有做闪退监测吗？bugly是怎么实现的？crash率是多少？crash率是怎么算出来的？"><a href="#9-有做闪退监测吗？bugly是怎么实现的？crash率是多少？crash率是怎么算出来的？" class="headerlink" title="9.有做闪退监测吗？bugly是怎么实现的？crash率是多少？crash率是怎么算出来的？"></a>9.有做闪退监测吗？bugly是怎么实现的？crash率是多少？crash率是怎么算出来的？</h4><h4 id="10-反转单向链表"><a href="#10-反转单向链表" class="headerlink" title="10.反转单向链表"></a>10.反转单向链表</h4><p>实现反转单向链表的函数。<br>如 1-&gt;2-&gt;3-&gt;4 反转后变成 2-&gt;1-&gt;4-&gt;3</p><p>有什么想问我的？</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;美团优选面试题2&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="面试题" scheme="http://soso.wiki/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="美团" scheme="http://soso.wiki/tags/%E7%BE%8E%E5%9B%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>美团面试题2及答案</title>
+    <link href="http://soso.wiki/%E7%BE%8E%E5%9B%A2%E9%9D%A2%E8%AF%95%E9%A2%982/"/>
+    <id>http://soso.wiki/美团面试题2/</id>
+    <published>2021-04-14T02:38:00.000Z</published>
+    <updated>2021-04-14T05:47:29.847Z</updated>
+    
+    <content type="html"><![CDATA[<p>美团面试题2<br><a id="more"></a></p><p>1.gcd, block,<code>__block</code>, <code>static</code><br>2.程序启动时执行了什么<br>3.runloop: 如何让一个 block 只在子线程runloop 上执行<br>4.autorelease 对象何时释放，主线程，子线程分别如何释放<br>5.isa指向的内存布局<br>6.如何定义一个只存在于栈的对象<br>7.线上卡顿监控<br>8.crash 触发流程，涉及的底层系统调用<br>9.链表反转： 1-&gt;2-&gt;3-&gt;4 反转为 2-&gt;1-&gt;4-&gt;3</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;美团面试题2&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="面试题" scheme="http://soso.wiki/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="美团" scheme="http://soso.wiki/tags/%E7%BE%8E%E5%9B%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>百度面试题及答案</title>
+    <link href="http://soso.wiki/%E7%99%BE%E5%BA%A6%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>http://soso.wiki/百度面试题/</id>
+    <published>2021-04-13T10:00:00.000Z</published>
+    <updated>2021-04-14T05:43:15.506Z</updated>
+    
+    <content type="html"><![CDATA[<p>百度面试题<br><a id="more"></a></p><h3 id="百度一面"><a href="#百度一面" class="headerlink" title="百度一面"></a>百度一面</h3><p>1.APP优化<br>2.列表快速滑动不需要加载的图片怎么处理<br>3.cell加载大图<br>4.异步绘制<br>5.交换方法<br>6.圆角的处理<br>7.监听子线程处理UI事件</p><h4 id="百度二面"><a href="#百度二面" class="headerlink" title="百度二面"></a>百度二面</h4><p>1.项目经验介绍（问rtmp协议，udp主动丢包策略）<br>2.项目中遇到什么难点<br>3.为什么要制作动态库  系统动态库会影响启动时间吗<br>4.https (ca证书验证流程)<br>5.category原理<br>6.异步发送通知  (NSNotificationQueue)<br>7.算法</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;百度面试题&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="面试题" scheme="http://soso.wiki/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="百度" scheme="http://soso.wiki/tags/%E7%99%BE%E5%BA%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>iOS 面试技术点</title>
@@ -167,9 +239,9 @@
     <link href="http://soso.wiki/%E7%BE%8E%E5%9B%A2%E9%9D%A2%E8%AF%95%E9%A2%98%E5%8F%8A%E7%AD%94%E6%A1%88/"/>
     <id>http://soso.wiki/美团面试题及答案/</id>
     <published>2020-02-20T09:27:00.000Z</published>
-    <updated>2021-04-03T09:41:45.583Z</updated>
+    <updated>2021-04-13T14:55:30.877Z</updated>
     
-    <content type="html"><![CDATA[<p>美团面试题<br><a id="more"></a></p><h2 id="1、Block-的底层原理，结构，内存以及需要注意的地方。"><a href="#1、Block-的底层原理，结构，内存以及需要注意的地方。" class="headerlink" title="1、Block 的底层原理，结构，内存以及需要注意的地方。"></a>1、Block 的底层原理，结构，内存以及需要注意的地方。</h2><h2 id="2、图片渲染，一张-png-jpg-格式的图片渲染到页面上显示有哪些流程。png-和-jpg-的区别。png-一定是无损的吗？"><a href="#2、图片渲染，一张-png-jpg-格式的图片渲染到页面上显示有哪些流程。png-和-jpg-的区别。png-一定是无损的吗？" class="headerlink" title="2、图片渲染，一张 png/jpg 格式的图片渲染到页面上显示有哪些流程。png 和 jpg 的区别。png 一定是无损的吗？"></a>2、图片渲染，一张 png/jpg 格式的图片渲染到页面上显示有哪些流程。png 和 jpg 的区别。png 一定是无损的吗？</h2><h2 id="3、Runtime。"><a href="#3、Runtime。" class="headerlink" title="3、Runtime。"></a>3、Runtime。</h2><h2 id="4、Runloop-的结构和循环流程，用-Runloop-做过什么事情。"><a href="#4、Runloop-的结构和循环流程，用-Runloop-做过什么事情。" class="headerlink" title="4、Runloop 的结构和循环流程，用 Runloop 做过什么事情。"></a>4、Runloop 的结构和循环流程，用 Runloop 做过什么事情。</h2><h2 id="5、多线程，NSOperationQueue-和-GCD-的区别。用多线程做过什么事情。线程安全的问题。加锁有几种方式。"><a href="#5、多线程，NSOperationQueue-和-GCD-的区别。用多线程做过什么事情。线程安全的问题。加锁有几种方式。" class="headerlink" title="5、多线程，NSOperationQueue 和 GCD 的区别。用多线程做过什么事情。线程安全的问题。加锁有几种方式。"></a>5、多线程，NSOperationQueue 和 GCD 的区别。用多线程做过什么事情。线程安全的问题。加锁有几种方式。</h2><h2 id="6、NSURLSession-和-NSURLConnection-的区别，-NSURLConnection-是怎么封装的。CFNetwork。"><a href="#6、NSURLSession-和-NSURLConnection-的区别，-NSURLConnection-是怎么封装的。CFNetwork。" class="headerlink" title="6、NSURLSession 和 NSURLConnection 的区别， NSURLConnection 是怎么封装的。CFNetwork。"></a>6、NSURLSession 和 NSURLConnection 的区别， NSURLConnection 是怎么封装的。CFNetwork。</h2><h2 id="7、做过什么动画。"><a href="#7、做过什么动画。" class="headerlink" title="7、做过什么动画。"></a>7、做过什么动画。</h2><h2 id="8、HTTPS-的工作原理，和-HTTP-的区别。RSA-加密原理。"><a href="#8、HTTPS-的工作原理，和-HTTP-的区别。RSA-加密原理。" class="headerlink" title="8、HTTPS 的工作原理，和 HTTP 的区别。RSA 加密原理。"></a>8、HTTPS 的工作原理，和 HTTP 的区别。RSA 加密原理。</h2><h2 id="9、网络层级，TCP-和-UDP-的区别。"><a href="#9、网络层级，TCP-和-UDP-的区别。" class="headerlink" title="9、网络层级，TCP 和 UDP 的区别。"></a>9、网络层级，TCP 和 UDP 的区别。</h2><h2 id="10、SDWebImage-的框架结构，缓存机制。"><a href="#10、SDWebImage-的框架结构，缓存机制。" class="headerlink" title="10、SDWebImage 的框架结构，缓存机制。"></a>10、SDWebImage 的框架结构，缓存机制。</h2><h2 id="11、Git-的-rebase-的原理。Git-流程。"><a href="#11、Git-的-rebase-的原理。Git-流程。" class="headerlink" title="11、Git 的 rebase 的原理。Git 流程。"></a>11、Git 的 rebase 的原理。Git 流程。</h2><h2 id="12、对组件化的了解，组件化是为了解决什么问题。"><a href="#12、对组件化的了解，组件化是为了解决什么问题。" class="headerlink" title="12、对组件化的了解，组件化是为了解决什么问题。"></a>12、对组件化的了解，组件化是为了解决什么问题。</h2><h2 id="13、JSPatch-的原理。"><a href="#13、JSPatch-的原理。" class="headerlink" title="13、JSPatch 的原理。"></a>13、JSPatch 的原理。</h2><h2 id="14、单例是为了处理什么问题而使用的，单例和全局变量的区别。"><a href="#14、单例是为了处理什么问题而使用的，单例和全局变量的区别。" class="headerlink" title="14、单例是为了处理什么问题而使用的，单例和全局变量的区别。"></a>14、单例是为了处理什么问题而使用的，单例和全局变量的区别。</h2><h2 id="15、对设计模式的掌握。"><a href="#15、对设计模式的掌握。" class="headerlink" title="15、对设计模式的掌握。"></a>15、对设计模式的掌握。</h2><h2 id="16、分层打印二叉树。"><a href="#16、分层打印二叉树。" class="headerlink" title="16、分层打印二叉树。"></a>16、分层打印二叉树。</h2>]]></content>
+    <content type="html"><![CDATA[<p>美团面试题<br><a id="more"></a></p><h3 id="1、Block-的底层原理，结构，内存以及需要注意的地方。"><a href="#1、Block-的底层原理，结构，内存以及需要注意的地方。" class="headerlink" title="1、Block 的底层原理，结构，内存以及需要注意的地方。"></a>1、Block 的底层原理，结构，内存以及需要注意的地方。</h3><p>block本质上也是一个OC对象，它内部也有个isa指针。<br>block是封装了函数调用以及函数调用环境的OC对象。<br><img src="/images/ios/block.png" alt="block的底层结构"></p><table><thead><tr><th>block类型</th><th>环境</th></tr></thead><tbody><tr><td><strong>NSGlobalBlock</strong></td><td>没有访问auto变量</td></tr><tr><td><strong>NSStackBlock</strong></td><td>访问了auto变量</td></tr><tr><td><strong>NSMallocBlock</strong></td><td><strong>NSStackBlock</strong>调用了copy</td></tr></tbody></table><h3 id="2、图片渲染，一张-png-jpg-格式的图片渲染到页面上显示有哪些流程。png-和-jpg-的区别。png-一定是无损的吗？"><a href="#2、图片渲染，一张-png-jpg-格式的图片渲染到页面上显示有哪些流程。png-和-jpg-的区别。png-一定是无损的吗？" class="headerlink" title="2、图片渲染，一张 png/jpg 格式的图片渲染到页面上显示有哪些流程。png 和 jpg 的区别。png 一定是无损的吗？"></a>2、图片渲染，一张 png/jpg 格式的图片渲染到页面上显示有哪些流程。png 和 jpg 的区别。png 一定是无损的吗？</h3><p><strong>图片渲染的过程:</strong> 读取文件 -&gt; 计算frame -&gt;图片解码 -&gt;解码后通过数据总线交给GPU -&gt;GPU获取图片frame后进行顶点变换计算 -&gt;光栅化 -&gt;根据纹理坐标获取每一个像素点的颜色值 -&gt; 交给帧缓冲区 -&gt;渲染到屏幕上</p><p><a href="https://www.jianshu.com/p/b77399fbef5b" target="_blank" rel="noopener">iOS中图片渲染的流程</a></p><p><a href="https://link.jianshu.com/?t=https://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/" target="_blank" rel="noopener">iOS 保持界面流畅的技巧</a></p><p><a href="https://link.jianshu.com/?t=http://sonnewilling.com/blog/2016/10/19/iostu-xing-yuan-li-yu-chi-ping-xuan-ran/#fn:1" target="_blank" rel="noopener">iOS图形原理与离屏渲染</a></p><h3 id="3、Runtime。"><a href="#3、Runtime。" class="headerlink" title="3、Runtime。"></a>3、Runtime。</h3><p>OC中的方法调用其实都是转成了objc_msgSend函数的调用，给receiver（方法调用者）发送了一条消息（selector方法名）<br>objc_msgSend底层有3大阶段<br>消息发送（当前类、父类中查找）、动态方法解析、消息转发</p><h4 id="具体应用"><a href="#具体应用" class="headerlink" title="具体应用"></a>具体应用</h4><p>利用关联对象（AssociatedObject）给分类添加属性<br>遍历类的所有成员变量（修改textfield的占位文字颜色、字典转模型、自动归档解档）<br>交换方法实现（交换系统的方法）<br>利用消息转发机制解决方法找不到的异常问题</p><h3 id="4、Runloop-的结构和循环流程，用-Runloop-做过什么事情。"><a href="#4、Runloop-的结构和循环流程，用-Runloop-做过什么事情。" class="headerlink" title="4、Runloop 的结构和循环流程，用 Runloop 做过什么事情。"></a>4、Runloop 的结构和循环流程，用 Runloop 做过什么事情。</h3><p>01、通知Observers：进入Loop<br>02、通知Observers：即将处理Timers<br>03、通知Observers：即将处理Sources<br>04、处理Blocks<br>05、处理Source0（可能会再次处理Blocks）<br>06、如果存在Source1，就跳转到第8步<br>07、通知Observers：开始休眠（等待消息唤醒）<br>08、通知Observers：结束休眠（被某个消息唤醒）<br>01&gt; 处理Timer<br>02&gt; 处理GCD Async To Main Queue<br>03&gt; 处理Source1<br>09、处理Blocks<br>10、根据前面的执行结果，决定如何操作<br>01&gt; 回到第02步<br>02&gt; 退出Loop<br>11、通知Observers：退出Loop</p><p>控制线程生命周期（线程保活）</p><p>解决NSTimer在滑动时停止工作的问题 </p><p>监控应用卡顿</p><p>性能优化</p><h3 id="5、多线程，NSOperationQueue-和-GCD-的区别。用多线程做过什么事情。线程安全的问题。加锁有几种方式。"><a href="#5、多线程，NSOperationQueue-和-GCD-的区别。用多线程做过什么事情。线程安全的问题。加锁有几种方式。" class="headerlink" title="5、多线程，NSOperationQueue 和 GCD 的区别。用多线程做过什么事情。线程安全的问题。加锁有几种方式。"></a>5、多线程，NSOperationQueue 和 GCD 的区别。用多线程做过什么事情。线程安全的问题。加锁有几种方式。</h3><p>dispatch_after</p><p>dispatch_group</p><p>dispatch_barrier</p><p>dispatch_once</p><p>OSSpinLock<br>os_unfair_lock<br>pthread_mutex<br>dispatch_semaphore<br>dispatch_queue(DISPATCH_QUEUE_SERIAL)<br>NSLock<br>NSRecursiveLock<br>NSCondition<br>NSConditionLock<br>@synchronized</p><h3 id="6、NSURLSession-和-NSURLConnection-的区别，-NSURLConnection-是怎么封装的。CFNetwork。"><a href="#6、NSURLSession-和-NSURLConnection-的区别，-NSURLConnection-是怎么封装的。CFNetwork。" class="headerlink" title="6、NSURLSession 和 NSURLConnection 的区别， NSURLConnection 是怎么封装的。CFNetwork。"></a>6、NSURLSession 和 NSURLConnection 的区别， NSURLConnection 是怎么封装的。CFNetwork。</h3><h3 id="7、做过什么动画。"><a href="#7、做过什么动画。" class="headerlink" title="7、做过什么动画。"></a>7、做过什么动画。</h3><h3 id="8、HTTPS-的工作原理，和-HTTP-的区别。RSA-加密原理。"><a href="#8、HTTPS-的工作原理，和-HTTP-的区别。RSA-加密原理。" class="headerlink" title="8、HTTPS 的工作原理，和 HTTP 的区别。RSA 加密原理。"></a>8、HTTPS 的工作原理，和 HTTP 的区别。RSA 加密原理。</h3><h3 id="9、网络层级，TCP-和-UDP-的区别。"><a href="#9、网络层级，TCP-和-UDP-的区别。" class="headerlink" title="9、网络层级，TCP 和 UDP 的区别。"></a>9、网络层级，TCP 和 UDP 的区别。</h3><table><thead><tr><th>TCP</th><th>UDP</th><th></th></tr></thead><tbody><tr><td>面向连接</td><td>面向数据报</td><td></td></tr><tr><td>可靠传输</td><td>不可靠传输</td><td></td></tr><tr><td>传输效率低</td><td>传输效率高</td></tr></tbody></table><h3 id="10、SDWebImage-的框架结构，缓存机制。"><a href="#10、SDWebImage-的框架结构，缓存机制。" class="headerlink" title="10、SDWebImage 的框架结构，缓存机制。"></a>10、SDWebImage 的框架结构，缓存机制。</h3><h3 id="11、Git-的-rebase-的原理。Git-流程。"><a href="#11、Git-的-rebase-的原理。Git-流程。" class="headerlink" title="11、Git 的 rebase 的原理。Git 流程。"></a>11、Git 的 rebase 的原理。Git 流程。</h3><h3 id="12、对组件化的了解，组件化是为了解决什么问题。"><a href="#12、对组件化的了解，组件化是为了解决什么问题。" class="headerlink" title="12、对组件化的了解，组件化是为了解决什么问题。"></a>12、对组件化的了解，组件化是为了解决什么问题。</h3><h3 id="13、JSPatch-的原理。"><a href="#13、JSPatch-的原理。" class="headerlink" title="13、JSPatch 的原理。"></a>13、JSPatch 的原理。</h3><h3 id="14、单例是为了处理什么问题而使用的，单例和全局变量的区别。"><a href="#14、单例是为了处理什么问题而使用的，单例和全局变量的区别。" class="headerlink" title="14、单例是为了处理什么问题而使用的，单例和全局变量的区别。"></a>14、单例是为了处理什么问题而使用的，单例和全局变量的区别。</h3><h3 id="15、对设计模式的掌握。"><a href="#15、对设计模式的掌握。" class="headerlink" title="15、对设计模式的掌握。"></a>15、对设计模式的掌握。</h3><h3 id="16、分层打印二叉树。"><a href="#16、分层打印二叉树。" class="headerlink" title="16、分层打印二叉树。"></a>16、分层打印二叉树。</h3>]]></content>
     
     <summary type="html">
     
@@ -425,28 +497,6 @@
       <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
     
       <category term="高思教育" scheme="http://soso.wiki/tags/%E9%AB%98%E6%80%9D%E6%95%99%E8%82%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>滴滴面试题</title>
-    <link href="http://soso.wiki/%E6%BB%B4%E6%BB%B4%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    <id>http://soso.wiki/滴滴面试题/</id>
-    <published>2019-09-04T07:27:00.000Z</published>
-    <updated>2019-09-04T08:02:21.795Z</updated>
-    
-    <content type="html"><![CDATA[<p>滴滴面试题<br><a id="more"></a></p><h1 id="笔试题"><a href="#笔试题" class="headerlink" title="笔试题"></a>笔试题</h1><p>笔试题</p><h1 id="滴滴一面"><a href="#滴滴一面" class="headerlink" title="滴滴一面"></a>滴滴一面</h1><p>看了一下笔试题的答案，第一题 C 语言字符串反转打印了一下</p><p>1、说一下你觉得项目中遇到了什么印象深刻的问题，你是怎么解决的？</p><p>2、大学里学了哪些课？信息管理与信息系统专业是哪个学院的？</p><p>3、项目里的网络请求用到了网络5层模型的哪些，TCP/IP 属于哪一层？HTTP 呢？</p><p>4、你觉得自己是什么级别的？优势和不足主要是哪方面？</p><p>5、GCD 平时项目里怎么用的？我提到了回到主线程操作 UI 需要 dispatch_get_mainQueue</p><p>6、为什么操作 UI 需要在主线程？</p><p>7、哪些是你独立开发的项目？</p><p>8、问了一下上家公司的情况</p><p>9、之后有什么打算？</p><p>10、上家薪资多少？你还有啥想问的吗？</p><h1 id="滴滴二面"><a href="#滴滴二面" class="headerlink" title="滴滴二面"></a>滴滴二面</h1><p>1、自定义封装控件需要注意什么？有什么规范？</p><p>2、说一下你了解的设计模式。</p><p>3、数据库怎么优化？我说数据量大的话加索引提升查询效率。问其他优化呢？比如数据库大小有没有做过优化？</p><p>4、内存优化是怎么做的？我提到了内存泄漏。什么情况会发生内存泄漏？</p><p>5、App 启动时间优化？</p><p>6、视图做过哪些优化，我提了 TableView。那就以 TableView 说一下优化了哪些方面？</p><p>7、AFNetworking 内部是怎么样的一个过程？</p><p>8、你还有什么想问我的？</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;滴滴面试题&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="面试题" scheme="http://soso.wiki/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-    
-      <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
