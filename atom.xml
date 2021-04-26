@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://soso.wiki/"/>
-  <updated>2021-04-17T02:43:03.502Z</updated>
+  <updated>2021-04-26T02:24:06.724Z</updated>
   <id>http://soso.wiki/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>字节跳动面试题</title>
+    <link href="http://soso.wiki/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>http://soso.wiki/字节跳动面试题/</id>
+    <published>2021-04-25T11:00:00.000Z</published>
+    <updated>2021-04-26T02:24:06.724Z</updated>
+    
+    <content type="html"><![CDATA[<p>字节跳动面试题<br><a id="more"></a></p><p>1.retain  strong区别<br>2.NSClassFromString原理<br>3.http协议版本<br>4.http code 206  401<br>5.为什么三次握手，四次挥手<br>6.dispatch_asycn(queue,block);<br>7.二叉树路径<br>8.runtime<br>9.uiview绘制过程<br>10.autoreleasepool<br>11.vc生命周期<br>12.autorelease调用release会立即销毁吗</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;字节跳动面试题&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="面试题" scheme="http://soso.wiki/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="字节跳动" scheme="http://soso.wiki/tags/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>平安面试题</title>
@@ -468,28 +492,6 @@
     <summary type="html">
     
       &lt;p&gt;新浪乐居面试题&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="面试题" scheme="http://soso.wiki/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-    
-      <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>好未来面试题</title>
-    <link href="http://soso.wiki/%E5%A5%BD%E6%9C%AA%E6%9D%A5%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    <id>http://soso.wiki/好未来面试题/</id>
-    <published>2019-09-04T07:56:00.000Z</published>
-    <updated>2019-09-04T08:01:25.975Z</updated>
-    
-    <content type="html"><![CDATA[<p>好未来面试题<br><a id="more"></a></p><h1 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h1><p>1、说一下optional。（？ ！ ？？ 几种解包方式 if let、guard、？？等）</p><p>2、说一下闭包。</p><p>3、比较代理、通知、KVO？这三个谁的效率最高，谁的效率最低？( KVO 效率最低，因为 Runtime ）</p><p>4、NSString 和 String 的区别？（ String 是值类型，NSString 是引用类型）</p><p>5、Swift 跟 OC 的区别？（ OC 是动态的语言，Swift 是静态的语言）OC 是面向对象的，Swift 呢？（面向对象、面向协议、响应式编程）解释一下面向协议编程？</p><p>6、说一下 MRC ？自动释放池？自动释放池什么时候释放？（我说 drain ）</p><p>7、说一下多线程？（我提到了 dispatch_once 单例）</p><p>8、分别用 OC 和 Swift 手写一下单例。（ Swift 的单例我忘记写 static 了，但是经提醒立马说出来了）</p><p>9、SnaptKit 内部看过吗？</p><p>10、链式语法的实现。</p><p>UIView.top.equalTo().offSet(10)</p><p>UIView.left.equalTo().offSet(10)</p><p>为什么能写成UIView.top.left.offSet(10)</p><h1 id="二面"><a href="#二面" class="headerlink" title="二面"></a>二面</h1><p>主要是手写算法题：</p><p>1、用两个栈实现队列。</p><p>2、从扑克牌中抽出5张，写一个方法判断是不是顺子。（如34567）大小王是万能的，可以替代任意数字。</p><h1 id="三面"><a href="#三面" class="headerlink" title="三面"></a>三面</h1><p>项目经理</p><h1 id="四面"><a href="#四面" class="headerlink" title="四面"></a>四面</h1><p>HR</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;好未来面试题&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
