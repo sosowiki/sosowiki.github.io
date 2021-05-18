@@ -95,9 +95,9 @@
     <link href="http://soso.wiki/%E5%B9%B3%E5%AE%89%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     <id>http://soso.wiki/平安面试题/</id>
     <published>2021-04-15T07:23:00.000Z</published>
-    <updated>2021-04-17T02:43:03.502Z</updated>
+    <updated>2021-05-18T02:57:15.889Z</updated>
     
-    <content type="html"><![CDATA[<p>平安面试题<br><a id="more"></a></p><p>1.什么是多态？具体在项目中怎么用的？<br>2.说一下组件化开发（业务组件非UI组件）；<br>3.调用未实现的方法会发生什么，然后通过什么可以进行处理？消息转发的具体流程？消息转发流程在实际中的应用？<br>4.KVO 的原理？<br>5.分类的底层实现？<br>6.App 启动优化？热启动&amp;冷启动，具体优化？<br>7.Vue 的双向绑定？<br>8.说一下你对 Runloop 的理解，Runloop 的应用？<br>9.项目中具体是怎么用的多线程？<br>10.bug 管理工具？bug 率，日活？<br>11.项目中你的职责所在？<br>12.是否读过 SDWebImage，AFNetworking 底层？</p>]]></content>
+    <content type="html"><![CDATA[<p>平安面试题<br><a id="more"></a></p><p>1.什么是多态？具体在项目中怎么用的？</p><p>2.说一下组件化开发（业务组件非UI组件）；</p><p>3.调用未实现的方法会发生什么，然后通过什么可以进行处理？消息转发的具体流程？消息转发流程在实际中的应用？</p><p>4.KVO 的原理？</p><p>5.分类的底层实现？</p><p>6.App 启动优化？热启动&amp;冷启动，具体优化？</p><p>7.Vue 的双向绑定？</p><p>8.说一下你对 Runloop 的理解，Runloop 的应用？</p><p>9.项目中具体是怎么用的多线程？</p><p>10.bug 管理工具？bug 率，日活？</p><p>11.项目中你的职责所在？</p><p>12.是否读过 SDWebImage，AFNetworking 底层？</p>]]></content>
     
     <summary type="html">
     
@@ -163,11 +163,11 @@
   </entry>
   
   <entry>
-    <title>百度面试题及答案</title>
+    <title>百度面试题</title>
     <link href="http://soso.wiki/%E7%99%BE%E5%BA%A6%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     <id>http://soso.wiki/百度面试题/</id>
     <published>2021-04-13T10:00:00.000Z</published>
-    <updated>2021-04-14T05:43:15.506Z</updated>
+    <updated>2021-05-18T01:58:26.742Z</updated>
     
     <content type="html"><![CDATA[<p>百度面试题<br><a id="more"></a></p><h3 id="百度一面"><a href="#百度一面" class="headerlink" title="百度一面"></a>百度一面</h3><p>1.APP优化<br>2.列表快速滑动不需要加载的图片怎么处理<br>3.cell加载大图<br>4.异步绘制<br>5.交换方法<br>6.圆角的处理<br>7.监听子线程处理UI事件</p><h4 id="百度二面"><a href="#百度二面" class="headerlink" title="百度二面"></a>百度二面</h4><p>1.项目经验介绍（问rtmp协议，udp主动丢包策略）<br>2.项目中遇到什么难点<br>3.为什么要制作动态库  系统动态库会影响启动时间吗<br>4.https (ca证书验证流程)<br>5.category原理<br>6.异步发送通知  (NSNotificationQueue)<br>7.算法</p>]]></content>
     
@@ -183,6 +183,30 @@
       <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
     
       <category term="百度" scheme="http://soso.wiki/tags/%E7%99%BE%E5%BA%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>太一云面试题</title>
+    <link href="http://soso.wiki/%E5%A4%AA%E4%B8%80%E4%BA%91%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>http://soso.wiki/太一云面试题/</id>
+    <published>2021-04-13T10:00:00.000Z</published>
+    <updated>2021-05-18T02:50:38.731Z</updated>
+    
+    <content type="html"><![CDATA[<p>太一云面试题</p><a id="more"></a><p>1、@property属性的修饰符？String 为什么用 copy ？String 能不能用 strong ？NSMutableString 能不能用Strong？他说MutableString用Strong会崩溃。</p><p>2、单例的本质？项目里怎么用的单例？</p><p>3、说一下 KVO，说一下通知，通知属不属于观察者模式？</p><p>4、说一下 GCD的同步、异步。GCD 你是怎么用的？</p><p>5、说一下内存管理。MRC 了解吗？ARC 下系统是怎么自动加 retain、release 的？</p><p>6、了解 AutoreleasePool 吗？如果不写 autorelease，对象会被添加到 Pool 里吗？</p><p>7、了解 Socket 吗？</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;太一云面试题&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="面试题" scheme="http://soso.wiki/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="太一云" scheme="http://soso.wiki/tags/%E5%A4%AA%E4%B8%80%E4%BA%91/"/>
     
   </entry>
   
@@ -475,32 +499,6 @@
       <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
     
       <category term="京东" scheme="http://soso.wiki/tags/%E4%BA%AC%E4%B8%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>高思教育笔试题</title>
-    <link href="http://soso.wiki/%E9%AB%98%E6%80%9D%E6%95%99%E8%82%B2%E7%AC%94%E8%AF%95%E9%A2%98/"/>
-    <id>http://soso.wiki/高思教育笔试题/</id>
-    <published>2019-09-06T08:25:00.000Z</published>
-    <updated>2019-09-08T09:04:25.596Z</updated>
-    
-    <content type="html"><![CDATA[<p>高思教育笔试题</p><a id="more"></a><h1 id="笔试题（部分）"><a href="#笔试题（部分）" class="headerlink" title="笔试题（部分）"></a>笔试题（部分）</h1><p>3.下面代码输出什么？</p><figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">int</span> a = <span class="hljs-number">0</span>;</span><br><span class="line"><span class="hljs-keyword">void</span> (^foo)(<span class="hljs-keyword">void</span>) = ^&#123;</span><br><span class="line">a = <span class="hljs-number">1</span>;</span><br><span class="line"><span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"inner a=%d"</span>,a);</span><br><span class="line">&#125;;</span><br><span class="line">foo();</span><br><span class="line"><span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"outer a=%@"</span>,a);</span><br></pre></td></tr></table></figure><p>4.下面代码输出什么？</p><figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="hljs-keyword">void</span>)viewDidLoad</span><br><span class="line">&#123;</span><br><span class="line">  [<span class="hljs-keyword">super</span> viewDidLoad];</span><br><span class="line">  <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"1"</span>);</span><br><span class="line">  <span class="hljs-built_in">dispatch_sync</span>(dispatch_get_main_queue(),^&#123;</span><br><span class="line">    <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"2"</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"3"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>5.什么情况使用 weak 关键字，相比 assign 有什么不同？</p><p>6.@property 中有哪些属性关键字？/ @property 后面可以有哪些修饰符？</p><p>7.@synthesize 和 @dynamic 分别有什么作用？</p><p>8.什么时候会报 unrecognized selector 的异常？</p><p>9.能否想编译后得到的类中增加实例变量？能否向运行时创建的类中添加实例变量？为什么？</p><p>10.如何用 GCD 同步若干异步调用？dispatch_barrier_async 的作用是什么？</p><p>11.如何手动触发一个 value 的 KVO</p><p>12.Native 的 Web（WK/UI）控件和 js 的交互是如何实现的？（native<->js）</-></p><p>13.JavaScriptCore 框架中，native 如何调用 js？反之，js如何调用native？</p><p>14.有阅读 Weex、ReactNative 或者 Cordova 框架的描述其一即可。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;高思教育笔试题&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="面试题" scheme="http://soso.wiki/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-    
-      <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-      <category term="笔试题" scheme="http://soso.wiki/tags/%E7%AC%94%E8%AF%95%E9%A2%98/"/>
-    
-      <category term="高思教育" scheme="http://soso.wiki/tags/%E9%AB%98%E6%80%9D%E6%95%99%E8%82%B2/"/>
     
   </entry>
   
