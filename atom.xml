@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://soso.wiki/"/>
-  <updated>2021-05-20T03:46:37.919Z</updated>
+  <updated>2021-05-20T07:55:56.489Z</updated>
   <id>http://soso.wiki/</id>
   
   <author>
@@ -17,13 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>必要商城面试题</title>
+    <link href="http://soso.wiki/%E5%BF%85%E8%A6%81%E5%95%86%E5%9F%8E%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>http://soso.wiki/必要商城面试题/</id>
+    <published>2021-05-20T07:38:00.000Z</published>
+    <updated>2021-05-20T07:55:56.489Z</updated>
+    
+    <content type="html"><![CDATA[<p>必要商城面试题<br><a id="more"></a></p><p>1.项目搭建都做了哪些？</p><p>2.有没有做过解耦？</p><p>3.路由怎么实现传值的？</p><p>4.项目优化？</p><p>5.防崩溃处理？</p><p>6.cell 加载图片的优化？</p><p>7.项目难点？</p><p>8.数据传递除了加密以外，怎么保证数据安全？</p><p>9.原生与 H5 的交互？</p><p>WKWebView 和 UIWebView 的区别？</p><p>10.Cocopods 怎么管理自己的第三方库？</p><p>11.除了 MVC 有没有了解过别的设计模式？</p><p>12.方法交换原理？</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;必要商城面试题&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="面试题" scheme="http://soso.wiki/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="必要商城" scheme="http://soso.wiki/tags/%E5%BF%85%E8%A6%81%E5%95%86%E5%9F%8E/"/>
+    
+  </entry>
+  
+  <entry>
     <title>猿辅导面试题</title>
     <link href="http://soso.wiki/%E7%8C%BF%E8%BE%85%E5%AF%BC%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     <id>http://soso.wiki/猿辅导面试题/</id>
     <published>2021-05-19T11:00:00.000Z</published>
-    <updated>2021-05-20T03:46:37.919Z</updated>
+    <updated>2021-05-20T07:54:17.744Z</updated>
     
-    <content type="html"><![CDATA[<p>猿辅导面试题<br><a id="more"></a><br>1.@[];加入nil会闪退吗<br>2.array[i]会不会走objectAtIndex<br>3.信号量3个网络接口返回执行4<br>4.hook delelgate 方法<br>5.交换方法交传入参数<br>6.关联对象关联weak<br>7.响应者链 超出父视图一半<br>8.离屏渲染，为什么会触发<br>9.判断当前任务在哪个queue中<br>10.sdwebimage 内存缓存怎么实现的<br>11.json转model<br>12.tableview快速滑动 卡顿发生可能原因<br>13.括号算法<br>14.cocoapod缓存</p>]]></content>
+    <content type="html"><![CDATA[<p>猿辅导面试题<br><a id="more"></a><br>1.@[]; 加入 nil 会闪退吗</p><p>2.array[i] 会不会走 objectAtIndex</p><p>3.信号量 3 个网络接口返回执行 4</p><p>4.hook delelgate 方法</p><p>5.交换方法传入参数 为什么需要先 addMethod</p><p>6.关联对象有几种策略，如何实现 weak</p><p>7.响应者链 button 超出父视图一半能否响应点击事件</p><p>8.离屏渲染，为什么会触发</p><p>9.判断当前任务在哪个 queue 中</p><p>10.SDWebImage 内存缓存怎么实现的</p><p>11.json 转 model，Runtime 能否获取到自定义属性的类型</p><p>12.tableView 快速滑动 卡顿发生可能原因</p><p>13.括号算法</p><p>LeetCode 题目链接：<a href="https://leetcode-cn.com/problems/generate-parentheses/" target="_blank" rel="noopener">括号生成</a></p><p>14.CocoaPods 缓存存在哪里，pod install 执行</p>]]></content>
     
     <summary type="html">
     
@@ -475,30 +499,6 @@
       <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
     
       <category term="ofo" scheme="http://soso.wiki/tags/ofo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>京东面试题</title>
-    <link href="http://soso.wiki/%E4%BA%AC%E4%B8%9C%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    <id>http://soso.wiki/京东面试题/</id>
-    <published>2019-09-06T08:27:00.000Z</published>
-    <updated>2019-09-07T16:27:57.388Z</updated>
-    
-    <content type="html"><![CDATA[<p>京东面试题</p><a id="more"></a><p>1、AFNetworking 是如何实现多线程的。</p><p>2、如何自己控制 AFNetWorking 的多线程，如果解决上传多张图片引起的内存剧增的问题。</p><p>3、模块化的实现过程。</p><p>4、自动化测试。</p><p>5、数据库的升级（当前数据库不能满足业务了，1.0-&gt;2.0-&gt;3.0…..）。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;京东面试题&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="面试题" scheme="http://soso.wiki/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-    
-      <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-      <category term="京东" scheme="http://soso.wiki/tags/%E4%BA%AC%E4%B8%9C/"/>
     
   </entry>
   
