@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://soso.wiki/"/>
-  <updated>2021-05-18T04:57:36.645Z</updated>
+  <updated>2021-05-20T03:46:37.919Z</updated>
   <id>http://soso.wiki/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>猿辅导面试题</title>
+    <link href="http://soso.wiki/%E7%8C%BF%E8%BE%85%E5%AF%BC%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>http://soso.wiki/猿辅导面试题/</id>
+    <published>2021-05-19T11:00:00.000Z</published>
+    <updated>2021-05-20T03:46:37.919Z</updated>
+    
+    <content type="html"><![CDATA[<p>猿辅导面试题<br><a id="more"></a><br>1.@[];加入nil会闪退吗<br>2.array[i]会不会走objectAtIndex<br>3.信号量3个网络接口返回执行4<br>4.hook delelgate 方法<br>5.交换方法交传入参数<br>6.关联对象关联weak<br>7.响应者链 超出父视图一半<br>8.离屏渲染，为什么会触发<br>9.判断当前任务在哪个queue中<br>10.sdwebimage 内存缓存怎么实现的<br>11.json转model<br>12.tableview快速滑动 卡顿发生可能原因<br>13.括号算法<br>14.cocoapod缓存</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;猿辅导面试题&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="面试题" scheme="http://soso.wiki/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="猿辅导" scheme="http://soso.wiki/tags/%E7%8C%BF%E8%BE%85%E5%AF%BC/"/>
+    
+  </entry>
   
   <entry>
     <title>链表算法题</title>
@@ -475,32 +499,6 @@
       <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
     
       <category term="京东" scheme="http://soso.wiki/tags/%E4%BA%AC%E4%B8%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>高思教育笔试题</title>
-    <link href="http://soso.wiki/%E9%AB%98%E6%80%9D%E6%95%99%E8%82%B2%E7%AC%94%E8%AF%95%E9%A2%98/"/>
-    <id>http://soso.wiki/高思教育笔试题/</id>
-    <published>2019-09-06T08:25:00.000Z</published>
-    <updated>2019-09-08T09:04:25.596Z</updated>
-    
-    <content type="html"><![CDATA[<p>高思教育笔试题</p><a id="more"></a><h1 id="笔试题（部分）"><a href="#笔试题（部分）" class="headerlink" title="笔试题（部分）"></a>笔试题（部分）</h1><p>3.下面代码输出什么？</p><figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">int</span> a = <span class="hljs-number">0</span>;</span><br><span class="line"><span class="hljs-keyword">void</span> (^foo)(<span class="hljs-keyword">void</span>) = ^&#123;</span><br><span class="line">a = <span class="hljs-number">1</span>;</span><br><span class="line"><span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"inner a=%d"</span>,a);</span><br><span class="line">&#125;;</span><br><span class="line">foo();</span><br><span class="line"><span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"outer a=%@"</span>,a);</span><br></pre></td></tr></table></figure><p>4.下面代码输出什么？</p><figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="hljs-keyword">void</span>)viewDidLoad</span><br><span class="line">&#123;</span><br><span class="line">  [<span class="hljs-keyword">super</span> viewDidLoad];</span><br><span class="line">  <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"1"</span>);</span><br><span class="line">  <span class="hljs-built_in">dispatch_sync</span>(dispatch_get_main_queue(),^&#123;</span><br><span class="line">    <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"2"</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"3"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>5.什么情况使用 weak 关键字，相比 assign 有什么不同？</p><p>6.@property 中有哪些属性关键字？/ @property 后面可以有哪些修饰符？</p><p>7.@synthesize 和 @dynamic 分别有什么作用？</p><p>8.什么时候会报 unrecognized selector 的异常？</p><p>9.能否想编译后得到的类中增加实例变量？能否向运行时创建的类中添加实例变量？为什么？</p><p>10.如何用 GCD 同步若干异步调用？dispatch_barrier_async 的作用是什么？</p><p>11.如何手动触发一个 value 的 KVO</p><p>12.Native 的 Web（WK/UI）控件和 js 的交互是如何实现的？（native<->js）</-></p><p>13.JavaScriptCore 框架中，native 如何调用 js？反之，js如何调用native？</p><p>14.有阅读 Weex、ReactNative 或者 Cordova 框架的描述其一即可。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;高思教育笔试题&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="面试题" scheme="http://soso.wiki/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-    
-      <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-      <category term="笔试题" scheme="http://soso.wiki/tags/%E7%AC%94%E8%AF%95%E9%A2%98/"/>
-    
-      <category term="高思教育" scheme="http://soso.wiki/tags/%E9%AB%98%E6%80%9D%E6%95%99%E8%82%B2/"/>
     
   </entry>
   
