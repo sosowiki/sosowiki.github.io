@@ -19,7 +19,7 @@
 <meta property="og:description" content="字节跳动面试题">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://soso.wiki/images/og_image.png">
-<meta property="og:updated_time" content="2021-04-28T05:01:14.652Z">
+<meta property="og:updated_time" content="2021-05-25T03:42:24.845Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="字节跳动面试题">
 <meta name="twitter:description" content="字节跳动面试题">
@@ -147,7 +147,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 87 个字)
+                    16 分钟 读完 (大约 2370 个字)
                 </span>
                 
                 
@@ -161,19 +161,103 @@
         </h1>
         <div class="content">
             <p>字节跳动面试题<br><a id="more"></a></p>
-<p>1.retain  strong区别</p>
-<p>2.NSClassFromString原理</p>
-<p>3.http协议版本</p>
-<p>4.http code 206  401</p>
-<p>5.为什么三次握手，四次挥手</p>
-<p>6.dispatch_asycn(queue,block);</p>
-<p>7.二叉树路径</p>
-<p>8.Runtime</p>
-<p>9.UIView 绘制过程</p>
-<p>10.autoreleasepool</p>
-<p>11.VC生命周期，viewWillDisappear和viewDidDisappear之间会不会调用view的layout</p>
-<p>12.autorelease调用release会立即销毁吗</p>
-<p>13.GCD能不能取消任务</p>
+<h4 id="1-retain-strong-区别"><a href="#1-retain-strong-区别" class="headerlink" title="1.retain  strong 区别"></a>1.retain  strong 区别</h4><p>在声明 block 时，retain 相当于 assign，strong 相当于 copy，block一般使用 copy</p>
+<h4 id="2-NSClassFromString-原理"><a href="#2-NSClassFromString-原理" class="headerlink" title="2.NSClassFromString 原理"></a>2.NSClassFromString 原理</h4><h5 id="反射方法"><a href="#反射方法" class="headerlink" title="反射方法"></a>反射方法</h5><p>系统<code>Foundation</code>框架为我们提供了一些方法反射的 API，我们可以通过这些 API 执行将字符串转为<code>SEL</code>等操作。由于<code>OC</code>语言的动态性，这些操作都是发生在运行时的。</p>
+<figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// SEL和字符串转换</span></span><br><span class="line">FOUNDATION_EXPORT <span class="hljs-built_in">NSString</span> *<span class="hljs-built_in">NSStringFromSelector</span>(SEL aSelector);</span><br><span class="line">FOUNDATION_EXPORT SEL <span class="hljs-built_in">NSSelectorFromString</span>(<span class="hljs-built_in">NSString</span> *aSelectorName);</span><br><span class="line"><span class="hljs-comment">// Class和字符串转换</span></span><br><span class="line">FOUNDATION_EXPORT <span class="hljs-built_in">NSString</span> *<span class="hljs-built_in">NSStringFromClass</span>(Class aClass);</span><br><span class="line">FOUNDATION_EXPORT Class __<span class="hljs-keyword">nullable</span> <span class="hljs-built_in">NSClassFromString</span>(<span class="hljs-built_in">NSString</span> *aClassName);</span><br><span class="line"><span class="hljs-comment">// Protocol和字符串转换</span></span><br><span class="line">FOUNDATION_EXPORT <span class="hljs-built_in">NSString</span> *<span class="hljs-built_in">NSStringFromProtocol</span>(Protocol *proto) <span class="hljs-built_in">NS_AVAILABLE</span>(<span class="hljs-number">10</span>_5, <span class="hljs-number">2</span>_0);</span><br><span class="line">FOUNDATION_EXPORT Protocol * __<span class="hljs-keyword">nullable</span> <span class="hljs-built_in">NSProtocolFromString</span>(<span class="hljs-built_in">NSString</span> *namestr) <span class="hljs-built_in">NS_AVAILABLE</span>(<span class="hljs-number">10</span>_5, <span class="hljs-number">2</span>_0);</span><br></pre></td></tr></table></figure>
+<h5 id="常用判断方法"><a href="#常用判断方法" class="headerlink" title="常用判断方法"></a>常用判断方法</h5><p>在<code>NSObject</code>类中为我们提供了一些基础方法，用来做一些判断操作，这些方法都是发生在运行时动态判断的。</p>
+<figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 当前对象是否这个类或其子类的实例</span></span><br><span class="line">- (<span class="hljs-built_in">BOOL</span>)isKindOfClass:(Class)aClass;</span><br><span class="line"><span class="hljs-comment">// 当前对象是否是这个类的实例</span></span><br><span class="line">- (<span class="hljs-built_in">BOOL</span>)isMemberOfClass:(Class)aClass;</span><br><span class="line"><span class="hljs-comment">// 当前对象是否遵守这个协议</span></span><br><span class="line">- (<span class="hljs-built_in">BOOL</span>)conformsToProtocol:(Protocol *)aProtocol;</span><br><span class="line"><span class="hljs-comment">// 当前对象是否实现这个方法</span></span><br><span class="line">- (<span class="hljs-built_in">BOOL</span>)respondsToSelector:(SEL)aSelector;</span><br></pre></td></tr></table></figure>
+<p>参考链接：<a href="https://www.jianshu.com/p/5bbde2480680" target="_blank" rel="noopener">iOS反射机制</a></p>
+<h4 id="3-http协议版本"><a href="#3-http协议版本" class="headerlink" title="3.http协议版本"></a>3.http协议版本</h4><p><strong>1、HTTP 0.9 ：</strong><br>（1）只接受GET一种请求方法，没有在通信中指定版本号，且不支持请求头；</p>
+<p>（2）此外该版本也不支持POST方法，因此客户端无法向服务器传递太多信息；</p>
+<p><strong>2、HTTP 1.0：</strong><br>（1）支持POST、GET、HEAD三种方法；</p>
+<p>（2）规定浏览器与服务器之间只保持短暂的连接，浏览器的每次请求都需要与服务器建立一个TCP连接，服务器完成请求处理后立即断开TCP连接，服务器不跟踪每个客户也不记录过去的请求；</p>
+<p><strong>3、HTTP 1.1：</strong><br>（1）新增了五种请求方法：PUT、DELETE、CONNECT、TRACE、OPTIONS；</p>
+<p>（2）HTTP 1.1 在Request消息头里头多了一个Host域，便于一台WEB服务器上可以在同一个IP地址和端口号上使用不同的主机名来创建多个虚拟WEB站点；</p>
+<p>（3）长连接</p>
+<p>（4）缓存策略不同</p>
+<p>（5）在HTTP/1.1中新增了24个状态响应码：<br>100-199 用于指定客户端应相应的某些动作。<br>200-299 用于表示请求成功。<br>300-399 用于已经移动的文件并且常被包含在定位头信息中指定新的地址信息。<br>400-499 用于指出客户端的错误。<br>500-599 用于支持服务器错误。</p>
+<p><strong>4、HTTP 2.0</strong></p>
+<p>二进制传输：http 1.x 的解析是基于文本，http2的解析是基于二进制；</p>
+<p>多路复用</p>
+<p>header压缩</p>
+<p>服务端推送</p>
+<h4 id="4-http-code-206-401"><a href="#4-http-code-206-401" class="headerlink" title="4.http code 206  401"></a>4.http code 206  401</h4><p>206 Partial Content</p>
+<p>最后一条会话返回了HTTP/206 “Partial Content”响应.这种响应是在客户端表明自己只需要目标URL上的部分资源的时候返回的.这种情况经常发生在客户端继续请求一个未完成的下载的时候(通常是当客户端加载一个体积较大的嵌入文件,比如视频或PDF文件),或者是客户端尝试实现带宽遏流的时候。</p>
+<p>你可以通过<strong>Range</strong>请求头辨认出一个部分内容请求.该请求头表明了客户端需要请求资源的哪一部分。</p>
+<p>401错误原因：用户没有访问权限，需要进行身份认证。</p>
+<h5 id="http-常见的错误码"><a href="#http-常见的错误码" class="headerlink" title="http 常见的错误码"></a>http 常见的错误码</h5><p>2XX 成功</p>
+<p>· 200 OK，表示从客户端发来的请求在服务器端被正确处理</p>
+<p>· 204 No content，表示请求成功，但响应报文不含实体的主体部分</p>
+<p>· 206 Partial Content，进行范围请求</p>
+<p>3XX 重定向</p>
+<p>· 301 moved permanently，永久性重定向，表示资源已被分配了新的 URL</p>
+<p>· 302 found，临时性重定向，表示资源临时被分配了新的 URL</p>
+<p>· 303 see other，表示资源存在着另一个 URL，应使用 GET 方法丁香获取资源</p>
+<p>· 304 not modified，表示服务器允许访问资源，但因发生请求未满足条件的情况</p>
+<p>· 307 temporary redirect，临时重定向，和302含义相同</p>
+<p>4XX 客户端错误</p>
+<p>· 400 bad request，请求报文存在语法错误</p>
+<p>· 401 unauthorized，表示发送的请求需要有通过 HTTP 认证的认证信息</p>
+<p>· 403 forbidden，表示对请求资源的访问被服务器拒绝</p>
+<p>· 404 not found，表示在服务器上没有找到请求的资源</p>
+<p>5XX 服务器错误</p>
+<p>· 500 internal sever error，表示服务器端在执行请求时发生了错误</p>
+<p>· 503 service unavailable，表明服务器暂时处于超负载或正在停机维护，无法处理请求</p>
+<h4 id="5-为什么三次握手，四次挥手"><a href="#5-为什么三次握手，四次挥手" class="headerlink" title="5.为什么三次握手，四次挥手"></a>5.为什么三次握手，四次挥手</h4><h4 id="6-dispatch-async-queue-block-会不会开线程"><a href="#6-dispatch-async-queue-block-会不会开线程" class="headerlink" title="6.dispatch_async(queue,block);会不会开线程"></a>6.dispatch_async(queue,block);会不会开线程</h4><p>除了主队列，其他队列都开线程。</p>
+<h4 id="7-二叉树中和为某一值的路径"><a href="#7-二叉树中和为某一值的路径" class="headerlink" title="7.二叉树中和为某一值的路径"></a>7.二叉树中和为某一值的路径</h4><p>LeetCode题目链接：<a href="https://leetcode-cn.com/problems/er-cha-shu-zhong-he-wei-mou-yi-zhi-de-lu-jing-lcof/" target="_blank" rel="noopener">剑指 Offer 34. 二叉树中和为某一值的路径</a></p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;</span><br><span class="line">    LinkedList&lt;List&lt;Integer&gt;&gt; res = <span class="hljs-keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">    LinkedList&lt;Integer&gt; path = <span class="hljs-keyword">new</span> LinkedList&lt;&gt;(); </span><br><span class="line">    <span class="hljs-keyword">public</span> List&lt;List&lt;Integer&gt;&gt; pathSum(TreeNode root, <span class="hljs-keyword">int</span> sum) &#123;</span><br><span class="line">        recur(root, sum);</span><br><span class="line">        <span class="hljs-keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">recur</span><span class="hljs-params">(TreeNode root, <span class="hljs-keyword">int</span> tar)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">if</span>(root == <span class="hljs-keyword">null</span>) <span class="hljs-keyword">return</span>;</span><br><span class="line">        path.add(root.val);</span><br><span class="line">        tar -= root.val;</span><br><span class="line">        <span class="hljs-keyword">if</span>(tar == <span class="hljs-number">0</span> &amp;&amp; root.left == <span class="hljs-keyword">null</span> &amp;&amp; root.right == <span class="hljs-keyword">null</span>)</span><br><span class="line">            res.add(<span class="hljs-keyword">new</span> LinkedList(path));</span><br><span class="line">        recur(root.left, tar);</span><br><span class="line">        recur(root.right, tar);</span><br><span class="line">        path.removeLast();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="8-Runtime"><a href="#8-Runtime" class="headerlink" title="8.Runtime"></a>8.Runtime</h4><h4 id="9-UIView-绘制过程"><a href="#9-UIView-绘制过程" class="headerlink" title="9.UIView 绘制过程"></a>9.UIView 绘制过程</h4><p><strong>UIView的绘制原理</strong></p>
+<p><img src="/images/ios/UIView的绘制原理.png" alt="UIView的绘制原理"></p>
+<p>当我们调用 UIView 的 setNeedsDisplay 方法以后,实际上并没有立刻发生当前视图的绘制工作,而是在之后的某一时机才会进行当前视图的绘制 。为什么没有立刻发生当前视图的绘制工作？（因为到当前 runloop 将要结束的时候,才会开始介入到UI视图的绘制流程中）</p>
+<ul>
+<li>当调用 UIView 的 setNeedsDisplay 后</li>
+<li>系统会立刻调用 view 的 layer 的同名方法 [view.layer setNeedsDisplay] ,之后相当于在 layer 上面打上了一个脏标记</li>
+<li>然后再当前 runloop 将要结束的时候,才会调用 CALayer 的 display 函数方法，然后才进入到当前视图的真正绘制工作的流程当中</li>
+<li>CALayer 的 display 方法,在内部会首先判断 layer 的 delegate 是否响应 displayLayer 这个方法</li>
+<li>若不响应,则系统开始绘制流程</li>
+<li>若响应,则开始异步绘制</li>
+</ul>
+<p><strong>系统绘制流程</strong></p>
+<p><img src="/images/ios/系统绘制流程.png" alt="系统绘制流程"></p>
+<ul>
+<li>首先 CALayer 内部会创建一个 CGContextRef ,在 drawRect 方法中,可以通过上下文堆栈当中的取出这个 context，拿到的就是当前控件或者说视图的上下文或者说是 backing store</li>
+<li>然后 layer 会判断它是否有代理，若没有,则调用 CALayer 的 drawInContext。</li>
+<li>若有则调用代理方法,然后做当前视图的绘制工作（这一步发生在系统内部当中）,再在合适的时机,基于 drawRect 回调方法,</li>
+<li>drawRect 默认操作是什么都不做,而之所以有这个接口,就是为了让我们在系统绘制之上,可以做些自定义的绘制工作。</li>
+<li>最后再由 CALayer 上传对应的 backing store 给 GPU,这里的 backing store 我们可以理解为位图。</li>
+</ul>
+<p><strong>异步绘制流程</strong></p>
+<p><img src="/images/ios/异步绘制时序图.png" alt="异步绘制时序图"></p>
+<ul>
+<li>左侧是主队列，右侧是全局并发队列</li>
+<li>假如在某一时机调用了 setNeedsDiaplay 方法后</li>
+<li>在当前 runloop 将要结束的时候,会有系统调用视图所对应 layer 的 display 方法</li>
+<li>如果代理实现了 displayLayer 方法,会调用这个代理的 displayLayer 这个方法</li>
+<li>然后通过子线程的切换,我们会在子线程中去做位图的绘制，此时主线程可以去做些其他的工作</li>
+<li>然后再回到主队列中,提交这个位图,设置给 CALayer 的 contents 属性</li>
+</ul>
+<p><strong>子线程的绘制</strong></p>
+<ol>
+<li>通过 CGBitmapContextCreat 方法,来创建一个位图的上下文</li>
+<li>通过 CoreGraphic 的相关 API,可以做当前 UI 控件的一些绘制工作</li>
+<li>之后通过 CGBitmapContextCreatImage 方法,根据所绘制的上下文,生成一张 CGImage 图片</li>
+<li>最后回到主队列中，将该 <strong>CGImage</strong> 图片设置为 <strong>CALayer</strong> 的 <strong>contents</strong></li>
+</ol>
+<p>参考链接：<a href="https://blog.csdn.net/ochenmengo/article/details/104769773/" target="_blank" rel="noopener">UI绘制原理&amp;系统/异步绘制流程</a></p>
+<p><a href="https://www.jianshu.com/p/1afd22268abc" target="_blank" rel="noopener">UIView的绘制原理及优化</a></p>
+<h4 id="10-autoreleasepool"><a href="#10-autoreleasepool" class="headerlink" title="10.autoreleasepool"></a>10.autoreleasepool</h4><ul>
+<li>子线程使用了 autorelease 后，如果当前线程没有 AutorelesepoolPage 的话，代码执行顺序为 autorelease -&gt; autoreleaseFast -&gt; autoreleaseNoPage。在 autoreleaseNoPage 方法中，会创建一个 hotPage ，然后调用page-&gt;add(obj) 。也就是说即使这个线程没有 AutorelesepoolPage ，使用了 autorelease 对象时也会 new 一个 AutoreleasepoolPage 出来管理 autorelese 对象。</li>
+<li>子线程的 autoreleasepool 是在线程销毁的时候释放的。</li>
+</ul>
+<h4 id="11-VC生命周期，viewWillDisappear-和-viewDidDisappear-之间会不会调用view-的-layout"><a href="#11-VC生命周期，viewWillDisappear-和-viewDidDisappear-之间会不会调用view-的-layout" class="headerlink" title="11.VC生命周期，viewWillDisappear 和 viewDidDisappear 之间会不会调用view 的 layout"></a>11.VC生命周期，viewWillDisappear 和 viewDidDisappear 之间会不会调用view 的 layout</h4><p>push 会调用，pop 不会调用</p>
+<figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-number">1</span> push <span class="hljs-number">2</span></span><br><span class="line"><span class="hljs-number">2</span>-[<span class="hljs-number">2</span> loadView]</span><br><span class="line"><span class="hljs-number">2</span>-[<span class="hljs-number">2</span> viewDidLoad]</span><br><span class="line"><span class="hljs-number">1</span>-[<span class="hljs-number">1</span> viewWillDisappear:]</span><br><span class="line"><span class="hljs-number">2</span>-[<span class="hljs-number">2</span> viewWillAppear:]</span><br><span class="line"><span class="hljs-number">2</span>-[<span class="hljs-number">2</span> viewWillLayoutSubviews]</span><br><span class="line"><span class="hljs-number">2</span>-[<span class="hljs-number">2</span> viewDidLayoutSubviews]</span><br><span class="line"><span class="hljs-number">1</span>-[<span class="hljs-number">1</span> viewWillLayoutSubviews]</span><br><span class="line"><span class="hljs-number">1</span>-[<span class="hljs-number">1</span> viewDidLayoutSubviews]</span><br><span class="line"><span class="hljs-number">1</span>-[<span class="hljs-number">1</span> viewDidDisappear:]</span><br><span class="line"><span class="hljs-number">2</span>-[<span class="hljs-number">2</span> viewDidAppear:]</span><br></pre></td></tr></table></figure>
+<h4 id="12-autorelease-调用-release-会立即销毁吗"><a href="#12-autorelease-调用-release-会立即销毁吗" class="headerlink" title="12.autorelease 调用 release 会立即销毁吗"></a>12.autorelease 调用 release 会立即销毁吗</h4><h4 id="13-GCD能不能取消任务"><a href="#13-GCD能不能取消任务" class="headerlink" title="13.GCD能不能取消任务"></a>13.GCD能不能取消任务</h4><ul>
+<li><p>dispatch_block_cancel</p>
+</li>
+<li><p>定义外部变量，用于标记block是否需要取消</p>
+</li>
+</ul>
+<p>参考链接：<a href="https://www.jianshu.com/p/c45f099c7fd4" target="_blank" rel="noopener">如何取消GCD任务</a></p>
 
         </div>
         
