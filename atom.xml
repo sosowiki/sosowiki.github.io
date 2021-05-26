@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://soso.wiki/"/>
-  <updated>2021-05-26T06:12:59.641Z</updated>
+  <updated>2021-05-26T07:49:04.226Z</updated>
   <id>http://soso.wiki/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://soso.wiki/%E8%B1%86%E7%93%A3%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     <id>http://soso.wiki/豆瓣面试题/</id>
     <published>2021-05-26T05:39:00.000Z</published>
-    <updated>2021-05-26T06:12:59.641Z</updated>
+    <updated>2021-05-26T07:49:04.226Z</updated>
     
-    <content type="html"><![CDATA[<p>豆瓣面试题<br><a id="more"></a></p><p>1.是在大学里学的 iOS 吗？怎么学的 iOS？</p><p>2.判断2个单链表是否交叉,实现代码,如果有交叉找出交叉点。</p><p>3.说一下 @property 属性修饰符，block 为什么用 copy ？weak 的实现原理？atomic 怎么保证安全？怎么解决读写安全？</p><ul><li><p>dispatch_barrier_async</p></li><li><p>pthread_rwlock：读写锁</p></li></ul><p>4.OSSPinLock 为什么不用了？</p><p>5.同时请求两张图片，之后合成一张图</p><ul><li><p>dispatch_group 配合 dispatch_semaphore</p></li><li><p>dispatch_barrier</p></li></ul><p>还有其他的方式吗？使用 dispatch_semphore 和 dispatch_async 怎么实现？</p><p>6.Runloop 有哪些使用场景？</p><p>7.子线程怎么销毁？换一种问法，常驻线程怎么销毁？NSPort 的生命周期怎么控制？</p><p>8.组件是怎么拆分的？组件化是怎么传值的？组件的注册是写在哪里的？写在 +load 会不会有性能问题？怎么解决？</p><p>9.了解 httpDNS 吗？询问的操作是谁去问？本层-&gt;上层-&gt;上上层</p><p>10.性能优化，tableView 怎么缓存行高？高度存在哪儿？key 是什么？横竖屏怎么缓存行高？一个页面大概率不会横屏，缓存横竖屏两份行高是不是有些浪费，怎么去处理行高？tableView 怎么控制缓存数量，比如最大1000条数据的缓存量。</p><p>11.加载大图，地图这种大图怎么加载优化？系统 API 的原理是什么？</p><p>12.项目怎么分工的？你负责什么？有没有什么值得说的点？H5 与原生交互有什么经验分享吗？怎么给 webView 加载的页面发的网络请求统一加上 header？</p><p>13.AFN 早期版本为什么要使用常驻线程？怎么统一设置 header？</p><p>14.RN 和 Flutter 的底层实现有什么区别？</p><p>15.平时怎么学习 iOS？上家公司的离职原因，未来规划，有没有要问我的？</p>]]></content>
+    <content type="html"><![CDATA[<p>豆瓣面试题<br><a id="more"></a></p><p>1.是在大学里学的 iOS 吗？怎么学的 iOS？</p><p>2.判断2个单链表是否交叉,实现代码,如果有交叉找出交叉点。</p><p>3.说一下 @property 属性修饰符，block 为什么用 copy ？weak 的实现原理？atomic 怎么保证安全？怎么解决读写安全？</p><ul><li><p>dispatch_barrier_async</p></li><li><p>pthread_rwlock：读写锁</p></li></ul><p>4.OSSPinLock 为什么不用了？</p><p>5.同时请求两张图片，之后合成一张图</p><ul><li><p>dispatch_group 配合 dispatch_semaphore</p></li><li><p>dispatch_barrier</p></li></ul><p>还有其他的方式吗？使用 dispatch_semphore 和 dispatch_async 怎么实现？</p><p>6.Runloop 有哪些使用场景？</p><p>7.子线程怎么销毁？换一种问法，常驻线程怎么销毁？NSPort 的生命周期怎么控制？</p><p>8.说一下响应者链。有三个视图 A、B、C 依次被添加到 self.view 上，frame 相同，复写 C 的 pointInSide 方法缩小范围，点击 C 的边缘 C 会响应吗？C 不响应的话，B 会响应吗？</p><p>9.组件是怎么拆分的？组件化是怎么传值的？组件的注册是写在哪里的？写在 +load 会不会有性能问题？怎么解决？</p><p>10.了解 httpDNS 吗？询问的操作是谁去问？本层-&gt;上层-&gt;上上层</p><p>11.性能优化，tableView 怎么缓存行高？高度存在哪儿？key 是什么？横竖屏怎么缓存行高？一个页面大概率不会横屏，缓存横竖屏两份行高是不是有些浪费，怎么去处理行高？tableView 怎么控制缓存数量，比如最大1000条数据的缓存量。</p><p>12.加载大图，地图这种大图怎么加载优化？系统 API 的原理是什么？</p><p>13.项目怎么分工的？你负责什么？有没有什么值得说的点？H5 与原生交互有什么经验分享吗？怎么给 webView 加载的页面发的网络请求统一加上 header？</p><p>14.AFN 早期版本为什么要使用常驻线程？怎么统一设置 header？</p><p>15.RN 和 Flutter 的底层实现有什么区别？</p><p>16.平时怎么学习 iOS？上家公司的离职原因，未来规划，有没有要问我的？</p>]]></content>
     
     <summary type="html">
     
