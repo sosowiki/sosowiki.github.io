@@ -7,21 +7,22 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>分类: 面试题 - 搜搜题</title>
+<title>豆瓣面试题 - 搜搜题</title>
 
 
-    <meta name="description" content="SOSOWIKI">
-<meta name="keywords" content="soso,sosowiki,Objective-C,iOS,objc,ObjC,Swift,搜搜题">
-<meta property="og:type" content="website">
-<meta property="og:title" content="搜搜题">
-<meta property="og:url" content="http://soso.wiki/categories/面试题/page/4/index.html">
+    <meta name="description" content="豆瓣面试题">
+<meta name="keywords" content="面试,豆瓣">
+<meta property="og:type" content="article">
+<meta property="og:title" content="豆瓣面试题">
+<meta property="og:url" content="http://soso.wiki/豆瓣面试题/index.html">
 <meta property="og:site_name" content="搜搜题">
-<meta property="og:description" content="SOSOWIKI">
+<meta property="og:description" content="豆瓣面试题">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://soso.wiki/images/og_image.png">
+<meta property="og:updated_time" content="2021-05-26T06:12:59.641Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="搜搜题">
-<meta name="twitter:description" content="SOSOWIKI">
+<meta name="twitter:title" content="豆瓣面试题">
+<meta name="twitter:description" content="豆瓣面试题">
 <meta name="twitter:image" content="http://soso.wiki/images/og_image.png">
 
 
@@ -92,7 +93,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.png" alt="搜搜题" height="28">
+                <img src="/images/logo.png" alt="豆瓣面试题" height="28">
             
             </a>
         </div>
@@ -131,24 +132,12 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-12 has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/categories">分类</a></li>
-            
-            <li class="is-active"><a href="#" aria-current="page">面试题</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-08-01T14:08:00.000Z">2018-08-01</time>
+                <time class="level-item has-text-grey" datetime="2021-05-26T05:39:00.000Z">2021-05-26</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/面试题/">面试题</a>
@@ -158,7 +147,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 174 个字)
+                    3 分钟 读完 (大约 515 个字)
                 </span>
                 
                 
@@ -167,21 +156,51 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/朗播网面试题/">朗播网面试题</a>
+                豆瓣面试题
             
         </h1>
         <div class="content">
-            <p>朗播网面试题</p>
+            <p>豆瓣面试题<br><a id="more"></a></p>
+<p>1.是在大学里学的 iOS 吗？怎么学的 iOS？</p>
+<p>2.判断2个单链表是否交叉,实现代码,如果有交叉找出交叉点。</p>
+<p>3.说一下 @property 属性修饰符，block 为什么用 copy ？weak 的实现原理？atomic 怎么保证安全？怎么解决读写安全？</p>
+<ul>
+<li><p>dispatch_barrier_async</p>
+</li>
+<li><p>pthread_rwlock：读写锁</p>
+</li>
+</ul>
+<p>4.OSSPinLock 为什么不用了？</p>
+<p>5.同时请求两张图片，之后合成一张图</p>
+<ul>
+<li><p>dispatch_group 配合 dispatch_semaphore</p>
+</li>
+<li><p>dispatch_barrier</p>
+</li>
+</ul>
+<p>还有其他的方式吗？使用 dispatch_semphore 和 dispatch_async 怎么实现？</p>
+<p>6.Runloop 有哪些使用场景？</p>
+<p>7.子线程怎么销毁？换一种问法，常驻线程怎么销毁？NSPort 的生命周期怎么控制？</p>
+<p>8.组件是怎么拆分的？组件化是怎么传值的？组件的注册是写在哪里的？写在 +load 会不会有性能问题？怎么解决？</p>
+<p>9.了解 httpDNS 吗？询问的操作是谁去问？本层-&gt;上层-&gt;上上层</p>
+<p>10.性能优化，tableView 怎么缓存行高？高度存在哪儿？key 是什么？横竖屏怎么缓存行高？一个页面大概率不会横屏，缓存横竖屏两份行高是不是有些浪费，怎么去处理行高？tableView 怎么控制缓存数量，比如最大1000条数据的缓存量。</p>
+<p>11.加载大图，地图这种大图怎么加载优化？系统 API 的原理是什么？</p>
+<p>12.项目怎么分工的？你负责什么？有没有什么值得说的点？H5 与原生交互有什么经验分享吗？怎么给 webView 加载的页面发的网络请求统一加上 header？</p>
+<p>13.AFN 早期版本为什么要使用常驻线程？怎么统一设置 header？</p>
+<p>14.RN 和 Flutter 的底层实现有什么区别？</p>
+<p>15.平时怎么学习 iOS？上家公司的离职原因，未来规划，有没有要问我的？</p>
+
         </div>
         
-        
-        <div class="level is-mobile">
+        <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/朗播网面试题/#more">阅读全文</a>
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/豆瓣/">豆瓣</a>, <a class="has-link-grey -link" href="/tags/面试/">面试</a>
                 </div>
             </div>
         </div>
+        
         
         
     </div>
@@ -191,240 +210,21 @@
 
 
 
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-07-30T04:10:00.000Z">2018-07-30</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/面试题/">面试题</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分钟 读完 (大约 192 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/乐为金融面试题/">乐为金融面试题</a>
-            
-        </h1>
-        <div class="content">
-            <p>乐为金融面试题</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/乐为金融面试题/#more">阅读全文</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-07-22T09:09:00.000Z">2018-07-22</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/面试题/">面试题</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分钟 读完 (大约 165 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/太一云面试题/">太一云面试题</a>
-            
-        </h1>
-        <div class="content">
-            <p>太一云面试题</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/太一云面试题/#more">阅读全文</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-07-22T08:43:00.000Z">2018-07-22</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/面试题/">面试题</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 282 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/棵朵面试题/">棵朵面试题</a>
-            
-        </h1>
-        <div class="content">
-            <p>棵朵面试题</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/棵朵面试题/#more">阅读全文</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-07-17T09:30:00.000Z">2018-07-17</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/面试题/">面试题</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 335 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/登云美业面试题/">登云美业面试题</a>
-            
-        </h1>
-        <div class="content">
-            <p>登云美业面试题</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/登云美业面试题/#more">阅读全文</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-    
 <div class="card card-transparent">
-    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-        <div class="pagination-previous">
-            <a class="is-flex-grow has-text-black-ter" href="/categories/面试题/page/3/">上一页</a>
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/必要商城面试题/">
+                <span class="level-item">必要商城面试题</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
         </div>
-        <div class="pagination-next is-invisible is-hidden-mobile">
-            <a class="is-flex-grow has-text-black-ter" href="/categories/面试题/page/5/">下一页</a>
-        </div>
-        <ul class="pagination-list is-hidden-mobile">
-            
-            <li><a class="pagination-link has-text-black-ter" href="/categories/面试题/">1</a></li>
-            
-            <li><a class="pagination-link has-text-black-ter" href="/categories/面试题/page/2/">2</a></li>
-            
-            <li><a class="pagination-link has-text-black-ter" href="/categories/面试题/page/3/">3</a></li>
-            
-            <li><a class="pagination-link is-current" href="/categories/面试题/page/4/">4</a></li>
-            
-        </ul>
-    </nav>
+        
+    </div>
 </div>
+
+
 </div>
                 
                 
@@ -437,7 +237,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.png" alt="搜搜题" height="28">
+                    <img src="/images/logo.png" alt="豆瓣面试题" height="28">
                 
                 </a>
                 <p class="is-size-7">
