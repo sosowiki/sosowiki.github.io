@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://soso.wiki/"/>
-  <updated>2021-06-01T07:29:03.828Z</updated>
+  <updated>2021-06-04T15:49:47.742Z</updated>
   <id>http://soso.wiki/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>首汽租车面试题</title>
+    <link href="http://soso.wiki/%E9%A6%96%E6%B1%BD%E7%A7%9F%E8%BD%A6%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>http://soso.wiki/首汽租车面试题/</id>
+    <published>2021-06-04T03:49:00.000Z</published>
+    <updated>2021-06-04T15:49:47.742Z</updated>
+    
+    <content type="html"><![CDATA[<p>首汽租车面试题<br><a id="more"></a></p><p>1.什么是野指针？什么情况下会野指针？</p><p>2.打印结果：</p><figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="hljs-keyword">void</span>)testWeak &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-keyword">id</span> obj1 = <span class="hljs-string">@"12131"</span>;</span><br><span class="line">    __<span class="hljs-keyword">weak</span> <span class="hljs-keyword">id</span> obj2 = obj1;</span><br><span class="line">    <span class="hljs-keyword">id</span> obj3 = [<span class="hljs-built_in">NSObject</span> new];</span><br><span class="line">    __<span class="hljs-keyword">weak</span> <span class="hljs-keyword">id</span> obj4 = [[<span class="hljs-built_in">NSObject</span> alloc] init];</span><br><span class="line">    <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"obj1:%@ obj2:%@ obj3:%@ obj4:%@"</span>,obj1,obj2,obj3,obj4);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>3.子类怎么重写父类的属性？问题简化怎么重写一个类的属性？只重写set方法可以吗？</p><p>4.了解哪些设计模式？单例有哪些不好的地方？</p><p>5.说一下响应者链</p><p>6.Masonry 链式调用的实现，实现一个控制器，属性的链式调用（手写）</p><p>7.打印结果：</p><figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="hljs-keyword">void</span>)testGCD &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-built_in">dispatch_queue_t</span> queue = dispatch_queue_create(<span class="hljs-string">"testqueue"</span>, DISPATCH_QUEUE_SERIAL);</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-built_in">dispatch_async</span>(queue, ^&#123;</span><br><span class="line">        <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"1"</span>);</span><br><span class="line">        <span class="hljs-built_in">dispatch_async</span>(queue, ^&#123;</span><br><span class="line">            <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"2"</span>);</span><br><span class="line">            <span class="hljs-built_in">dispatch_sync</span>(queue, ^&#123;</span><br><span class="line">                <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"3"</span>);</span><br><span class="line">            &#125;);</span><br><span class="line">            <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"4"</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"5"</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>8.项目亮点或难点</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;首汽租车面试题&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="面试题" scheme="http://soso.wiki/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="首汽租车" scheme="http://soso.wiki/tags/%E9%A6%96%E6%B1%BD%E7%A7%9F%E8%BD%A6/"/>
+    
+      <category term="首汽" scheme="http://soso.wiki/tags/%E9%A6%96%E6%B1%BD/"/>
+    
+  </entry>
   
   <entry>
     <title>豆瓣面试题</title>
@@ -477,30 +503,6 @@
       <category term="开果" scheme="http://soso.wiki/tags/%E5%BC%80%E6%9E%9C/"/>
     
       <category term="面试题" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>美团面试题</title>
-    <link href="http://soso.wiki/%E7%BE%8E%E5%9B%A2%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    <id>http://soso.wiki/美团面试题/</id>
-    <published>2019-09-06T08:50:00.000Z</published>
-    <updated>2019-09-06T08:51:09.319Z</updated>
-    
-    <content type="html"><![CDATA[<p>美团面试题</p><a id="more"></a><p>1、Block 的底层原理，结构，内存以及需要注意的地方。</p><p>2、图片渲染，一张 png/jpg 格式的图片渲染到页面上显示有哪些流程。png 和 jpg 的区别。png 一定是无损的吗？</p><p>3、Runtime。</p><p>4、Runloop 的结构和循环流程，用 Runloop 做过什么事情。</p><p>5、多线程，NSOperationQueue 和 GCD 的区别。用多线程做过什么事情。线程安全的问题。加锁有几种方式。</p><p>6、NSURLSession 和 NSURLConnection 的区别， NSURLConnection 是怎么封装的。CFNetwork。</p><p>7、做过什么动画。</p><p>8、HTTPS 的工作原理，和 HTTP 的区别。RSA 加密原理。</p><p>9、网络层级，TCP 和 UDP 的区别。</p><p>10、SDWebImage 的框架结构，缓存机制。</p><p>11、Git 的 rebase 的原理。Git 流程。</p><p>12、对组件化的了解，组件化是为了解决什么问题。</p><p>13、JSPatch 的原理。</p><p>14、单例是为了处理什么问题而使用的，单例和全局变量的区别。</p><p>15、对设计模式的掌握。</p><p>16、分层打印二叉树。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;美团面试题&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="面试题" scheme="http://soso.wiki/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-    
-      <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-      <category term="美团" scheme="http://soso.wiki/tags/%E7%BE%8E%E5%9B%A2/"/>
     
   </entry>
   
