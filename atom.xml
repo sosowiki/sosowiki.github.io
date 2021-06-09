@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://soso.wiki/"/>
-  <updated>2021-06-04T15:49:47.742Z</updated>
+  <updated>2021-06-09T05:58:54.464Z</updated>
   <id>http://soso.wiki/</id>
   
   <author>
@@ -15,6 +15,82 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>达达面试题</title>
+    <link href="http://soso.wiki/%E8%BE%BE%E8%BE%BE%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>http://soso.wiki/达达面试题/</id>
+    <published>2021-06-08T12:40:00.000Z</published>
+    <updated>2021-06-09T05:58:54.464Z</updated>
+    
+    <content type="html"><![CDATA[<p>达达面试题<br><a id="more"></a></p><p>1.深拷贝、浅拷贝区别。数组里放对象，copy 数组，是深拷贝还是浅拷贝？数组里对象的指针是一样的吗？</p><p>2.布局使用 Masony 还是 Xib</p><p>3.StatefulWidget、StatelessWidget 区别</p><p>4.UITableView、UICollectionView 的调用流程区别</p><p>5.常用的 pod 命令</p><p>6.图文混排有没有做过，有没有内存、性能问题</p><p>7.写过哪些脚本，有没有写过函数，按顺序执行的函数。</p><p>8.闪退捕获，Flutter 错误捕获</p><p>9.埋点是怎么做的？页面上的某一个 view 的停留时长怎么统计？</p><p>10.性能优化、图片加载优化、安装包大小优化做了啥，没用到的代码或图片有写脚本来检查吗？</p><p>12.界面渲染流程、UIView 渲染流程，有没有做过异步绘制？</p><p>13.解决遇到的线程问题描述一下，在子线程刷新 UI 会怎么样？</p><p>14.有没有做过组件模块化？</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;达达面试题&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="面试题" scheme="http://soso.wiki/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="京东" scheme="http://soso.wiki/tags/%E4%BA%AC%E4%B8%9C/"/>
+    
+      <category term="达达" scheme="http://soso.wiki/tags/%E8%BE%BE%E8%BE%BE/"/>
+    
+      <category term="京东到家" scheme="http://soso.wiki/tags/%E4%BA%AC%E4%B8%9C%E5%88%B0%E5%AE%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一点资讯面试题</title>
+    <link href="http://soso.wiki/%E4%B8%80%E7%82%B9%E8%B5%84%E8%AE%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>http://soso.wiki/一点资讯面试题/</id>
+    <published>2021-06-08T04:00:00.000Z</published>
+    <updated>2021-06-09T05:57:22.945Z</updated>
+    
+    <content type="html"><![CDATA[<p>一点资讯面试题<br><a id="more"></a></p><p>1.Flutter 与原生怎么交互</p><p>2.Flutter 跳转原生页面，原生跳转 Flutter 页面怎么实现？</p><p>3.Widget、StatefulWidget、StatelessWidget 区别</p><p>4.Flutter 的三棵树（Widget 树等）</p><p>5.setState 实现源码看过吗？内部实现原理</p><p>6.KVO 实现原理</p><p>7.Runtime 流程，怎么避免方法找不到的闪退</p><p>8.数组插入空安全怎么实现的？交换方法写在哪里？为什么不写在 initialize 里？</p><p>9.两个分类里同名方法执行哪个？</p><p>10.isa 指针的指向，isa 的结构</p><p>11.<code>__block</code> 的原理，全局变量需要捕获吗？</p><p>12.闪退率，Flutter 的闪退怎么监控？</p><p>13.做过哪些优化？FPS 优化，启动优化，安装包大小优化</p><p>14.做过哪些组件？</p><p>15.字符串反转</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一点资讯面试题&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="面试题" scheme="http://soso.wiki/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="一点资讯" scheme="http://soso.wiki/tags/%E4%B8%80%E7%82%B9%E8%B5%84%E8%AE%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>恒天财富面试题</title>
+    <link href="http://soso.wiki/%E6%81%92%E5%A4%A9%E8%B4%A2%E5%AF%8C%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>http://soso.wiki/恒天财富面试题/</id>
+    <published>2021-06-04T15:50:00.000Z</published>
+    <updated>2021-06-09T06:05:40.179Z</updated>
+    
+    <content type="html"><![CDATA[<p>恒天财富面试题<br><a id="more"></a></p><h4 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h4><p>1.KVO 的实现原理</p><p>2.Category 的底层结构，Category 能添加成员变量吗？为什么？</p><p>3.load 和 initialize 的区别？initialize 的调用顺序？</p><p>4.Block 为什么用 copy？Block 的类型？Block 的结构</p><p>5.Runtime 的消息流程</p><p>6.说说你了解的 Runloop</p><p>7.项目亮点</p><p>8.怎么实现 webView 秒开 H5</p><p>9.项目优化</p><h4 id="二面（前端负责人）"><a href="#二面（前端负责人）" class="headerlink" title="二面（前端负责人）"></a>二面（前端负责人）</h4><p>1.打开一个 App，首页关掉网络后还可以显示一些内容，怎么实现的，有落地吗？</p><p>2.webView 跟 H5 交互方式？是 url scheme 吗？Bridge 用了吗</p><p>3.从加载 H5 到界面显示出来这段时间的白屏发生了什么？</p><p>4.打开一个示例 App，webView 加载 H5 秒开？离线包了解吗？行业解决方案</p><p>5.Vue 的生命周期</p><p>6.v-if 的作用</p><p>7.父子组件怎么传值？</p><p>8.知道 vuex 吗？</p><h4 id="三面（后端负责人）"><a href="#三面（后端负责人）" class="headerlink" title="三面（后端负责人）"></a>三面（后端负责人）</h4><p>1.介绍项目模块，项目分工</p><p>2.安卓 App 提示更新，更新一半退出再进来，从头下载了。断点续传怎么做？</p><p>3.查看药店首页，白屏 loading 时间长怎么优化？</p><p>4.webView 白屏怎么优化？</p><p>5.做过哪些具体的优化</p><p>6.除了埋点还有什么方式排查问题？不能复现的问题怎么查？</p><p>四面（部门负责人）</p><p>HR</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;恒天财富面试题&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="面试题" scheme="http://soso.wiki/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="恒天财富" scheme="http://soso.wiki/tags/%E6%81%92%E5%A4%A9%E8%B4%A2%E5%AF%8C/"/>
+    
+  </entry>
   
   <entry>
     <title>首汽租车面试题</title>
@@ -429,80 +505,6 @@
       <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
     
       <category term="微店" scheme="http://soso.wiki/tags/%E5%BE%AE%E5%BA%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>美团面试题及答案</title>
-    <link href="http://soso.wiki/%E7%BE%8E%E5%9B%A2%E9%9D%A2%E8%AF%95%E9%A2%98%E5%8F%8A%E7%AD%94%E6%A1%88/"/>
-    <id>http://soso.wiki/美团面试题及答案/</id>
-    <published>2020-02-20T09:27:00.000Z</published>
-    <updated>2021-04-13T14:55:30.877Z</updated>
-    
-    <content type="html"><![CDATA[<p>美团面试题<br><a id="more"></a></p><h3 id="1、Block-的底层原理，结构，内存以及需要注意的地方。"><a href="#1、Block-的底层原理，结构，内存以及需要注意的地方。" class="headerlink" title="1、Block 的底层原理，结构，内存以及需要注意的地方。"></a>1、Block 的底层原理，结构，内存以及需要注意的地方。</h3><p>block本质上也是一个OC对象，它内部也有个isa指针。<br>block是封装了函数调用以及函数调用环境的OC对象。<br><img src="/images/ios/block.png" alt="block的底层结构"></p><table><thead><tr><th>block类型</th><th>环境</th></tr></thead><tbody><tr><td><strong>NSGlobalBlock</strong></td><td>没有访问auto变量</td></tr><tr><td><strong>NSStackBlock</strong></td><td>访问了auto变量</td></tr><tr><td><strong>NSMallocBlock</strong></td><td><strong>NSStackBlock</strong>调用了copy</td></tr></tbody></table><h3 id="2、图片渲染，一张-png-jpg-格式的图片渲染到页面上显示有哪些流程。png-和-jpg-的区别。png-一定是无损的吗？"><a href="#2、图片渲染，一张-png-jpg-格式的图片渲染到页面上显示有哪些流程。png-和-jpg-的区别。png-一定是无损的吗？" class="headerlink" title="2、图片渲染，一张 png/jpg 格式的图片渲染到页面上显示有哪些流程。png 和 jpg 的区别。png 一定是无损的吗？"></a>2、图片渲染，一张 png/jpg 格式的图片渲染到页面上显示有哪些流程。png 和 jpg 的区别。png 一定是无损的吗？</h3><p><strong>图片渲染的过程:</strong> 读取文件 -&gt; 计算frame -&gt;图片解码 -&gt;解码后通过数据总线交给GPU -&gt;GPU获取图片frame后进行顶点变换计算 -&gt;光栅化 -&gt;根据纹理坐标获取每一个像素点的颜色值 -&gt; 交给帧缓冲区 -&gt;渲染到屏幕上</p><p><a href="https://www.jianshu.com/p/b77399fbef5b" target="_blank" rel="noopener">iOS中图片渲染的流程</a></p><p><a href="https://link.jianshu.com/?t=https://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/" target="_blank" rel="noopener">iOS 保持界面流畅的技巧</a></p><p><a href="https://link.jianshu.com/?t=http://sonnewilling.com/blog/2016/10/19/iostu-xing-yuan-li-yu-chi-ping-xuan-ran/#fn:1" target="_blank" rel="noopener">iOS图形原理与离屏渲染</a></p><h3 id="3、Runtime。"><a href="#3、Runtime。" class="headerlink" title="3、Runtime。"></a>3、Runtime。</h3><p>OC中的方法调用其实都是转成了objc_msgSend函数的调用，给receiver（方法调用者）发送了一条消息（selector方法名）<br>objc_msgSend底层有3大阶段<br>消息发送（当前类、父类中查找）、动态方法解析、消息转发</p><h4 id="具体应用"><a href="#具体应用" class="headerlink" title="具体应用"></a>具体应用</h4><p>利用关联对象（AssociatedObject）给分类添加属性<br>遍历类的所有成员变量（修改textfield的占位文字颜色、字典转模型、自动归档解档）<br>交换方法实现（交换系统的方法）<br>利用消息转发机制解决方法找不到的异常问题</p><h3 id="4、Runloop-的结构和循环流程，用-Runloop-做过什么事情。"><a href="#4、Runloop-的结构和循环流程，用-Runloop-做过什么事情。" class="headerlink" title="4、Runloop 的结构和循环流程，用 Runloop 做过什么事情。"></a>4、Runloop 的结构和循环流程，用 Runloop 做过什么事情。</h3><p>01、通知Observers：进入Loop<br>02、通知Observers：即将处理Timers<br>03、通知Observers：即将处理Sources<br>04、处理Blocks<br>05、处理Source0（可能会再次处理Blocks）<br>06、如果存在Source1，就跳转到第8步<br>07、通知Observers：开始休眠（等待消息唤醒）<br>08、通知Observers：结束休眠（被某个消息唤醒）<br>01&gt; 处理Timer<br>02&gt; 处理GCD Async To Main Queue<br>03&gt; 处理Source1<br>09、处理Blocks<br>10、根据前面的执行结果，决定如何操作<br>01&gt; 回到第02步<br>02&gt; 退出Loop<br>11、通知Observers：退出Loop</p><p>控制线程生命周期（线程保活）</p><p>解决NSTimer在滑动时停止工作的问题 </p><p>监控应用卡顿</p><p>性能优化</p><h3 id="5、多线程，NSOperationQueue-和-GCD-的区别。用多线程做过什么事情。线程安全的问题。加锁有几种方式。"><a href="#5、多线程，NSOperationQueue-和-GCD-的区别。用多线程做过什么事情。线程安全的问题。加锁有几种方式。" class="headerlink" title="5、多线程，NSOperationQueue 和 GCD 的区别。用多线程做过什么事情。线程安全的问题。加锁有几种方式。"></a>5、多线程，NSOperationQueue 和 GCD 的区别。用多线程做过什么事情。线程安全的问题。加锁有几种方式。</h3><p>dispatch_after</p><p>dispatch_group</p><p>dispatch_barrier</p><p>dispatch_once</p><p>OSSpinLock<br>os_unfair_lock<br>pthread_mutex<br>dispatch_semaphore<br>dispatch_queue(DISPATCH_QUEUE_SERIAL)<br>NSLock<br>NSRecursiveLock<br>NSCondition<br>NSConditionLock<br>@synchronized</p><h3 id="6、NSURLSession-和-NSURLConnection-的区别，-NSURLConnection-是怎么封装的。CFNetwork。"><a href="#6、NSURLSession-和-NSURLConnection-的区别，-NSURLConnection-是怎么封装的。CFNetwork。" class="headerlink" title="6、NSURLSession 和 NSURLConnection 的区别， NSURLConnection 是怎么封装的。CFNetwork。"></a>6、NSURLSession 和 NSURLConnection 的区别， NSURLConnection 是怎么封装的。CFNetwork。</h3><h3 id="7、做过什么动画。"><a href="#7、做过什么动画。" class="headerlink" title="7、做过什么动画。"></a>7、做过什么动画。</h3><h3 id="8、HTTPS-的工作原理，和-HTTP-的区别。RSA-加密原理。"><a href="#8、HTTPS-的工作原理，和-HTTP-的区别。RSA-加密原理。" class="headerlink" title="8、HTTPS 的工作原理，和 HTTP 的区别。RSA 加密原理。"></a>8、HTTPS 的工作原理，和 HTTP 的区别。RSA 加密原理。</h3><h3 id="9、网络层级，TCP-和-UDP-的区别。"><a href="#9、网络层级，TCP-和-UDP-的区别。" class="headerlink" title="9、网络层级，TCP 和 UDP 的区别。"></a>9、网络层级，TCP 和 UDP 的区别。</h3><table><thead><tr><th>TCP</th><th>UDP</th><th></th></tr></thead><tbody><tr><td>面向连接</td><td>面向数据报</td><td></td></tr><tr><td>可靠传输</td><td>不可靠传输</td><td></td></tr><tr><td>传输效率低</td><td>传输效率高</td></tr></tbody></table><h3 id="10、SDWebImage-的框架结构，缓存机制。"><a href="#10、SDWebImage-的框架结构，缓存机制。" class="headerlink" title="10、SDWebImage 的框架结构，缓存机制。"></a>10、SDWebImage 的框架结构，缓存机制。</h3><h3 id="11、Git-的-rebase-的原理。Git-流程。"><a href="#11、Git-的-rebase-的原理。Git-流程。" class="headerlink" title="11、Git 的 rebase 的原理。Git 流程。"></a>11、Git 的 rebase 的原理。Git 流程。</h3><h3 id="12、对组件化的了解，组件化是为了解决什么问题。"><a href="#12、对组件化的了解，组件化是为了解决什么问题。" class="headerlink" title="12、对组件化的了解，组件化是为了解决什么问题。"></a>12、对组件化的了解，组件化是为了解决什么问题。</h3><h3 id="13、JSPatch-的原理。"><a href="#13、JSPatch-的原理。" class="headerlink" title="13、JSPatch 的原理。"></a>13、JSPatch 的原理。</h3><h3 id="14、单例是为了处理什么问题而使用的，单例和全局变量的区别。"><a href="#14、单例是为了处理什么问题而使用的，单例和全局变量的区别。" class="headerlink" title="14、单例是为了处理什么问题而使用的，单例和全局变量的区别。"></a>14、单例是为了处理什么问题而使用的，单例和全局变量的区别。</h3><h3 id="15、对设计模式的掌握。"><a href="#15、对设计模式的掌握。" class="headerlink" title="15、对设计模式的掌握。"></a>15、对设计模式的掌握。</h3><h3 id="16、分层打印二叉树。"><a href="#16、分层打印二叉树。" class="headerlink" title="16、分层打印二叉树。"></a>16、分层打印二叉树。</h3>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;美团面试题&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="面试题" scheme="http://soso.wiki/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-    
-      <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-      <category term="美团" scheme="http://soso.wiki/tags/%E7%BE%8E%E5%9B%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>苏宁面试题</title>
-    <link href="http://soso.wiki/%E8%8B%8F%E5%AE%81%E9%9D%A2%E8%AF%95%E9%A2%98%E5%8F%8A%E7%AD%94%E6%A1%88/"/>
-    <id>http://soso.wiki/苏宁面试题及答案/</id>
-    <published>2020-02-20T07:47:00.000Z</published>
-    <updated>2021-04-03T09:41:30.746Z</updated>
-    
-    <content type="html"><![CDATA[<p>苏宁面试题<br><a id="more"></a></p><h2 id="1-笔试题"><a href="#1-笔试题" class="headerlink" title="1. 笔试题"></a>1. 笔试题</h2><h3 id="1-1-冒泡排序"><a href="#1-1-冒泡排序" class="headerlink" title="1.1 冒泡排序"></a>1.1 冒泡排序</h3><p>Objective-C 实现如下：<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">- (void)bubbleSort:(NSMutableArray *)array &#123;</span><br><span class="line">  for (int i = 0; i &lt; array.count; i++)</span><br><span class="line">  &#123;</span><br><span class="line">    for (int j = 0; j &lt; array.count-1-i; j++)</span><br><span class="line">    &#123;</span><br><span class="line">      NSInteger left = [array[j] integerValue];</span><br><span class="line">      NSInteger right = [array[j+1] integerValue];</span><br><span class="line">      if (left &lt; right) &#123;</span><br><span class="line">        [array exchangeObjectAtIndex:j withObjectAtIndex:j+1];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  NSLog(@&quot;%@&quot;,array);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>参考链接：<a href="https://objc.vip/冒泡排序/" target="_blank" rel="noopener">【算法】冒泡排序</a></p><h3 id="1-2-二分查找"><a href="#1-2-二分查找" class="headerlink" title="1.2 二分查找"></a>1.2 二分查找</h3><p>Swift实现如下：<br><figure class="highlight swift hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">binarySearch</span>&lt;T: comparable&gt;<span class="hljs-params">(_a: [T], key: T)</span></span> -&gt; <span class="hljs-type">Int</span>? &#123;</span><br><span class="line">  <span class="hljs-keyword">var</span> lowerBound = <span class="hljs-number">0</span></span><br><span class="line">  <span class="hljs-keyword">var</span> upperBound = a.<span class="hljs-built_in">count</span></span><br><span class="line">  <span class="hljs-keyword">while</span> lowerBound &lt; upperBound &#123;</span><br><span class="line">    <span class="hljs-keyword">let</span> midIndex = lowerBound + (upperBound - lowerBound) / <span class="hljs-number">2</span></span><br><span class="line">    <span class="hljs-keyword">if</span> a[midIndex] == key &#123;</span><br><span class="line">      <span class="hljs-keyword">return</span> midIndex</span><br><span class="line">    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> a[midIndex] &lt; key &#123;</span><br><span class="line">      lowerBound = midIndex + <span class="hljs-number">1</span></span><br><span class="line">    &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">      upperBound = midIndex</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>参考链接：<a href="https://objc.vip/二分查找/" target="_blank" rel="noopener">【算法】二分查找</a></p><h3 id="1-3-合并两个数组去重"><a href="#1-3-合并两个数组去重" class="headerlink" title="1.3 合并两个数组去重"></a>1.3 合并两个数组去重</h3><p>参考链接：<a href="https://objc.vip/合并两个数组并去重/" target="_blank" rel="noopener">【算法】合并两个数组并去重</a></p><h3 id="1-4-两个大数相加"><a href="#1-4-两个大数相加" class="headerlink" title="1.4 两个大数相加"></a>1.4 两个大数相加</h3><p>参考链接：<a href="https://www.jianshu.com/p/fdeb84644b50" target="_blank" rel="noopener">大数相加算法</a></p><h2 id="2-一面"><a href="#2-一面" class="headerlink" title="2. 一面"></a>2. 一面</h2><h3 id="2-1-SDWebImage-的缓存机制？LRU-说一下。"><a href="#2-1-SDWebImage-的缓存机制？LRU-说一下。" class="headerlink" title="2.1 SDWebImage 的缓存机制？LRU 说一下。"></a>2.1 SDWebImage 的缓存机制？LRU 说一下。</h3><p>SDWebImage加载图片拿到url会先把url的MD5值作为key从内存中查找，如果内存中有，则直接取图片显示；如果内存中没有，会从磁盘中查找。磁盘中没有，会走下载流程。<br>LRU 最近最少使用。缓存容量满时，会先清理最近最少的缓存。</p><h3 id="2-2-数据库升级，比如从-1-0-升级到-2-0，增加了字段。"><a href="#2-2-数据库升级，比如从-1-0-升级到-2-0，增加了字段。" class="headerlink" title="2.2 数据库升级，比如从 1.0 升级到 2.0，增加了字段。"></a>2.2 数据库升级，比如从 1.0 升级到 2.0，增加了字段。</h3><p>做好兼容处理。</p><h3 id="2-3-性能优化"><a href="#2-3-性能优化" class="headerlink" title="2.3 性能优化"></a>2.3 性能优化</h3><h4 id="2-3-1-优化启动时间"><a href="#2-3-1-优化启动时间" class="headerlink" title="2.3.1 优化启动时间"></a>2.3.1 优化启动时间</h4><ol><li>将一些耗时操作延迟执行。比如SDK的初始化，界面的创建。</li><li>不能延迟执行的，尽量放到后台执行。比如数据读取，原始 JSON 数据转对象，日志发送。</li><li>减少动态库、合并动态库，定期清理不必要的动态库。</li><li>减少类、分类的数量，合并Category和功能类似的类。删除不必要的方法和类、分类。</li><li>将不必须在+load中做的事延时到+initialize中。</li></ol><h4 id="2-3-2-减少CPU、GPU资源消耗"><a href="#2-3-2-减少CPU、GPU资源消耗" class="headerlink" title="2.3.2 减少CPU、GPU资源消耗"></a>2.3.2 减少CPU、GPU资源消耗</h4><ol><li>cell复用，header、footer复用。</li><li>尽量把view设置不透明。</li><li>减少视图的层级。</li><li>尽量避免调整视图层次、添加和移除视图。</li><li>合理选择加载图片的方式，UIImage imageNamed: ImageAssets 用于多个地方重复使用，UIImage imageWithContentsOfFile 一般用在图片数据很大，一般不需要多次使用的情况。</li><li>图片大小最好和UIImageView的大小相同。</li><li>不要阻塞主线程，耗时操作放在子线程进行。</li><li>懒加载。</li><li>缓存，缓存图片SDWebImage，缓存行高，NSCache缓存。</li><li>复用高开销对象NSDateFormatter和NSCalendar。</li><li>减少离屏渲染，优化圆角、阴影。</li><li>使用正确的数据存储。</li></ol><h4 id="2-3-3-内存优化"><a href="#2-3-3-内存优化" class="headerlink" title="2.3.3 内存优化"></a>2.3.3 内存优化</h4><ol><li>减少内存泄漏。</li><li>降低内存使用峰值。<ul><li>懒加载。</li><li>灵活运用图片和文件加载。</li><li>拉长文件处理机制，逐步处理文件。</li></ul></li></ol><h4 id="2-3-4-耗电优化"><a href="#2-3-4-耗电优化" class="headerlink" title="2.3.4 耗电优化"></a>2.3.4 耗电优化</h4><p>耗电功率是个比较综合的指标，影响因素很多。密集的网络请求，长链接，密集的CPU操作（比如大量的复杂计算）都会使耗电功率增加。网络状况（流畅的Wi-Fi还是信号不好的3G）都会影响。</p><ol><li>优化网络。<ul><li>减少、压缩网络数据。</li><li>若多次网络请求结果相同，尽量使用缓存。</li><li>网络不可用时，不进行网络请求。</li></ul></li><li>优化CPU、GPU消耗。</li><li>优化I/O操作，使用dispatch_io。</li><li>定位优化<ul><li>尽量降低定位精度，如不要使用精度最高的KCLLocationAccuracyBest。</li><li>如果只是需要快速确定用户位置，用 CLLocationManager 的 requestLocation 方法定位，定位完成后，定位硬件会自动断电。</li></ul></li></ol><h3 id="2-4-Git-开发流程。"><a href="#2-4-Git-开发流程。" class="headerlink" title="2.4 Git 开发流程。"></a>2.4 Git 开发流程。</h3><ul><li>master </li><li>develop</li><li>dev-xx 具体开发人员分支</li></ul><p>开发完成后发起PR。项目提审打Tag</p><h3 id="2-5-微信登录流程。"><a href="#2-5-微信登录流程。" class="headerlink" title="2.5 微信登录流程。"></a>2.5 微信登录流程。</h3><p>注册微信的AppKey与AppSecret。使用微信SDK方法调起微信，回调拿到一些参数，把包含openId等协定好的参数传给服务器，由服务器判断该用户是否注册过，如果注册过，返回登录成功后的用户相关信息。</p><h3 id="2-6-WebView-与-JS-交互。"><a href="#2-6-WebView-与-JS-交互。" class="headerlink" title="2.6 WebView 与 JS 交互。"></a>2.6 WebView 与 JS 交互。</h3><p>H5调用原生采用拦截协议的方式。<br>执行JS方法：evaluateScript<br>也可以使用JSBridge等方式。</p><h3 id="2-7-说一下Runloop，苹果设计-Runloop-的初衷是什么？"><a href="#2-7-说一下Runloop，苹果设计-Runloop-的初衷是什么？" class="headerlink" title="2.7 说一下Runloop，苹果设计 Runloop 的初衷是什么？"></a>2.7 说一下Runloop，苹果设计 Runloop 的初衷是什么？</h3><p>Runloop 运行循环。<br>让线程在有任务的时候忙任务，没任务的时候休眠。<br>参考链接：<a href="https://objc.vip/RunloopSummary/" target="_blank" rel="noopener">【iOS 开发】RunLoop 总结</a></p><h3 id="2-8-Delegate"><a href="#2-8-Delegate" class="headerlink" title="2.8 Delegate"></a>2.8 Delegate</h3><p>代理用assign修饰。</p><h3 id="2-9-GCD"><a href="#2-9-GCD" class="headerlink" title="2.9 GCD"></a>2.9 GCD</h3><p>参考链接：<a href="https://www.jianshu.com/p/93cecfd5fc89" target="_blank" rel="noopener">GCD 的 API</a></p><h3 id="2-10-深拷贝与浅拷贝"><a href="#2-10-深拷贝与浅拷贝" class="headerlink" title="2.10 深拷贝与浅拷贝"></a>2.10 深拷贝与浅拷贝</h3><p>深拷贝是拷贝整个对象。<br>浅拷贝只拷贝对象的指针。<br>copy用于修饰NSArray、NSDictionary、NSString。如果=右边赋值的对象是可变的，copy是深拷贝，拷贝对象的本身。如果赋值的对象是不可变的，copy是浅拷贝，只拷贝对象的指针。<br>用copy和用strong的区别？<br>用copy更安全，避免赋的值是可变的。如果能确保赋的值是不可变的，那么用strong和用copy都是浅拷贝，copy只是多了一个判断，判断可变还是不可变，其他是一样的。<br>NSMutableArray、NSMutableDictionary用Strong修饰，如果用copy，就会拷贝一份，变成不可变的，如果增删数据，就会发生错误。</p><h3 id="2-11-进程间通信"><a href="#2-11-进程间通信" class="headerlink" title="2.11 进程间通信"></a>2.11 进程间通信</h3><p>URL Schemes</p><h3 id="2-12-线程间通信，两个线程怎么切换？"><a href="#2-12-线程间通信，两个线程怎么切换？" class="headerlink" title="2.12 线程间通信，两个线程怎么切换？"></a>2.12 线程间通信，两个线程怎么切换？</h3><p>performSelectorOnThread</p><h3 id="2-13-多态"><a href="#2-13-多态" class="headerlink" title="2.13 多态"></a>2.13 多态</h3><p>多态（Polymorphism）按字面的意思就是“多种状态”。在面向对象语言中，接口的多种不同的实现方式即为多态。<br>子类继承父类后，子类重写父类的方法，实现多态。</p><h3 id="2-14-HTTP-三次握手，四次挥手。"><a href="#2-14-HTTP-三次握手，四次挥手。" class="headerlink" title="2.14 HTTP 三次握手，四次挥手。"></a>2.14 HTTP 三次握手，四次挥手。</h3><h2 id="3-二面"><a href="#3-二面" class="headerlink" title="3. 二面"></a>3. 二面</h2><h3 id="3-1-有没有复杂点的页面。"><a href="#3-1-有没有复杂点的页面。" class="headerlink" title="3.1 有没有复杂点的页面。"></a>3.1 有没有复杂点的页面。</h3><h3 id="3-2-（这个部门是做智能硬件的）蓝牙有哪些API。"><a href="#3-2-（这个部门是做智能硬件的）蓝牙有哪些API。" class="headerlink" title="3.2 （这个部门是做智能硬件的）蓝牙有哪些API。"></a>3.2 （这个部门是做智能硬件的）蓝牙有哪些API。</h3><h3 id="3-3-播放音频，展示音频的曲线，具体怎么做？"><a href="#3-3-播放音频，展示音频的曲线，具体怎么做？" class="headerlink" title="3.3 播放音频，展示音频的曲线，具体怎么做？"></a>3.3 播放音频，展示音频的曲线，具体怎么做？</h3><h2 id="4-三面"><a href="#4-三面" class="headerlink" title="4. 三面"></a>4. 三面</h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;苏宁面试题&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="面试题" scheme="http://soso.wiki/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-    
-      <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-      <category term="苏宁" scheme="http://soso.wiki/tags/%E8%8B%8F%E5%AE%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>开果科技面试题</title>
-    <link href="http://soso.wiki/%E5%BC%80%E6%9E%9C%E7%A7%91%E6%8A%80%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    <id>http://soso.wiki/开果科技面试题/</id>
-    <published>2019-09-06T15:30:00.000Z</published>
-    <updated>2019-09-06T16:13:42.745Z</updated>
-    
-    <content type="html"><![CDATA[<p>开果科技面试题<br><a id="more"></a></p><h1 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h1><p>1、卡顿原因、解决办法。为什么透明视图不如不透明视图？</p><p>2、闪退原因、监测、过程。友盟是怎么捕获闪退的？从一个事件到闪退发生了什么？</p><p>3、图片的压缩，从600k到500k，不能设置固定压缩比，应该怎么做？压缩图片，压缩图片实际压缩的是哪些东西？加载超大图；图片在计算机中的存储形式；10M的图片加载到内存中是多大？大图是怎么加载的？</p><p>图像文件存储的都是每一个像素对应的颜色值。</p><p>4、字典的本质？哈希表原理？</p><p>哈希表。</p><p>5、链表和数组，哪个容易找到地址？</p><p>数组。</p><ul><li><p>在内存中，数组是一块连续的区域。插入和删除数据效率低。随机读取效率很高，因为数组是连续的，知道每一个数据的内存地址，可以直接找到给地址的数据。</p></li><li><p>链表增加和删除数据很容易。查找数据时效率低，因为不具有随机访问性。</p></li></ul><p>6、列表有好多页，某一页和后边加载的一页中有相同的数据，怎么处理？</p><p>7、动态库和静态库的区别。</p><p>8、设计模式。</p><h1 id="二面-电话面试"><a href="#二面-电话面试" class="headerlink" title="二面(电话面试)"></a>二面(电话面试)</h1><p>1、什么时候开始接触 iOS？怎么学的iOS？</p><p>2、公司多少人？什么项目？</p><p>3、你会选择什么样的公司？</p><p>4、数据库（SQLite/Realm）是怎么保证线程安全的？</p><p>5、UserDeafaults 系统做了哪些优化？为什么可以在主线程上去做存取？如果让你实现，方法已经是同步的方法了，你会怎么处理？</p><p>6、+load 和 +initialize 方法什么时候会调用，+load 和 +initialize 方法、main 方法这三个的调用顺序。</p><p>7、@class 和 #import 在编译的时候有哪些区别？</p><p>8、JSON 转 Model 你用的是什么？MJExtension 字典转模型的具体步骤？拿到字典了，第一步做什么，第二步做什么？</p><p>9、WebView 跟 JS 是怎么交互的？</p><p>10、WebView 怎么存 cookie？</p><p>11、A-&gt;B-&gt;C-&gt;D 从D返回到B。说几个不同的实现思路。</p><ul><li>方案1：for 循环 self.navigationController.viewControllers 判断某个控制器是否是 B 如果是就 popToViewController:B。</li><li>方案2：self.navigationController.viewControllers 是一个不可变数组，可以赋值给一个可变的数组，然后把 C 移除，然后再赋值给 viewControllers。</li><li>其他方案：提示不一定要 push，present出来的怎么弄？</li></ul><p>12、二分查找。</p><p>13、深拷贝与浅拷贝，某个值得改变可能会影响原始值，那是深拷贝还是浅拷贝？</p><p>14、性能优化？图片加载到 UIImageView 上经过了哪些过程？</p><p>15、Label 怎么多行显示。</p><p>16、Button有哪些状态？</p><p>17、dispatch_group_notify 是在哪个线程上？</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;开果科技面试题&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="面试题" scheme="http://soso.wiki/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-    
-      <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-      <category term="开果" scheme="http://soso.wiki/tags/%E5%BC%80%E6%9E%9C/"/>
-    
-      <category term="面试题" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
   </entry>
   
