@@ -19,7 +19,7 @@
 <meta property="og:description" content="搜狐面试题">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://soso.wiki/images/og_image.png">
-<meta property="og:updated_time" content="2021-06-11T08:17:42.100Z">
+<meta property="og:updated_time" content="2021-06-12T15:27:30.378Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搜狐面试题">
 <meta name="twitter:description" content="搜狐面试题">
@@ -157,7 +157,7 @@ var _hmt = _hmt || [];
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 372 个字)
+                    3 分钟 读完 (大约 449 个字)
                 </span>
                 
                 
@@ -181,6 +181,8 @@ var _hmt = _hmt || [];
 <p>有一个产品发布了多个版本，它遵循以下规则：假如某个版本崩溃了，则后面的所有版本都会崩溃。</p>
 <p>举个例子：一个产品假如有5个版本，其中第1-3版本都是正常的，但是第4个版本崩溃了，那么第5个版本（最新版本）一定也崩溃，第4个版本被称为第一个崩溃版本。</p>
 <p>现在已知一个产品有n个版本，而且有一个检查算法func isBadVersion(version:Int) -&gt; Bool 可以判断一个版本是否崩溃，假设这个产品的最新版本崩溃了，求第一个崩溃的版本。</p>
+<p>思路：本质上是有重复数字的升序数组的二分查找</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">search</span>(<span class="hljs-params"> nums ,  target </span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">let</span> start = <span class="hljs-number">0</span></span><br><span class="line">    <span class="hljs-keyword">if</span>(!nums.length) <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;</span><br><span class="line">    <span class="hljs-keyword">let</span> left = <span class="hljs-number">0</span>, right = nums.length - <span class="hljs-number">1</span>;</span><br><span class="line">    <span class="hljs-keyword">while</span>(left &lt;= right) &#123;</span><br><span class="line">        <span class="hljs-keyword">let</span> mid = <span class="hljs-built_in">Math</span>.floor((left + right) / <span class="hljs-number">2</span>);</span><br><span class="line">        <span class="hljs-keyword">if</span>(target == nums[mid]) &#123;</span><br><span class="line">            <span class="hljs-keyword">while</span>(mid != <span class="hljs-number">0</span> &amp;&amp; nums[mid - <span class="hljs-number">1</span>] == nums[mid]) mid--; <span class="hljs-comment">// 找到第一个数</span></span><br><span class="line">            <span class="hljs-keyword">return</span> mid;</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(target &lt; nums[mid]) &#123;</span><br><span class="line">            right = mid - <span class="hljs-number">1</span>;</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">            left = mid + <span class="hljs-number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>6.想实现一个图片，删除后撤销删除，你会用什么数据结构来怎么实现？</p>
 
         </div>

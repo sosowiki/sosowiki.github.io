@@ -19,7 +19,7 @@
 <meta property="og:description" content="达达面试题">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://soso.wiki/images/og_image.png">
-<meta property="og:updated_time" content="2021-06-09T05:58:54.464Z">
+<meta property="og:updated_time" content="2021-06-12T15:37:27.006Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="达达面试题">
 <meta name="twitter:description" content="达达面试题">
@@ -157,7 +157,7 @@ var _hmt = _hmt || [];
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 261 个字)
+                    9 分钟 读完 (大约 1328 个字)
                 </span>
                 
                 
@@ -171,20 +171,97 @@ var _hmt = _hmt || [];
         </h1>
         <div class="content">
             <p>达达面试题<br><a id="more"></a></p>
-<p>1.深拷贝、浅拷贝区别。数组里放对象，copy 数组，是深拷贝还是浅拷贝？数组里对象的指针是一样的吗？</p>
-<p>2.布局使用 Masony 还是 Xib</p>
-<p>3.StatefulWidget、StatelessWidget 区别</p>
-<p>4.UITableView、UICollectionView 的调用流程区别</p>
-<p>5.常用的 pod 命令</p>
-<p>6.图文混排有没有做过，有没有内存、性能问题</p>
-<p>7.写过哪些脚本，有没有写过函数，按顺序执行的函数。</p>
-<p>8.闪退捕获，Flutter 错误捕获</p>
-<p>9.埋点是怎么做的？页面上的某一个 view 的停留时长怎么统计？</p>
-<p>10.性能优化、图片加载优化、安装包大小优化做了啥，没用到的代码或图片有写脚本来检查吗？</p>
-<p>12.界面渲染流程、UIView 渲染流程，有没有做过异步绘制？</p>
-<p>13.解决遇到的线程问题描述一下，在子线程刷新 UI 会怎么样？</p>
-<p>14.有没有做过组件模块化？</p>
-
+<h4 id="1-深拷贝、浅拷贝区别。数组里放对象，copy-数组，是深拷贝还是浅拷贝？数组里对象的指针是一样的吗？"><a href="#1-深拷贝、浅拷贝区别。数组里放对象，copy-数组，是深拷贝还是浅拷贝？数组里对象的指针是一样的吗？" class="headerlink" title="1.深拷贝、浅拷贝区别。数组里放对象，copy 数组，是深拷贝还是浅拷贝？数组里对象的指针是一样的吗？"></a>1.深拷贝、浅拷贝区别。数组里放对象，copy 数组，是深拷贝还是浅拷贝？数组里对象的指针是一样的吗？</h4><ul>
+<li><p>浅拷贝：指针拷贝，不会创建一个新的对象。对指向对象的指针拷贝，产生一个新的指向对象的指针。两个指针指向同一个对象。对象的引用计数+1；</p>
+</li>
+<li><p>深拷贝：内容拷贝，会创建一个新的对象。深拷贝就是拷贝地址中的内容。</p>
+</li>
+</ul>
+<p>深拷贝和浅拷贝的本质是内存地址是否相同。</p>
+<p>copy 可变数组是深拷贝。copy 不可变数组是浅拷贝。数组里对象的指针是一样的。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>copy</th>
+<th>mutableCopy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NSString</td>
+<td>NSString 浅拷贝</td>
+<td>NSMutableString 深拷贝</td>
+</tr>
+<tr>
+<td>NSMutableString</td>
+<td>NSString 深拷贝</td>
+<td>NSMutableString 深拷贝</td>
+</tr>
+<tr>
+<td>NSArray</td>
+<td>NSArray 浅拷贝</td>
+<td>NSMutableArray 深拷贝</td>
+</tr>
+<tr>
+<td>NSMutableArray</td>
+<td>NSArray 深拷贝</td>
+<td>NSMutableArray 深拷贝</td>
+</tr>
+<tr>
+<td>NSDictionary</td>
+<td>NSDictionary 浅拷贝</td>
+<td>NSMutableDictionary 深拷贝</td>
+</tr>
+<tr>
+<td>NSMutableDictionary</td>
+<td>NSDictionary 深拷贝</td>
+<td>NSMutableDictionary 深拷贝</td>
+</tr>
+</tbody>
+</table>
+<h4 id="2-布局使用-Masony-还是-Xib"><a href="#2-布局使用-Masony-还是-Xib" class="headerlink" title="2.布局使用 Masony 还是 Xib"></a>2.布局使用 Masony 还是 Xib</h4><h4 id="3-StatefulWidget、StatelessWidget-区别"><a href="#3-StatefulWidget、StatelessWidget-区别" class="headerlink" title="3.StatefulWidget、StatelessWidget 区别"></a>3.StatefulWidget、StatelessWidget 区别</h4><ul>
+<li>Widget 是部分界面的不可变的描述信息。</li>
+<li>StatelessWidget 和 StatefulWidget 没有本质区别，他们的所有属性都是不可变的。它们都没法更新，除非用一个新的 Widget 去替换它们。</li>
+<li>StatefulWidget 拥有一个可变的 State。</li>
+</ul>
+<p>StatefulWidget 和 StatelessWidget 的区别在于可变的 State。本质区别是能否自我重新构建（self rebuild）。</p>
+<p><img src="/images/flutter/StatelessWidget和StatefulWidget区别.jpeg" alt="StatelessWidget和StatefulWidget区别"></p>
+<p>参考链接：<a href="https://www.jianshu.com/p/d56e9c758b26" target="_blank" rel="noopener">简书-StatelessWidget和StatefulWidget的区别</a></p>
+<h4 id="4-UITableView、UICollectionView-的调用流程区别"><a href="#4-UITableView、UICollectionView-的调用流程区别" class="headerlink" title="4.UITableView、UICollectionView 的调用流程区别"></a>4.UITableView、UICollectionView 的调用流程区别</h4><h4 id="5-常用的-pod-命令"><a href="#5-常用的-pod-命令" class="headerlink" title="5.常用的 pod 命令"></a>5.常用的 pod 命令</h4><p><code>pod init</code>: 创建 Podfile 文件。</p>
+<p><code>pod install</code>：会根据 podfile.lock 文件中指定的 pod 依赖库的版本去拉去项目的 pod 依赖库。</p>
+<p><code>pod install --no-repo-update</code>: 协作开发时使用此命令可以根据 podfile.lock 文件限制第三方库的版本。</p>
+<p><code>pod update</code>：这个命令会检查 podfile.lock 文件中的 pod 依赖库的版本，并进行更新，会重新生成一个 podfile.lock 文件。</p>
+<p><code>pod repo add NAME URL[branch]</code> ：添加 pod 源。</p>
+<p><code>pod search</code>：搜索可以使用的 pod 依赖库。</p>
+<p><code>pod list</code>：列出所有项目依赖仓库中的 pod 依赖库。</p>
+<p><code>pod repo</code>：用来管理 pod 依赖仓库的地址。</p>
+<p><code>pod spec</code>：管理 pod 规范。</p>
+<p><code>pod env</code>：来打印出 pod 的环境，一般是 podfile 文件中的内容。</p>
+<p><code>pod cache</code>：管理 cocoapod 的缓存：可以用来清空内存，也可以用来查看每个 pod 库的缓存。</p>
+<p><strong>制作私有库使用</strong></p>
+<p><code>pod lib create [仓库名]</code>：在本地创建一个基于 pod 模板的 git 仓库。</p>
+<p><code>pod lib lint</code>：pod 本地库验证，验证 .podspec 文件是否有错。</p>
+<p><code>pod repo add NAME URL[branch]</code>：添加自己的 pod 仓库。</p>
+<p><code>pod spec lint</code>：pod 远程库验证。</p>
+<p><code>pod repo add xxx https://gitxxxx</code> ：放置 spec 文件的 git 仓库地址，给自己添加私有仓库。</p>
+<p><code>pod repo push 索引库名 podspec文件名</code>：命令执行会先将 pod 索引添加到本地的索引库，然后会自动推送到远程的索引库。</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Commands:</span><br><span class="line">    + cache         Manipulate the CocoaPods cache</span><br><span class="line">    + deintegrate   Deintegrate CocoaPods from your project</span><br><span class="line">    + env           Display pod environment</span><br><span class="line">    + init          Generate a Podfile for the current directory</span><br><span class="line">    + install       Install project dependencies according to versions from a</span><br><span class="line">                    Podfile.lock</span><br><span class="line">    + ipc           Inter-process communication</span><br><span class="line">    + lib           Develop pods</span><br><span class="line">    + list          List pods</span><br><span class="line">    + outdated      Show outdated project dependencies</span><br><span class="line">    + plugins       Show available CocoaPods plugins</span><br><span class="line">    + repo          Manage spec-repositories</span><br><span class="line">    + search        Search for pods</span><br><span class="line">    + setup         Setup the CocoaPods environment</span><br><span class="line">    + spec          Manage pod specs</span><br><span class="line">    + trunk         Interact with the CocoaPods API (e.g. publishing new specs)</span><br><span class="line">    + try           Try a Pod!</span><br><span class="line">    + update        Update outdated project dependencies and create new</span><br><span class="line">                    Podfile.lock</span><br></pre></td></tr></table></figure>
+<h4 id="6-图文混排有没有做过，有没有内存、性能问题"><a href="#6-图文混排有没有做过，有没有内存、性能问题" class="headerlink" title="6.图文混排有没有做过，有没有内存、性能问题"></a>6.图文混排有没有做过，有没有内存、性能问题</h4><p>参考链接：<a href="https://www.jianshu.com/p/73d098d638cf" target="_blank" rel="noopener">简书-iOS开发之富文本(图文混排)</a></p>
+<h4 id="7-写过哪些脚本，有没有写过函数，按顺序执行的函数。"><a href="#7-写过哪些脚本，有没有写过函数，按顺序执行的函数。" class="headerlink" title="7.写过哪些脚本，有没有写过函数，按顺序执行的函数。"></a>7.写过哪些脚本，有没有写过函数，按顺序执行的函数。</h4><p>bugly、Fastlane、切换 SDK 配置文件</p>
+<p>参考链接：<a href="https://www.runoob.com/linux/linux-shell.html" target="_blank" rel="noopener">菜鸟教程- Shell 教程</a></p>
+<h4 id="8-闪退捕获，Flutter-错误捕获"><a href="#8-闪退捕获，Flutter-错误捕获" class="headerlink" title="8.闪退捕获，Flutter 错误捕获"></a>8.闪退捕获，Flutter 错误捕获</h4><figure class="highlight dart hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">void</span> main() &#123;</span><br><span class="line">     <span class="hljs-comment">// Flutter framework 异常捕获</span></span><br><span class="line">     FlutterError.onError = (FlutterErrorDetails details) &#123;</span><br><span class="line">       <span class="hljs-built_in">bool</span> isDebugMode = <span class="hljs-keyword">false</span>;</span><br><span class="line">       <span class="hljs-keyword">assert</span>(() &#123;</span><br><span class="line">         isDebugMode = <span class="hljs-keyword">true</span>;</span><br><span class="line">         <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;</span><br><span class="line">       &#125;());</span><br><span class="line">       <span class="hljs-keyword">if</span> (isDebugMode) &#123;</span><br><span class="line">         FlutterError.dumpErrorToConsole(details);</span><br><span class="line">       &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">         <span class="hljs-comment">//profile,release两个模式下下捕捉异常信息</span></span><br><span class="line">         reportFrameworkError(details);</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">     <span class="hljs-comment">// 其他类型异常</span></span><br><span class="line">     runZoned(</span><br><span class="line">       () =&gt; runAutoSizeApp(MyApp(), width: <span class="hljs-number">375</span>, height: <span class="hljs-number">667</span>),</span><br><span class="line">       onError: (<span class="hljs-keyword">dynamic</span> ex, StackTrace stack) &#123;</span><br><span class="line">         reportError(ex, stack);</span><br><span class="line">       &#125;,</span><br><span class="line">     );</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<p>参考链接：<a href="https://www.jianshu.com/p/854d7e7eb2cf" target="_blank" rel="noopener">Flutter异常捕捉原理和异常上报</a></p>
+<h4 id="9-埋点是怎么做的？页面上的某一个-view-的停留时长怎么统计？"><a href="#9-埋点是怎么做的？页面上的某一个-view-的停留时长怎么统计？" class="headerlink" title="9.埋点是怎么做的？页面上的某一个 view 的停留时长怎么统计？"></a>9.埋点是怎么做的？页面上的某一个 view 的停留时长怎么统计？</h4><h4 id="10-性能优化、图片加载优化、安装包大小优化做了啥，没用到的代码或图片有写脚本来检查吗？"><a href="#10-性能优化、图片加载优化、安装包大小优化做了啥，没用到的代码或图片有写脚本来检查吗？" class="headerlink" title="10.性能优化、图片加载优化、安装包大小优化做了啥，没用到的代码或图片有写脚本来检查吗？"></a>10.性能优化、图片加载优化、安装包大小优化做了啥，没用到的代码或图片有写脚本来检查吗？</h4><ul>
+<li><p>未使用的代码可以用 AppCode 来检测。</p>
+</li>
+<li><p>未使用的图片可以用 <a href="https://github.com/tinymind/LSUnusedResources" target="_blank" rel="noopener">LSUnusedResources</a> 来检测。</p>
+</li>
+</ul>
+<h4 id="12-界面渲染流程、UIView-渲染流程，有没有做过异步绘制？"><a href="#12-界面渲染流程、UIView-渲染流程，有没有做过异步绘制？" class="headerlink" title="12.界面渲染流程、UIView 渲染流程，有没有做过异步绘制？"></a>12.界面渲染流程、UIView 渲染流程，有没有做过异步绘制？</h4><p><img src="/images/ios/UIView的绘制原理.png" alt="UIView的绘制原理"></p>
+<p><img src="/images/ios/系统绘制流程.png" alt="系统绘制流程"></p>
+<p><img src="/images/ios/异步绘制时序图.png" alt="异步绘制时序图"></p>
+<h4 id="13-解决遇到的线程问题描述一下，在子线程刷新-UI-会怎么样？"><a href="#13-解决遇到的线程问题描述一下，在子线程刷新-UI-会怎么样？" class="headerlink" title="13.解决遇到的线程问题描述一下，在子线程刷新 UI 会怎么样？"></a>13.解决遇到的线程问题描述一下，在子线程刷新 UI 会怎么样？</h4><h4 id="14-有没有做过组件模块化？"><a href="#14-有没有做过组件模块化？" class="headerlink" title="14.有没有做过组件模块化？"></a>14.有没有做过组件模块化？</h4>
         </div>
         
         <div class="level is-size-7 is-uppercase">

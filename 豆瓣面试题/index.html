@@ -19,7 +19,7 @@
 <meta property="og:description" content="豆瓣面试题">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://soso.wiki/images/og_image.png">
-<meta property="og:updated_time" content="2021-06-01T07:29:03.828Z">
+<meta property="og:updated_time" content="2021-06-12T15:32:17.737Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="豆瓣面试题">
 <meta name="twitter:description" content="豆瓣面试题">
@@ -227,17 +227,17 @@ var _hmt = _hmt || [];
 </ul>
 <p>参考链接：<a href="https://www.jianshu.com/p/2d9e58d67d87" target="_blank" rel="noopener">iOS 大图显示解决办法</a></p>
 <h4 id="13-项目怎么分工的？你负责什么？有没有什么值得说的点？H5-与原生交互有什么经验分享吗？怎么给-webView-加载的页面发的网络请求统一加上-header？"><a href="#13-项目怎么分工的？你负责什么？有没有什么值得说的点？H5-与原生交互有什么经验分享吗？怎么给-webView-加载的页面发的网络请求统一加上-header？" class="headerlink" title="13.项目怎么分工的？你负责什么？有没有什么值得说的点？H5 与原生交互有什么经验分享吗？怎么给 webView 加载的页面发的网络请求统一加上 header？"></a>13.项目怎么分工的？你负责什么？有没有什么值得说的点？H5 与原生交互有什么经验分享吗？怎么给 webView 加载的页面发的网络请求统一加上 header？</h4><h4 id="14-AFN-早期版本为什么要使用常驻线程？怎么统一设置-header？"><a href="#14-AFN-早期版本为什么要使用常驻线程？怎么统一设置-header？" class="headerlink" title="14.AFN 早期版本为什么要使用常驻线程？怎么统一设置 header？"></a>14.AFN 早期版本为什么要使用常驻线程？怎么统一设置 header？</h4><figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[requestSerializer setValue:value forHTTPHeaderField:httpHeaderField];</span><br></pre></td></tr></table></figure>
-<h4 id="15-RN-和-Flutter-的底层实现有什么区别？"><a href="#15-RN-和-Flutter-的底层实现有什么区别？" class="headerlink" title="15.RN 和 Flutter 的底层实现有什么区别？"></a>15.RN 和 Flutter 的底层实现有什么区别？</h4><p>在 Android 和 iOS 上，默认情况下 Flutter 和 React Native 都需要一个原生平台的 <code>Activity</code> / <code>ViewController</code> 支持，且在原生层面属于一个“单页面应用”，而它们之间最大的不同点其实在于 UI 构建 ：</p>
+<h4 id="15-RN-和-Flutter-的底层实现有什么区别？"><a href="#15-RN-和-Flutter-的底层实现有什么区别？" class="headerlink" title="15.RN 和 Flutter 的底层实现有什么区别？"></a>15.RN 和 Flutter 的底层实现有什么区别？</h4><p>在 Android 和 iOS 上，默认情况下 Flutter 和 React Native 都需要一个原生平台的 Activity / ViewController 支持，且在原生层面属于一个“单页面应用”，而它们之间最大的不同点其实在于 UI 构建 ：</p>
 <ul>
 <li>React Native ：</li>
 </ul>
-<p>React Native 是一套 UI 框架，默认情况下 React Native 会在 <code>Activity</code> 下加载  JS 文件，然后运行在 <code>JavaScriptCore</code> 中解析 <em>Bundle</em> 文件布局，最终堆叠出一系列的原生控件进行渲染。</p>
-<p>简单来说就是 <strong>通过写 JS 代码配置页面布局，然后 React Native 最终会解析渲染成原生控件</strong>，如 <code>&lt;View&gt;</code> 标签对应 <code>ViewGroup/UIView</code> ，<code>&lt;ScrollView&gt;</code> 标签对应 <code>ScrollView/UIScrollView</code> ，<code>&lt;Image&gt;</code> 标签对应 <code>ImageView/UIImageView</code> 等。</p>
+<p>React Native 是一套 UI 框架，默认情况下 React Native 会在 Activity 下加载  JS 文件，然后运行在  JavaScriptCore 中解析 Bundle 文件布局，最终堆叠出一系列的原生控件进行渲染。</p>
+<p>简单来说就是 <strong>通过写 JS 代码配置页面布局，然后 React Native 最终会解析渲染成原生控件</strong>，如 <code>&lt;View&gt;</code> 标签对应 ViewGroup/UIView ，<code>&lt;ScrollView&gt;</code> 标签对应 ScrollView/UIScrollView ，<code>&lt;Image&gt;</code> 标签对应 ImageView/UIImageView 等。</p>
 <ul>
 <li>Flutter ：</li>
 </ul>
 <p>如果说 React Native 是为开发者做了平台兼容，那 Flutter 则更像是为开发者屏蔽平台的概念。</p>
-<p>Flutter 中绝大部分的 <code>Widget</code> 都与平台无关， 开发者基于 <code>Framework</code> 开发 App ，而 <code>Framework</code> 运行在 <code>Engine</code> 之上，由 <code>Engine</code> 进行适配和跨平台支持。这个跨平台的支持过程，其实就是将 <strong>Flutter UI 中的 <code>Widget</code> “数据化” ，然后通过 <code>Engine</code> 上的 <code>Skia</code> 直接绘制到屏幕上 。</strong></p>
+<p>Flutter 中绝大部分的 Widget 都与平台无关， 开发者基于 Framework 开发 App ，而 Framework 运行在 Engine 之上，由 Engine 进行适配和跨平台支持。这个跨平台的支持过程，其实就是将 <strong>Flutter UI 中的 Widget “数据化” ，然后通过 Engine 上的 Skia 直接绘制到屏幕上 。</strong></p>
 <p>参考链接：<a href="https://www.jianshu.com/p/85a77bb8d926" target="_blank" rel="noopener">Flutter 与 React Native 的对比分析</a></p>
 <h4 id="16-平时怎么学习-iOS？上家公司的离职原因，未来规划，有没有要问我的？"><a href="#16-平时怎么学习-iOS？上家公司的离职原因，未来规划，有没有要问我的？" class="headerlink" title="16.平时怎么学习 iOS？上家公司的离职原因，未来规划，有没有要问我的？"></a>16.平时怎么学习 iOS？上家公司的离职原因，未来规划，有没有要问我的？</h4>
         </div>
