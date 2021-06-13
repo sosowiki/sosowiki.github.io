@@ -7,22 +7,22 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>搜狐面试题 - 搜搜题</title>
+<title>货拉拉面试题 - 搜搜题</title>
 
 
-    <meta name="description" content="搜狐面试题">
-<meta name="keywords" content="面试,搜狐,狐友">
+    <meta name="description" content="货拉拉面试题">
+<meta name="keywords" content="面试,货拉拉">
 <meta property="og:type" content="article">
-<meta property="og:title" content="搜狐面试题">
-<meta property="og:url" content="http://soso.wiki/搜狐面试题/index.html">
+<meta property="og:title" content="货拉拉面试题">
+<meta property="og:url" content="http://soso.wiki/货拉拉面试题/index.html">
 <meta property="og:site_name" content="搜搜题">
-<meta property="og:description" content="搜狐面试题">
+<meta property="og:description" content="货拉拉面试题">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://soso.wiki/images/og_image.png">
-<meta property="og:updated_time" content="2021-06-12T15:27:30.378Z">
+<meta property="og:updated_time" content="2021-06-13T10:29:39.094Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="搜狐面试题">
-<meta name="twitter:description" content="搜狐面试题">
+<meta name="twitter:title" content="货拉拉面试题">
+<meta name="twitter:description" content="货拉拉面试题">
 <meta name="twitter:image" content="http://soso.wiki/images/og_image.png">
 
 
@@ -103,7 +103,7 @@ var _hmt = _hmt || [];
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.png" alt="搜狐面试题" height="28">
+                <img src="/images/logo.png" alt="货拉拉面试题" height="28">
             
             </a>
         </div>
@@ -147,7 +147,7 @@ var _hmt = _hmt || [];
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2021-06-10T10:00:00.000Z">2021-06-10</time>
+                <time class="level-item has-text-grey" datetime="2021-06-11T03:40:00.000Z">2021-06-11</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/面试题/">面试题</a>
@@ -157,7 +157,7 @@ var _hmt = _hmt || [];
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分钟 读完 (大约 449 个字)
+                    2 分钟 读完 (大约 228 个字)
                 </span>
                 
                 
@@ -166,24 +166,23 @@ var _hmt = _hmt || [];
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                搜狐面试题
+                货拉拉面试题
             
         </h1>
         <div class="content">
-            <p>搜狐面试题<br><a id="more"></a></p>
-<p>1.介绍一个印象深刻的项目，遇到过什么问题，怎么解决的。</p>
-<p>组件化为什么没有用一个通用的字典来接收页面参数，这样不是更通用？</p>
-<p>webView 交互协议怎么制定的？H5 从原生拿返回值怎么实现的？</p>
-<p>2.做过哪些优化</p>
-<p>3.你觉得你最擅长哪方面？比如 UI、架构啥的</p>
-<p>4.微博详情页（内容、转发、评论）让你来做，你会怎么实现？从外层到内层用什么控件，具体实现。</p>
-<p>5.算法题</p>
-<p>有一个产品发布了多个版本，它遵循以下规则：假如某个版本崩溃了，则后面的所有版本都会崩溃。</p>
-<p>举个例子：一个产品假如有5个版本，其中第1-3版本都是正常的，但是第4个版本崩溃了，那么第5个版本（最新版本）一定也崩溃，第4个版本被称为第一个崩溃版本。</p>
-<p>现在已知一个产品有n个版本，而且有一个检查算法func isBadVersion(version:Int) -&gt; Bool 可以判断一个版本是否崩溃，假设这个产品的最新版本崩溃了，求第一个崩溃的版本。</p>
-<p>思路：本质上是有重复数字的升序数组的二分查找</p>
-<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">search</span>(<span class="hljs-params"> nums ,  target </span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">let</span> start = <span class="hljs-number">0</span></span><br><span class="line">    <span class="hljs-keyword">if</span>(!nums.length) <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;</span><br><span class="line">    <span class="hljs-keyword">let</span> left = <span class="hljs-number">0</span>, right = nums.length - <span class="hljs-number">1</span>;</span><br><span class="line">    <span class="hljs-keyword">while</span>(left &lt;= right) &#123;</span><br><span class="line">        <span class="hljs-keyword">let</span> mid = <span class="hljs-built_in">Math</span>.floor((left + right) / <span class="hljs-number">2</span>);</span><br><span class="line">        <span class="hljs-keyword">if</span>(target == nums[mid]) &#123;</span><br><span class="line">            <span class="hljs-keyword">while</span>(mid != <span class="hljs-number">0</span> &amp;&amp; nums[mid - <span class="hljs-number">1</span>] == nums[mid]) mid--; <span class="hljs-comment">// 找到第一个数</span></span><br><span class="line">            <span class="hljs-keyword">return</span> mid;</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(target &lt; nums[mid]) &#123;</span><br><span class="line">            right = mid - <span class="hljs-number">1</span>;</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">            left = mid + <span class="hljs-number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>6.想实现一个图片，删除后撤销删除，你会用什么数据结构来怎么实现？</p>
+            <p>货拉拉面试题<br><a id="more"></a></p>
+<p>1.Vue 用过哪些指令</p>
+<p>2.v-model 有没有遇到过什么问题？数组里的对象赋值后 UI 未更新，需要使用 set 方法的原因是什么？</p>
+<p>3.Vue 双向绑定是怎么实现的</p>
+<p>4.说一下你对 Flutter 的理解，使用过哪些 Widget</p>
+<p>5.Flutter 除了拆分组件还有什么方法能够使代码结构更清晰</p>
+<p>6.Flutter 有没有跟原生交互的部分，有没有涉及双引擎/单引擎的问题</p>
+<p>7.Masonry 和 SnapKit 的选择</p>
+<p>8.做过哪些优化</p>
+<p>9.说一下装饰模式</p>
+<p>10.对 MVVM 的理解，什么情况下会选择 MVVM</p>
+<p>11.多线程的几种实现方法如何选择，除了使用 dispatch_semaphore，还有什么更好用的方法来解决网络请求依赖，嵌套地狱的问题</p>
+<p>12.Git 的使用，项目里有哪些分支</p>
 
         </div>
         
@@ -191,7 +190,7 @@ var _hmt = _hmt || [];
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/搜狐/">搜狐</a>, <a class="has-link-grey -link" href="/tags/狐友/">狐友</a>, <a class="has-link-grey -link" href="/tags/面试/">面试</a>
+                    <a class="has-link-grey -link" href="/tags/货拉拉/">货拉拉</a>, <a class="has-link-grey -link" href="/tags/面试/">面试</a>
                 </div>
             </div>
         </div>
@@ -208,17 +207,10 @@ var _hmt = _hmt || [];
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/货拉拉面试题/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">货拉拉面试题</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/达达面试题/">
-                <span class="level-item">达达面试题</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/搜狐面试题/">
+                <span class="level-item">搜狐面试题</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -239,7 +231,7 @@ var _hmt = _hmt || [];
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.png" alt="搜狐面试题" height="28">
+                    <img src="/images/logo.png" alt="货拉拉面试题" height="28">
                 
                 </a>
                 <p class="is-size-7">
