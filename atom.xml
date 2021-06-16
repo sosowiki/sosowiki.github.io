@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://soso.wiki/"/>
-  <updated>2021-06-16T03:35:39.129Z</updated>
+  <updated>2021-06-16T06:41:31.275Z</updated>
   <id>http://soso.wiki/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://soso.wiki/%E4%BA%BA%E4%BA%BA%E8%BD%A6%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     <id>http://soso.wiki/人人车面试题/</id>
     <published>2021-06-15T10:00:00.000Z</published>
-    <updated>2021-06-16T03:35:39.129Z</updated>
+    <updated>2021-06-16T06:41:31.275Z</updated>
     
-    <content type="html"><![CDATA[<p>人人车面试题<br><a id="more"></a></p><h3 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h3><p>1.了解哪些设计模式</p><p>2.MVVM 解决什么问题</p><p>3.性能优化</p><p>4.内存管理的理解</p><p>autoreleasePool 的结构，一个 autoreleasePoolPage 的大小</p><p>5.weak 的原理</p><p>6.class 的结构，cache 的结构</p><p>7.关联对象存在哪里</p><p>8.Category 的加载流程</p><p>9.Runtime 的应用</p><p>10.三次握手与四次挥手，四次挥手后会立马断开连接吗</p><p>11.Swift 解包方式</p><p>12.Swift 中计算属性和其他属性的区别</p><p>13.Swift 类和结构体的区别，使用属性的写法上的区别</p><p>14.数组和链表的区别</p><p>15.快速排序，快排时间复杂度</p><h3 id="二面"><a href="#二面" class="headerlink" title="二面"></a>二面</h3><p>介绍项目</p><p>1.webView 与 H5 交互，拦截协议 url 有长度限制，有安全问题，可能会被抓包，JSBridge</p><p>2.埋点</p><ul><li><p>埋点保存/删除数据的时机</p></li><li><p>内存里的最大容量，收到内存警告</p></li><li><p>上报网络请求发送失败后的处理，埋点的补偿机制</p></li></ul><p>3.支付</p><p>4.页面 A push B  A willDisappear didDisappear B willAppear didAppear 的执行顺序</p><p>5.Person 类继承自 NSObject 类，没有实现 age 方法。两个实例 p1,p2，怎么让 p1 响应 age 方法，p2 不响应 age 方法。</p><p>6.消息发送机制和消息转发。</p><p>7.KVO 的实现原理</p><p>8.多个分类实现了同一个方法，查找顺序</p><p>9.Swift 的 String 为什么设计成值类型？</p><p>安全，copy，快速</p><p>10.设计 LRU 最近最少使用</p>]]></content>
+    <content type="html"><![CDATA[<p>人人车面试题<br><a id="more"></a></p><h3 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h3><p>1.了解哪些设计模式</p><p>2.MVVM 解决什么问题</p><p>3.性能优化</p><p>4.内存管理的理解</p><p>autoreleasePool 的结构，一个 autoreleasePoolPage 的大小</p><p>5.weak 的原理</p><p>6.class 的结构，cache 的结构，bucket_t 的结构，方法查找的顺序，是逐个遍历吗？</p><p>7.关联对象存在哪里</p><p>8.Category 的加载流程</p><p>9.Runtime 的应用，动态方法解析里返回 YES，但是并没有添加方法，会怎么样？</p><p>10.三次握手与四次挥手，四次挥手后会立马断开连接吗</p><p>11.Swift 解包方式</p><p>12.Swift 中计算属性和存储属性的区别</p><p>13.Swift 类和结构体的区别，使用属性的写法上的区别</p><p>14.数组和链表的区别</p><p>15.快速排序，快排时间复杂度</p><h3 id="二面"><a href="#二面" class="headerlink" title="二面"></a>二面</h3><p>介绍项目</p><p>1.webView 与 H5 交互，拦截协议 url 有长度限制，有安全问题，可能会被抓包，JSBridge</p><p>2.埋点</p><ul><li><p>埋点保存/删除数据的时机</p></li><li><p>内存里的最大容量，收到内存警告</p></li><li><p>上报网络请求发送失败后的处理，埋点的补偿机制</p></li></ul><p>3.支付</p><p>4.页面 A push B  A willDisappear didDisappear B willAppear didAppear 的执行顺序</p><p>5.Person 类继承自 NSObject 类，没有实现 age 方法。两个实例 p1,p2，怎么让 p1 响应 age 方法，p2 不响应 age 方法。</p><p>6.消息发送机制和消息转发。</p><p>7.KVO 的实现原理</p><p>8.多个分类实现了同一个方法，查找顺序</p><p>9.Swift 的 String 为什么设计成值类型？</p><p>安全，copy，快速</p><p>10.设计 LRU 最近最少使用</p>]]></content>
     
     <summary type="html">
     
