@@ -19,7 +19,7 @@
 <meta property="og:description" content="百度知道面试题">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://r.photo.store.qq.com/psc?/V51Psxff3kiaoK2VLg7n0iJ8vg4AHPYT/TmEUgtj9EK6.7V8ajmQrEH3xiZ1FwVx7xEmZSZLEw1lLVoqg4z*Xni1eSWSeFT6h48u02Owz2*w4aMJfCqdV574cxX9KXWNEwdVMeDz3ov0!/r/r/_yake_qzoneimgout.png">
-<meta property="og:updated_time" content="2021-07-05T15:55:43.596Z">
+<meta property="og:updated_time" content="2021-07-06T10:21:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="百度知道面试题">
 <meta name="twitter:description" content="百度知道面试题">
@@ -163,7 +163,7 @@ var _hmt = _hmt || [];
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分钟 读完 (大约 651 个字)
+                    14 分钟 读完 (大约 2149 个字)
                 </span>
                 
                 
@@ -188,6 +188,75 @@ var _hmt = _hmt || [];
 <p>9.两个链表是否相交（怎么判断是否相交？怎么找交点）</p>
 <p>10.两个字符串的最长相同子串的长度</p>
 <h3 id="二面"><a href="#二面" class="headerlink" title="二面"></a>二面</h3><p>1.较难定位的 Crash 怎么定位？怎么判断是 OOM 导致的 Crash 还是其他导致的 Crach？</p>
+<p>2.Jenkins+Fastlane 实现 CI，自动化的流程除了打包还能做什么？</p>
+<p>3.Flutter 和原生开发你觉得有什么差异</p>
+<p>4.HTTPDNS，使用和不使用有什么区别？有什么好处？</p>
+<p>5.通知是同步的还是异步的，异步的通知什么时候会发出去，通知的原理，通知如何存储，多次添加通知，多次移除通知会有问题吗？</p>
+<p>6.屏幕显示的流程，CPU/GPU，离屏渲染是什么？光栅化的过程</p>
+<p>7.安装包大小优化做了哪些？段迁移了解吗？</p>
+<p>8.App 启动系统做了哪些事情，怎么优化启动速度</p>
+<p>9.tableView 滑动流畅性优化</p>
+<p>10.从点击屏幕到响应事件的流程</p>
+<p>11.UIView 和 CALayer 的关系，为什么要这么设计</p>
+<p>12.autoreleasePool 的原理，设计成双向链表有什么好处</p>
+<p>13.最有成就感的项目，组件化的好处</p>
+<p>14.如果 Code Review，你会关注哪些东西？</p>
+<p>15.相对其他团队成员的优势</p>
+<p>16.分享会怎么做，如果听众有 PM/测试，会怎么分享</p>
+<p>17.团队里有成员不是特别优秀，怎么把控进度</p>
+<p>18.了解百度的技术职级吗？你觉得自己是T几？</p>
+<h3 id="参考答案"><a href="#参考答案" class="headerlink" title="参考答案"></a>参考答案</h3><h3 id="一面-1"><a href="#一面-1" class="headerlink" title="一面"></a>一面</h3><p>1.属性关键字，在 ARC、MRC下分别用什么关键字，copy 修饰 NSString，可变字符串用什么修饰？block 用什么修饰？能不能用 strong 修饰？assign 能修饰对象吗？unsafe_unretain 有什么作用？</p>
+<p>2.block，有几种 block，<code>__weak</code> <code>__block</code>，<code>__block</code> 修改局部变量的值原理，只把局部变量变成结构体就可以了吗？</p>
+<p>3.多线程都用过哪些？NSOperation 了解吗？GCD 怎么开一个线程</p>
+<h4 id="4-什么是死锁，举例说明为什么会死锁"><a href="#4-什么是死锁，举例说明为什么会死锁" class="headerlink" title="4.什么是死锁，举例说明为什么会死锁"></a>4.什么是死锁，举例说明为什么会死锁</h4><blockquote>
+<p>死锁是指两个或两个以上的进程在执行过程中，由于竞争资源或者由于彼此通信而造成的一种阻塞的现象，若无外力作用，它们都将无法推进下去。此时称系统处于死锁状态或系统产生了死锁，这些永远在互相等待的进程称为死锁进程。</p>
+</blockquote>
+<p>四个必要条件</p>
+<ul>
+<li><p>互斥条件：指进程对所分配到的资源进行排它性使用，即在一段时间内某资源只由一个进程占用。如果此时还有其它进程请求资源，则请求者只能等待，直至占有资源的进程用毕释放。</p>
+</li>
+<li><p>请求和保持条件：指进程已经保持至少一个资源，但又提出了新的资源请求，而该资源已被其它进程占有，此时请求进程阻塞，但又对自己已获得的其它资源保持不放。</p>
+</li>
+<li><p>不剥夺条件：指进程已获得的资源，在未使用完之前，不能被剥夺，只能在使用完时由自己释放。</p>
+</li>
+<li><p>环路等待条件：指在发生死锁时，必然存在一个进程——资源的环形链，即进程集合{P0，P1，P2，···，Pn}中的P0正在等待一个P1占用的资源；P1正在等待P2占用的资源，……，Pn正在等待已被P0占用的资源。</p>
+</li>
+</ul>
+<p>举例：</p>
+<figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="hljs-keyword">void</span>)viewDidLoad &#123;</span><br><span class="line">    [<span class="hljs-keyword">super</span> viewDidLoad];</span><br><span class="line">    <span class="hljs-built_in">dispatch_sync</span>(dispatch_get_main_queue(), ^&#123;</span><br><span class="line">        <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"1"</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>dispatch_sync 同步，阻塞当前线程，即阻塞主线程。block 又在等主线程里的 viewDidLoad 执行完，从而形成了主线程等待主线程，造成死锁。</p>
+<p>参考链接：<a href="https://baike.baidu.com/item/%E6%AD%BB%E9%94%81" target="_blank" rel="noopener">百度百科-死锁</a></p>
+<h4 id="5-内存都有哪些区域？哪些是在栈上，哪些是在堆上？局部变量存在哪里？"><a href="#5-内存都有哪些区域？哪些是在栈上，哪些是在堆上？局部变量存在哪里？" class="headerlink" title="5.内存都有哪些区域？哪些是在栈上，哪些是在堆上？局部变量存在哪里？"></a>5.内存都有哪些区域？哪些是在栈上，哪些是在堆上？局部变量存在哪里？</h4><ul>
+<li>代码段</li>
+<li>数据段</li>
+<li>栈</li>
+<li>堆</li>
+<li>内核区</li>
+</ul>
+<p>栈区：局部变量和实参</p>
+<p>堆区：OC 中使用 new 方法创建的对象</p>
+<h4 id="6-load-父类、子类调用顺序？分类的-load-会调用吗？项目里有用到-load-吗？initialize"><a href="#6-load-父类、子类调用顺序？分类的-load-会调用吗？项目里有用到-load-吗？initialize" class="headerlink" title="6.+load 父类、子类调用顺序？分类的 +load 会调用吗？项目里有用到 +load 吗？initialize"></a>6.+load 父类、子类调用顺序？分类的 +load 会调用吗？项目里有用到 +load 吗？initialize</h4><p>先调用父类，后调用子类，再调用分类。</p>
+<p>+load 调用顺序</p>
+<p>1.先调用类的 +load</p>
+<ul>
+<li>按照编译先后顺序调用（先编译，先调用）</li>
+<li>调用子类的 +load 之前会先调用父类的 +load</li>
+</ul>
+<p>2.再调用分类的 +load</p>
+<ul>
+<li>按照编译先后顺序调用（先编译，先调用）</li>
+</ul>
+<p>+initialize方法会在类第一次接收到消息时调用。+initialize 调用顺序：</p>
+<ul>
+<li>先调用父类的+initialize，再调用子类的+initialize</li>
+<li>(先初始化父类，再初始化子类，每个类只会初始化1次)</li>
+</ul>
+<h4 id="7-Category-实现了本类的同名方法，有没有办法来调用本类的方法？"><a href="#7-Category-实现了本类的同名方法，有没有办法来调用本类的方法？" class="headerlink" title="7.Category 实现了本类的同名方法，有没有办法来调用本类的方法？"></a>7.Category 实现了本类的同名方法，有没有办法来调用本类的方法？</h4><p>Category 实现了本类的同名方法，会调用 Category 的同名方法。</p>
+<h4 id="8-单链表是否有环"><a href="#8-单链表是否有环" class="headerlink" title="8.单链表是否有环"></a>8.单链表是否有环</h4><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hasCycle</span>(<span class="hljs-params"> head </span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">if</span> (head == <span class="hljs-literal">null</span>) &#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">let</span> slow = head;</span><br><span class="line">    <span class="hljs-keyword">let</span> fast = head;</span><br><span class="line">    <span class="hljs-keyword">while</span> (fast.next &amp;&amp; fast.next.next) &#123;</span><br><span class="line">        slow = slow.next;</span><br><span class="line">        fast = fast.next.next;</span><br><span class="line">        <span class="hljs-keyword">if</span> (slow == fast) &#123;</span><br><span class="line">            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="9-两个链表是否相交（怎么判断是否相交？怎么找交点）"><a href="#9-两个链表是否相交（怎么判断是否相交？怎么找交点）" class="headerlink" title="9.两个链表是否相交（怎么判断是否相交？怎么找交点）"></a>9.两个链表是否相交（怎么判断是否相交？怎么找交点）</h4><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">FindFirstCommonNode</span>(<span class="hljs-params">pHead1, pHead2</span>)</span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">let</span> mySet = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>();</span><br><span class="line">    <span class="hljs-keyword">let</span> p1 = pHead1;</span><br><span class="line">    <span class="hljs-keyword">while</span> (p1) &#123;</span><br><span class="line">        mySet.add(p1);</span><br><span class="line">        p1 = p1.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">let</span> p2 = pHead2;</span><br><span class="line">    <span class="hljs-keyword">while</span> (p2) &#123;</span><br><span class="line">        <span class="hljs-keyword">if</span> (mySet.has(p2)) &#123;</span><br><span class="line">            <span class="hljs-keyword">return</span> p2;</span><br><span class="line">        &#125;</span><br><span class="line">        p2 = p2.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="10-两个字符串的最长相同子串的长度"><a href="#10-两个字符串的最长相同子串的长度" class="headerlink" title="10.两个字符串的最长相同子串的长度"></a>10.两个字符串的最长相同子串的长度</h4><p>题目链接：<a href="https://www.nowcoder.com/practice/f33f5adc55f444baa0e0ca87ad8a6aac?tpId=188&amp;&amp;tqId=38644&amp;rp=1&amp;ru=/ta/job-code-high-week&amp;qru=/ta/job-code-high-week/question-ranking" target="_blank" rel="noopener">NC127 最长公共子串</a></p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">LCS</span>(<span class="hljs-params"> str1 ,  str2 </span>) </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">if</span> (str1.length &gt; str2.length) &#123;</span><br><span class="line">        [str1, str2] = [str2, str1];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">let</span> res = <span class="hljs-string">""</span>;</span><br><span class="line">    <span class="hljs-keyword">let</span> len = <span class="hljs-number">0</span>;</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; str1.length; i++) &#123;</span><br><span class="line">        <span class="hljs-keyword">let</span> temp = str1.slice(i-len,i+<span class="hljs-number">1</span>);</span><br><span class="line">        <span class="hljs-keyword">if</span> (str2.indexOf(temp) !== <span class="hljs-number">-1</span>) &#123;</span><br><span class="line">            res = temp;</span><br><span class="line">            len++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="二面-1"><a href="#二面-1" class="headerlink" title="二面"></a>二面</h3><p>1.较难定位的 Crash 怎么定位？怎么判断是 OOM 导致的 Crash 还是其他导致的 Crach？</p>
 <p>2.Jenkins+Fastlane 实现 CI，自动化的流程除了打包还能做什么？</p>
 <p>3.Flutter 和原生开发你觉得有什么差异</p>
 <p>4.HTTPDNS，使用和不使用有什么区别？有什么好处？</p>
