@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>搜搜文档</title>
+  <title>SOSOWIKI</title>
   <icon>https://www.gravatar.com/avatar/0add61f863154d82902310b0dd29ec33</icon>
   <subtitle>SOSOWIKI</subtitle>
   <link href="/atom.xml" rel="self"/>
