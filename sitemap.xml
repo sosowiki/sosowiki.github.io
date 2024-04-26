@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://soso.wiki/about/index.html</loc>
+    
+    <lastmod>2024-04-26T11:01:20.099Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://soso.wiki/2021-07-12-%E7%BE%8E%E5%9B%A2%E9%9D%A2%E8%AF%95%E9%A2%98/</loc>
     
     <lastmod>2024-04-26T08:34:44.313Z</lastmod>
@@ -47,13 +54,6 @@
     <loc>http://soso.wiki/%E4%BA%AC%E4%B8%9C%E9%9D%A2%E8%AF%95%E9%A2%98/</loc>
     
     <lastmod>2023-04-02T00:40:41.406Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://soso.wiki/about/index.html</loc>
-    
-    <lastmod>2023-04-02T00:34:36.707Z</lastmod>
     
   </url>
   
