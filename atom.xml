@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://soso.wiki/"/>
-  <updated>2024-05-08T06:24:06.674Z</updated>
+  <updated>2024-05-09T12:58:49.018Z</updated>
   <id>http://soso.wiki/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>百融云创面试题</title>
+    <link href="http://soso.wiki/%E7%99%BE%E8%9E%8D%E4%BA%91%E5%88%9B%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>http://soso.wiki/百融云创面试题/</id>
+    <published>2024-05-09T12:58:00.000Z</published>
+    <updated>2024-05-09T12:58:49.018Z</updated>
+    
+    <content type="html"><![CDATA[<p>百融云创面试题<br><a id="more"></a></p><p>1.腾讯视频共享屏幕在线编程 <a href="https://leetcode.cn/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof/description/" target="_blank" rel="noopener">https://leetcode.cn/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof/description/</a><br>2.KVO原理<br>3.如何调用私有API？三方库或系统未暴漏的方法<br>4.怎么改一个类的只读属性<br>5.消息机制<br>6.runloop流程，用runloop做过什么？卡顿检测，发生卡顿后怎么获取堆栈信息？<br>7.GCD都用了哪些？网络请求A和B都回调后，请求C，如何实现？除了dispatch_group<br>8.可变数组NSMutableArray，在头部插入元素，iOS系统做了什么优化<br>9.Tagged Pointer<br>10.NSString存储在哪里，引用计数存储哪里？<br>11.dealloc流程<br>12.避免哈希碰撞的几种方法？<br>13.mach-o了解吗？存储的方法信息可以无用代码检测？段迁移？<br>14.脚本检测未使用代码原理<br>15.render渲染流程<br>16.项目亮点</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;百融云创面试题&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="面试题" scheme="http://soso.wiki/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="百融云创" scheme="http://soso.wiki/tags/%E7%99%BE%E8%9E%8D%E4%BA%91%E5%88%9B/"/>
+    
+  </entry>
   
   <entry>
     <title>OC语法</title>
@@ -485,30 +509,6 @@
       <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
     
       <category term="字节跳动" scheme="http://soso.wiki/tags/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>平安面试题</title>
-    <link href="http://soso.wiki/%E5%B9%B3%E5%AE%89%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    <id>http://soso.wiki/平安面试题/</id>
-    <published>2021-04-15T07:23:00.000Z</published>
-    <updated>2023-04-02T00:21:08.577Z</updated>
-    
-    <content type="html"><![CDATA[<p>平安面试题<br><a id="more"></a></p><p>1.什么是多态？具体在项目中怎么用的？</p><p>2.说一下组件化开发（业务组件非UI组件）；</p><p>3.调用未实现的方法会发生什么，然后通过什么可以进行处理？消息转发的具体流程？消息转发流程在实际中的应用？</p><p>4.KVO 的原理？</p><p>5.分类的底层实现？</p><p>6.App 启动优化？热启动&amp;冷启动，具体优化？</p><p>7.Vue 的双向绑定？</p><p>8.说一下你对 Runloop 的理解，Runloop 的应用？</p><p>9.项目中具体是怎么用的多线程？</p><p>10.bug 管理工具？bug 率，日活？</p><p>11.项目中你的职责所在？</p><p>12.是否读过 SDWebImage，AFNetworking 底层？</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;平安面试题&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="面试题" scheme="http://soso.wiki/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-    
-      <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-      <category term="平安" scheme="http://soso.wiki/tags/%E5%B9%B3%E5%AE%89/"/>
     
   </entry>
   
