@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://soso.wiki/"/>
-  <updated>2024-08-07T07:39:54.396Z</updated>
+  <updated>2024-08-20T14:50:56.034Z</updated>
   <id>http://soso.wiki/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>度小满</title>
+    <link href="http://soso.wiki/%E5%BA%A6%E5%B0%8F%E6%BB%A1/"/>
+    <id>http://soso.wiki/度小满/</id>
+    <published>2024-08-20T14:50:00.000Z</published>
+    <updated>2024-08-20T14:50:56.034Z</updated>
+    
+    <content type="html"><![CDATA[<p>度小满<br><a id="more"></a></p><p>一面：</p><p>1.内存管理，内存泄漏，监测方法，解决办法</p><p>2.App启动流程，优化方法，查看每个阶段耗时的方法</p><p>Category和Extension区别，使用场景</p><p>Category可以添加属性吗？</p><p>3.webView和原生交互，怎么提升webView加载速度？H5怎么加载本地的JS和图片资源？</p><p>4.HTTP和HTTPS的区别，HTTPS怎么保证安全？GET和POST区别？请求头里一般有什么？</p><p>5.MVC、MVP、MVVM区别，使用场景</p><p>6.用OC实现一个栈，push  pop  isEmpty方法，栈和队列的区别，使用场景</p><p>7.了解鸿蒙吗</p><p>二面：</p><p>1.了解提升研发效率的方法，跨平台框架？</p><p>2.Flutter和原生交互方法</p><p>3.小程序的实现原理，SN的实现原理</p><p>3.设计图片下载框架，包括内存，缓存，解码等；缓存的技术指标是什么？(命中率) 在缓存即将达到最大容量时，同时有大量写入缓存的操作，怎么优化？</p><p>4.下载限制并发数量，下载断点续传    http请求码是多少</p><p>5.同层渲染怎么实现</p><p>6.webView加载速度优化</p><p>7.线上卡顿监控，卡顿优化</p><p>8.线上内存监控</p><p>9.口述快速排序，快速排序用迭代实现</p><p>10.HTTPS的流程，客户端校验证书的过程，链式验证</p><p>三面：</p><p>1.监控</p><p>2.原生与H5交互，注入和post message怎么选型的？</p><p>3.有没有关注过业务指标，技术手段提升业务指标的情况？收银台支付成功率？</p><p>4.其他：年龄、看机会原因，有没有别的offer</p><h2 id="参考答案"><a href="#参考答案" class="headerlink" title="参考答案"></a>参考答案</h2><p>1.内存管理，内存泄漏，卡顿监测方法，解决办法</p><p>2.App启动流程，优化方法，查看每个阶段耗时的方法</p><p>3.webView和原生交互，怎么提升webView加载速度？H5怎么加载本地的JS和图片资源？</p><p>4.HTTP和HTTPS的区别，HTTPS怎么保证安全？GET和POST区别？请求头里一般有什么？</p><p>HTTP（HyperText Transfer Protocol）和HTTPS（HyperText Transfer Protocol Secure）是用于在网络上传输数据的两种协议。它们有以下主要区别：</p><ol><li><strong>安全性</strong>：<ul><li><strong>HTTP</strong>：数据以纯文本形式传输，不加密。因此，数据在传输过程中容易被截获和篡改。</li><li><strong>HTTPS</strong>：在HTTP的基础上增加了SSL/TLS加密层。数据在传输过程中会被加密，提供了数据的保密性和完整性，防止被窃听和篡改。</li></ul></li><li><strong>端口</strong>：<ul><li><strong>HTTP</strong>：默认使用80端口。</li><li><strong>HTTPS</strong>：默认使用443端口。</li></ul></li><li><strong>证书</strong>：<ul><li><strong>HTTP</strong>：不需要证书。</li><li><strong>HTTPS</strong>：需要SSL/TLS证书，用于加密通信和验证服务器身份。证书由受信任的证书颁发机构（CA）签发。</li></ul></li><li><strong>性能</strong>：<ul><li><strong>HTTP</strong>：因为没有加密和解密的过程，速度相对较快。</li><li><strong>HTTPS</strong>：由于需要进行加密和解密操作，性能会有所下降，但现代硬件和优化技术已经极大地减少了这种影响。</li></ul></li></ol><p>GET和POST区别</p><ul><li><strong>GET</strong>：主要用于获取数据，参数在URL中，适合传输较少、非敏感数据，幂等且可缓存。</li><li><strong>POST</strong>：主要用于提交数据，参数在请求体中，适合传输大量、敏感数据，非幂等且通常不缓存。</li></ul><p>以下是一些常见的HTTP请求头字段及其作用：</p><h3 id="1-通用请求头字段"><a href="#1-通用请求头字段" class="headerlink" title="1. 通用请求头字段"></a>1. <strong>通用请求头字段</strong></h3><ul><li><strong>Host</strong>：指定请求的目标主机和端口，例如：<code>Host: www.example.com</code>。这是HTTP/1.1中必须包含的头字段。</li><li><strong>User-Agent</strong>：标识发出请求的客户端软件信息，例如浏览器类型和版本、操作系统等，例如：<code>User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3</code>。</li><li><strong>Accept</strong>：指定客户端能够处理的内容类型，例如：<code>Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</code>。</li><li><strong>Accept-Language</strong>：指定客户端首选的语言和地区，例如：<code>Accept-Language: en-US,en;q=0.5</code>。</li><li><strong>Accept-Encoding</strong>：指定客户端支持的内容编码类型，例如：<code>Accept-Encoding: gzip, deflate, br</code>。</li><li><strong>Connection</strong>：控制连接的管理，例如：<code>Connection: keep-alive</code>或<code>Connection: close</code>。</li></ul><h3 id="2-请求头字段（请求特有）"><a href="#2-请求头字段（请求特有）" class="headerlink" title="2. 请求头字段（请求特有）"></a>2. <strong>请求头字段（请求特有）</strong></h3><ul><li><strong>Referer</strong>：指示请求的来源页面的URL，例如：<code>Referer: https://www.example.com/previous-page</code>。</li><li><strong>Cookie</strong>：发送存储在客户端的Cookie数据，例如：<code>Cookie: sessionId=abc123; theme=light</code>。</li><li><strong>Authorization</strong>：用于传递身份验证凭据，例如：<code>Authorization: Bearer token123</code>或<code>Authorization: Basic base64credentials</code>。</li><li><strong>Content-Type</strong>：指定请求体的媒体类型，常用于POST和PUT请求，例如：<code>Content-Type: application/json</code>或<code>Content-Type: application/x-www-form-urlencoded</code>。</li><li><strong>Content-Length</strong>：表示请求体的字节长度，例如：<code>Content-Length: 348</code>。</li><li><strong>Origin</strong>：表明请求的来源，用于跨域请求，例如：<code>Origin: https://www.example.com</code>。</li><li><strong>If-Modified-Since</strong>：用于条件请求，只在指定日期之后资源被修改时才返回，例如：<code>If-Modified-Since: Wed, 21 Oct 2015 07:28:00 GMT</code>。</li><li><strong>If-None-Match</strong>：用于条件请求，当ETag不匹配时才返回，例如：<code>If-None-Match: &quot;abc123&quot;</code>。</li><li><strong>Range</strong>：请求部分资源内容，例如：<code>Range: bytes=500-999</code>。</li></ul><h3 id="3-自定义请求头字段"><a href="#3-自定义请求头字段" class="headerlink" title="3. 自定义请求头字段"></a>3. <strong>自定义请求头字段</strong></h3><ul><li><strong>X-Requested-With</strong>：通常用于标识Ajax请求，例如：<code>X-Requested-With: XMLHttpRequest</code>。</li><li><strong>X-CSRF-Token</strong>：用于传递CSRF（跨站请求伪造）令牌，以防止CSRF攻击。</li><li><strong>X-Forwarded-For</strong>：记录原始客户端IP地址，常用于代理服务器，例如：<code>X-Forwarded-For: 203.0.113.195</code>。</li></ul><h3 id="4-HTTP-2-特有头字段"><a href="#4-HTTP-2-特有头字段" class="headerlink" title="4. HTTP/2 特有头字段"></a>4. <strong>HTTP/2 特有头字段</strong></h3><ul><li><strong>:method</strong>：表示HTTP方法，例如：<code>:method: GET</code>。</li><li><strong>:scheme</strong>：表示请求的协议（http或https），例如：<code>:scheme: https</code>。</li><li><strong>:path</strong>：表示请求的路径和查询字符串，例如：<code>:path: /index.html</code>。</li><li><strong>:authority</strong>：表示服务器的主机名和端口，类似于HTTP/1.1的Host头字段，例如：<code>:authority: www.example.com</code>。</li></ul><h3 id="示例请求头"><a href="#示例请求头" class="headerlink" title="示例请求头"></a>示例请求头</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">GET /index.html HTTP/1.1</span><br><span class="line">Host: www.example.com</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3</span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</span><br><span class="line">Accept-Language: en-US,en;q=0.5</span><br><span class="line">Accept-Encoding: gzip, deflate, br</span><br><span class="line">Connection: keep-alive</span><br><span class="line">Referer: https://www.example.com/previous-page</span><br><span class="line">Cookie: sessionId=abc123; theme=light</span><br><span class="line">Authorization: Bearer token123</span><br></pre></td></tr></table></figure><p>这些请求头字段在客户端和服务器之间传递时，提供了关于请求和客户端环境的丰富信息，使得服务器能够理解和处理请求，并返回适当的响应。</p><p>5.MVC、MVP、MVVM区别，使用场景</p><p>6.用OC实现一个栈，push  pop  isEmpty方法，栈和队列的区别，使用场景</p><p>7.了解鸿蒙吗</p><p>二面：</p><p>1.了解提升研发效率的方法，跨平台框架？</p><p>2.Flutter和原生交互方法</p><p>3.小程序的实现原理，SN的实现原理</p><p>3.设计图片下载框架，包括内存，缓存，解码等；缓存的技术指标是什么？(命中率) 在缓存即将达到最大容量时，同时有大量写入缓存的操作，怎么优化？</p><p>4.下载限制并发数量，下载断点续传    http请求码是多少</p><p>5.同层渲染怎么实现</p><p><a href="https://developers.weixin.qq.com/community/develop/article/doc/000c4e433707c072c1793e56f5c813" target="_blank" rel="noopener">小程序同层渲染原理剖析</a></p><p><a href="https://zhuanlan.zhihu.com/p/498449103" target="_blank" rel="noopener">小程序在同层渲染上的探索</a></p><p>6.webView加载速度优化</p><p>7.线上卡顿监控，卡顿优化</p><p>8.线上内存监控</p><p><a href="https://wetest.qq.com/labs/367" target="_blank" rel="noopener">iOS微信内存监控 </a></p><p>9.口述快速排序，快速排序用迭代实现</p><p>10.HTTPS的流程，客户端校验证书的过程，链式验证</p><p>第一步是检查证书的链式验证。客户端会使用已信任的根证书（Root Certificate Authority）去验证服务器证书的有效性。根证书是权威机构颁发的，被广泛信任的证书，用于证明其它证书的合法性。客户端会检查服务器证书中的颁发者，然后递归地检查颁发者的证书，直到检查到根证书或者找不到信任的根证书为止。</p><p>第二步是检查证书的有效期。客户端会检查证书的有效起始日期和有效截止日期，确保证书在有效期内。如果证书过期，客户端将拒绝连接。</p><p>第三步是检查证书的公钥。客户端会验证服务器证书中的公钥和域名是否匹配。客户端会从证书中提取服务器的公钥，并与服务器进行握手协议，验证证书中的公钥是否与服务器的公钥匹配。如果不匹配，客户端将拒绝连接。</p><p>除了上述基本的校验步骤，客户端还可以进行更加严格的校验，以提高安全性。例如，客户端可以检查证书中是否包含指纹信息（Fingerprint），从而确保证书的完整性和一致性。客户端也可以检查证书中的扩展字段，查看是否存在其他安全相关的信息。</p><p>总结来说，客户端校验证书的过程包括链式验证、有效期验证和公钥匹配验证。通过这些验证步骤，客户端能够确保所连接的服务器是合法且可信赖的，从而保障通信的安全性。</p><p>三面：</p><p>1.监控</p><p>2.原生与H5交互，注入和post message怎么选型的？</p><p>在移动开发中，原生与H5（HTML5）交互是一个常见的需求。为了实现这种交互，通常有两种主要的方法：注入（Injection）和 <code>postMessage</code>。各有优缺点，选择哪种方法取决于具体的应用场景和需求。下面对这两种方法进行详细比较和建议：</p><h3 id="注入（Injection）"><a href="#注入（Injection）" class="headerlink" title="注入（Injection）"></a>注入（Injection）</h3><h4 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h4><ol><li><strong>灵活性高</strong>：可以直接在H5页面中注入原生代码，灵活性较高。</li><li><strong>强大的控制力</strong>：原生代码可以直接操作H5页面的DOM和JavaScript，控制力强。</li><li><strong>无需特定API支持</strong>：不需要依赖特定的API或者更新H5页面的代码。</li></ol><h4 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h4><ol><li><strong>安全性问题</strong>：注入代码可能会带来安全风险，容易被恶意代码利用。</li><li><strong>维护复杂</strong>：代码维护复杂，尤其是原生代码和H5页面频繁变动时。</li><li><strong>浏览器兼容性</strong>：不同浏览器对注入代码的支持可能有所不同。</li></ol><h3 id="postMessage"><a href="#postMessage" class="headerlink" title="postMessage"></a><code>postMessage</code></h3><h4 id="优点：-1"><a href="#优点：-1" class="headerlink" title="优点："></a>优点：</h4><ol><li><strong>安全性高</strong>：通过消息传递的方式进行交互，安全性较高，不容易被恶意代码利用。</li><li><strong>标准化</strong>：<code>postMessage</code>是HTML5标准的一部分，具有较好的跨浏览器兼容性。</li><li><strong>易于调试和维护</strong>：消息传递方式使得代码逻辑更加清晰，易于调试和维护。</li></ol><h4 id="缺点：-1"><a href="#缺点：-1" class="headerlink" title="缺点："></a>缺点：</h4><ol><li><strong>性能影响</strong>：在高频率消息传递的情况下，可能会有性能影响。</li><li><strong>依赖API</strong>：需要H5页面和原生代码都支持<code>postMessage</code> API。</li><li><strong>有限的控制力</strong>：相比直接注入代码，控制力稍弱，只能通过消息进行交互。</li></ol><h3 id="如何选择？"><a href="#如何选择？" class="headerlink" title="如何选择？"></a>如何选择？</h3><p>选择哪种方法取决于具体的应用场景和需求：</p><ol><li><strong>安全性优先</strong>：如果安全性是首要考虑因素，建议使用<code>postMessage</code>，因为这种方法更安全，不容易被恶意代码利用。</li><li><strong>高频交互</strong>：如果需要高频率的交互，且对性能要求较高，可以考虑注入方式，但要特别注意代码的安全性和浏览器兼容性。</li><li><strong>跨浏览器兼容</strong>：如果需要在多个浏览器中运行，并且希望代码易于维护和调试，<code>postMessage</code>是更好的选择。</li><li><strong>快速开发</strong>：如果需要快速实现功能，且不考虑长远的维护和安全性问题，注入方式可能会更快捷。</li></ol><h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>综合来看，<code>postMessage</code>在大多数情况下是更优的选择，特别是在考虑安全性、标准化和易于维护的情况下。但在某些特定场景下，比如需要高频率的交互或者对H5页面进行强控制时，注入方式也不失为一个可选方案。最终的选择应根据具体的项目需求和开发环境来决定。</p><p>3.有没有关注过业务指标，技术手段提升业务指标的情况？收银台支付成功率？</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;度小满&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="面试题" scheme="http://soso.wiki/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="度小满" scheme="http://soso.wiki/tags/%E5%BA%A6%E5%B0%8F%E6%BB%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>瓴岳科技</title>
@@ -481,30 +505,6 @@
       <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
     
       <category term="一点资讯" scheme="http://soso.wiki/tags/%E4%B8%80%E7%82%B9%E8%B5%84%E8%AE%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>恒天财富面试题</title>
-    <link href="http://soso.wiki/%E6%81%92%E5%A4%A9%E8%B4%A2%E5%AF%8C%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    <id>http://soso.wiki/恒天财富面试题/</id>
-    <published>2021-06-04T15:50:00.000Z</published>
-    <updated>2023-04-02T00:17:28.609Z</updated>
-    
-    <content type="html"><![CDATA[<p>恒天财富面试题<br><a id="more"></a></p><h4 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h4><p>1.KVO 的实现原理</p><p>2.Category 的底层结构，Category 能添加成员变量吗？为什么？</p><p>3.load 和 initialize 的区别？initialize 的调用顺序？</p><p>4.Block 为什么用 copy？Block 的类型？Block 的结构</p><p>5.Runtime 的消息流程</p><p>6.说说你了解的 Runloop</p><p>7.项目亮点</p><p>8.怎么实现 webView 秒开 H5</p><p>9.项目优化</p><h4 id="二面（前端负责人）"><a href="#二面（前端负责人）" class="headerlink" title="二面（前端负责人）"></a>二面（前端负责人）</h4><p>1.打开一个 App，首页关掉网络后还可以显示一些内容，怎么实现的，有落地吗？</p><p>2.webView 跟 H5 交互方式？是 url scheme 吗？Bridge 用了吗</p><p>3.从加载 H5 到界面显示出来这段时间的白屏发生了什么？</p><p>4.打开一个示例 App，webView 加载 H5 秒开？离线包了解吗？行业解决方案</p><p>5.Vue 的生命周期</p><p>6.v-if 的作用</p><p>7.父子组件怎么传值？</p><p>8.知道 vuex 吗？</p><h4 id="三面（后端负责人）"><a href="#三面（后端负责人）" class="headerlink" title="三面（后端负责人）"></a>三面（后端负责人）</h4><p>1.介绍项目模块，项目分工</p><p>2.安卓 App 提示更新，更新一半退出再进来，从头下载了。断点续传怎么做？</p><p>3.查看药店首页，白屏 loading 时间长怎么优化？</p><p>4.webView 白屏怎么优化？</p><p>5.做过哪些具体的优化</p><p>6.除了埋点还有什么方式排查问题？不能复现的问题怎么查？</p><p>四面（部门负责人）</p><p>HR</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;恒天财富面试题&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="面试题" scheme="http://soso.wiki/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-    
-      <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-      <category term="恒天财富" scheme="http://soso.wiki/tags/%E6%81%92%E5%A4%A9%E8%B4%A2%E5%AF%8C/"/>
     
   </entry>
   
