@@ -19,7 +19,7 @@
 <meta property="og:description" content="京东">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://soso.wiki/images/og_image.png">
-<meta property="og:updated_time" content="2024-09-03T05:09:19.578Z">
+<meta property="og:updated_time" content="2024-09-03T06:47:04.903Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="京东">
 <meta name="twitter:description" content="京东">
@@ -157,7 +157,7 @@ var _hmt = _hmt || [];
                 <span class="level-item has-text-grey">
                     
                     
-                    10 分钟 读完 (大约 1524 个字)
+                    17 分钟 读完 (大约 2493 个字)
                 </span>
                 
                 
@@ -274,6 +274,53 @@ var _hmt = _hmt || [];
 <p>10.产品上的业务指标</p>
 <p>11.读写安全，除了加锁还有哪些方法</p>
 <p>12.算法：实现一个列表，复用，不卡顿，cell上是多个文本</p>
+<p>二面：</p>
+<p>1.Flutter与iOS交互方法？</p>
+<p>2.Flutter的UI层在哪儿？RN是原生控件</p>
+<p>3.组件化的Router里的映射表什么时候生成？</p>
+<p>4.JSBridge原理</p>
+<p>5.iOS打包流程，命令  Xcode build；cocoapods打包出来的第三方库是什么形式的？源码还是二进制？.a和.framework有什么区别？</p>
+<p>CocoaPods 打包出来的第三方库可以是源码形式，也可以是二进制形式，取决于库的发布方式。</p>
+<ol>
+<li><strong>源码形式</strong>：大多数CocoaPods库以源码形式提供。这意味着CocoaPods会将库的源代码下载到你的项目中，并在构建时编译这些代码。</li>
+<li><strong>二进制形式</strong>：一些库提供二进制预编译版本，以减少编译时间和提高构建速度。在这种情况下，CocoaPods会下载预编译的二进制文件，而不是源码。</li>
+</ol>
+<p>你可以在<code>Podspec</code>文件中检查库的具体形式，通常在<code>source</code>字段中定义了库的来源。如果是二进制库，<code>Podspec</code>会指定二进制文件的URL和相关配置。</p>
+<p><code>.a</code>和<code>.framework</code>是iOS开发中常见的两种二进制文件格式，分别代表静态库和动态库。它们的主要区别如下：</p>
+<ol>
+<li><strong><code>.a</code>（静态库）</strong>：<ul>
+<li><strong>打包形式</strong>：静态库是一个归档文件，包含了多个编译好的目标文件（<code>.o</code>文件）。</li>
+<li><strong>链接方式</strong>：在编译时，静态库的代码会被直接链接到应用程序中。每次构建时，库的代码会被复制到最终的可执行文件中。</li>
+<li><strong>更新</strong>：如果静态库的代码有更新，必须重新编译整个应用程序。</li>
+<li><strong>体积</strong>：由于代码被复制到应用程序中，最终的应用包可能会较大。</li>
+</ul>
+</li>
+<li><strong><code>.framework</code>（动态库）</strong>：<ul>
+<li><strong>打包形式</strong>：动态库是一个文件夹（包），包含库的二进制文件以及相关的资源文件（如头文件和配置文件）。它可以包含多个版本和资源。</li>
+<li><strong>链接方式</strong>：动态库在运行时被加载到内存中。应用程序在运行时与库链接，而不是在编译时。这样，多个应用程序可以共享同一个动态库。</li>
+<li><strong>更新</strong>：更新动态库只需替换库文件，不需要重新编译依赖于该库的应用程序。</li>
+<li><strong>体积</strong>：动态库的使用可以减少最终应用程序的体积，因为库的代码和资源在运行时被共享和加载。</li>
+</ul>
+</li>
+</ol>
+<p>简而言之，<code>.a</code>是静态库，编译时直接包含在应用中；<code>.framework</code>是动态库，在运行时动态加载和共享。</p>
+<p>6.接口监控</p>
+<p>7.为什么用到动态库，动态库类型是什么 so？</p>
+<p>8.加载速度优化</p>
+<p>9.SDK体积优化</p>
+<p>10.RN的原理，怎么转成了原生控件？了解哪些动态化的方案？Week、小程序等的区别</p>
+<p>11.了解哪些性能优化，滑动流畅性的指标</p>
+<p>12.深拷贝和浅拷贝的区别</p>
+<p>13.App启动流程，优化手段，main函数有哪些优化地方</p>
+<p>14.发一个Post请求，怎么加快速度？Get和Post请求区别，Get可以将参数放在请求体吗？</p>
+<p>15.触摸屏幕流程</p>
+<p>16.Swift中Class和Struct区别，Struct可以继承吗？</p>
+<p>17.堆和栈的区别</p>
+<p>18.内存 isa</p>
+<p>19.绘制流程</p>
+<p>20.加载速度优化，各个阶段耗时有统计吗？网络的耗时在哪块儿？</p>
+<p>21.IM的架构</p>
+<p>22.IM怎么保证消息的顺序</p>
 
         </div>
         
@@ -297,6 +344,13 @@ var _hmt = _hmt || [];
 
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2024-09-03-转转/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">转转</span>
+            </a>
+        </div>
         
         
         <div class="level-end">
