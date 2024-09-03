@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://soso.wiki/"/>
-  <updated>2024-08-29T09:14:55.744Z</updated>
+  <updated>2024-09-03T05:09:19.578Z</updated>
   <id>http://soso.wiki/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>京东</title>
+    <link href="http://soso.wiki/2024-08-29-%E4%BA%AC%E4%B8%9C/"/>
+    <id>http://soso.wiki/2024-08-29-京东/</id>
+    <published>2024-08-29T09:30:00.000Z</published>
+    <updated>2024-09-03T05:09:19.578Z</updated>
+    
+    <content type="html"><![CDATA[<p>京东<br><a id="more"></a></p><p>1.SDK体积优化</p><p>2.组件化</p><p>3.端到端监控，具体实现</p><p>4.YYModel的实现原理，和MJExtension区别，为什么比MJExtension快？</p><p>5.OOM怎么排查</p><p>6.Facebook出的异步渲染框架AsyncDisplayKit原理</p><p>7.样式字段很多，怎么和逻辑字段分开下发？</p><p>8.跨端方案，Talos lite</p><p>9.怎么提升代码质量</p><p>10.设计模式：策略模式、中介者模式</p><p>11.打点 cell 50%展现时打点</p><p>打点规范，怎么快速找到某一个页面的所有点击点位</p><p>12.产品上的业务指标</p><p>13.读写安全，除了加锁还有哪些方法</p><p>14.算法：实现一个列表，复用，不卡顿，cell上是多个文本</p><p>二面：</p><p>1.Flutter与iOS交互方法？</p><p>2.Flutter的UI层在哪儿？RN是原生控件</p><p>3.组件化的Router里的映射表什么时候生成？</p><p>4.JSBridge原理</p><p>5.iOS打包流程，命令  Xcode build；cocoapods打包出来的第三方库是什么形式的？源码还是二进制？.a和.framework有什么区别？</p><p>6.接口监控</p><p>7.为什么用到动态库，动态库类型是什么 so？</p><p>8.加载速度优化</p><p>9.SDK体积优化</p><p>10.RN的原理，怎么转成了原生控件？了解哪些动态化的方案？Week、小程序等的区别</p><p>11.了解哪些性能优化，滑动流畅性的指标</p><p>12.深拷贝和浅拷贝的区别</p><p>13.App启动流程，优化手段，main函数有哪些优化地方</p><p>14.发一个Post请求，怎么加快速度？Get和Post请求区别，Get可以将参数放在请求体吗？</p><p>15.触摸屏幕流程</p><p>16.Swift中Class和Struct区别，Struct可以继承吗？</p><p>17.堆和栈的区别</p><p>18.内存 isa</p><p>19.绘制流程</p><p>20.加载速度优化，各个阶段耗时有统计吗？网络的耗时在哪块儿？</p><p>21.IM的架构</p><p>22.IM怎么保证消息的顺序</p><h2 id="参考答案"><a href="#参考答案" class="headerlink" title="参考答案"></a>参考答案</h2><p>1.SDK体积优化</p><p>2.组件化</p><p>3.端到端监控，具体实现</p><p>4.OOM怎么排查</p><p>5.样式字段很多，怎么和逻辑字段分开下发？</p><p>6.跨端方案，Talos lite</p><p>7.怎么提升代码质量</p><p>8.设计模式：策略模式、中介者模式</p><p>常见的23种设计模式包括：</p><ol><li><strong>创建型模式</strong>：<ul><li>单例模式 (Singleton)</li><li>工厂方法模式 (Factory Method)</li><li>抽象工厂模式 (Abstract Factory)</li><li>建造者模式 (Builder)</li><li>原型模式 (Prototype)</li></ul></li><li><strong>结构型模式</strong>：<ul><li>适配器模式 (Adapter)</li><li>桥接模式 (Bridge)</li><li>组合模式 (Composite)</li><li>装饰器模式 (Decorator)</li><li>外观模式 (Facade)</li><li>享元模式 (Flyweight)</li><li>代理模式 (Proxy)</li></ul></li><li><strong>行为型模式</strong>：<ul><li>责任链模式 (Chain of Responsibility)</li><li>命令模式 (Command)</li><li>解释器模式 (Interpreter)</li><li>迭代器模式 (Iterator)</li><li>中介者模式 (Mediator)</li><li>存储器模式 (Memento)</li><li>观察者模式 (Observer)</li><li>状态模式 (State)</li><li>策略模式 (Strategy)</li><li>模板方法模式 (Template Method)</li><li>访问者模式 (Visitor)</li></ul></li></ol><h4 id="中介者模式"><a href="#中介者模式" class="headerlink" title="中介者模式"></a><a href="https://www.runoob.com/design-pattern/mediator-pattern.html" target="_blank" rel="noopener">中介者模式</a></h4><p>中介者模式（Mediator Pattern）是用来降低多个对象和类之间的通信复杂性，属于行为型模式。</p><p>中介者模式定义了一个中介对象来封装一系列对象之间的交互。中介者使各对象之间不需要显式地相互引用，从而使其耦合松散，且可以独立地改变它们之间的交互。</p><h4 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a><a href="https://www.runoob.com/design-pattern/strategy-pattern.html" target="_blank" rel="noopener">策略模式</a></h4><p>在策略模式（Strategy Pattern）中一个类的行为或其算法可以在运行时更改。这种类型的设计模式属于行为型模式。</p><p>在策略模式定义了一系列算法或策略，并将每个算法封装在独立的类中，使得它们可以互相替换。通过使用策略模式，可以在运行时根据需要选择不同的算法，而不需要修改客户端代码。</p><p>在策略模式中，我们创建表示各种策略的对象和一个行为随着策略对象改变而改变的 context 对象。策略对象改变 context 对象的执行算法。</p><p>9.打点 cell 50%展现时打点</p><p>可以使用<code>UITableView</code>的<code>scrollViewDidScroll</code>方法来检测<code>cell</code>的可见区域。具体步骤如下：</p><ol><li><strong>设置UITableViewDelegate</strong>: 确保你的视图控制器实现了<code>UITableViewDelegate</code>协议，并设置<code>delegate</code>。</li><li><strong>计算可见区域</strong>: 在<code>scrollViewDidScroll</code>方法中，计算每个<code>cell</code>的可见区域，并检查它是否至少展现了50%。</li><li><strong>打点逻辑</strong>: 根据计算结果进行打点操作，例如记录数据或发送网络请求。</li></ol><h3 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h3><figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">objc<span class="hljs-meta">#import <span class="hljs-meta-string">"ViewController.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">@interface</span> <span class="hljs-title">ViewController</span> () &lt;<span class="hljs-title">UITableViewDelegate</span>, <span class="hljs-title">UITableViewDataSource</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">@property</span> (<span class="hljs-keyword">weak</span>, <span class="hljs-keyword">nonatomic</span>) <span class="hljs-keyword">IBOutlet</span> <span class="hljs-built_in">UITableView</span> *tableView;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">@end</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">@implementation</span> <span class="hljs-title">ViewController</span></span></span><br><span class="line"></span><br><span class="line">- (<span class="hljs-keyword">void</span>)viewDidLoad &#123;</span><br><span class="line">    [<span class="hljs-keyword">super</span> viewDidLoad];</span><br><span class="line">    <span class="hljs-keyword">self</span>.tableView.delegate = <span class="hljs-keyword">self</span>;</span><br><span class="line">    <span class="hljs-keyword">self</span>.tableView.dataSource = <span class="hljs-keyword">self</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">#pragma mark - UITableViewDataSource</span></span><br><span class="line"></span><br><span class="line">- (<span class="hljs-built_in">NSInteger</span>)tableView:(<span class="hljs-built_in">UITableView</span> *)tableView numberOfRowsInSection:(<span class="hljs-built_in">NSInteger</span>)section &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">100</span>; <span class="hljs-comment">// 示例行数</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="hljs-built_in">UITableViewCell</span> *)tableView:(<span class="hljs-built_in">UITableView</span> *)tableView cellForRowAtIndexPath:(<span class="hljs-built_in">NSIndexPath</span> *)indexPath &#123;</span><br><span class="line">    <span class="hljs-built_in">UITableViewCell</span> *cell = [tableView dequeueReusableCellWithIdentifier:<span class="hljs-string">@"cell"</span> forIndexPath:indexPath];</span><br><span class="line">    cell.textLabel.text = [<span class="hljs-built_in">NSString</span> stringWithFormat:<span class="hljs-string">@"Row %ld"</span>, (<span class="hljs-keyword">long</span>)indexPath.row];</span><br><span class="line">    <span class="hljs-keyword">return</span> cell;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">#pragma mark - UIScrollViewDelegate</span></span><br><span class="line"></span><br><span class="line">- (<span class="hljs-keyword">void</span>)scrollViewDidScroll:(<span class="hljs-built_in">UIScrollView</span> *)scrollView &#123;</span><br><span class="line">    <span class="hljs-built_in">NSArray</span>&lt;<span class="hljs-built_in">UITableViewCell</span> *&gt; *visibleCells = [<span class="hljs-keyword">self</span>.tableView visibleCells];</span><br><span class="line">    <span class="hljs-built_in">CGRect</span> visibleRect;</span><br><span class="line">    visibleRect.origin = <span class="hljs-keyword">self</span>.tableView.contentOffset;</span><br><span class="line">    visibleRect.size = <span class="hljs-keyword">self</span>.tableView.bounds.size;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-built_in">UITableViewCell</span> *cell <span class="hljs-keyword">in</span> visibleCells) &#123;</span><br><span class="line">        <span class="hljs-built_in">CGRect</span> cellRect = [<span class="hljs-keyword">self</span>.tableView convertRect:cell.frame toView:<span class="hljs-keyword">self</span>.tableView.superview];</span><br><span class="line">        <span class="hljs-built_in">CGRect</span> intersection = <span class="hljs-built_in">CGRectIntersection</span>(visibleRect, cellRect);</span><br><span class="line">        <span class="hljs-built_in">CGFloat</span> intersectionRatio = intersection.size.height / cellRect.size.height;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">if</span> (intersectionRatio &gt;= <span class="hljs-number">0.5</span>) &#123;</span><br><span class="line">            <span class="hljs-built_in">NSIndexPath</span> *indexPath = [<span class="hljs-keyword">self</span>.tableView indexPathForCell:cell];</span><br><span class="line">            <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"Cell at %ld is at least 50%% visible."</span>, (<span class="hljs-keyword">long</span>)indexPath.row);</span><br><span class="line">            <span class="hljs-comment">// 打点逻辑，例如记录或发送请求</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">@end</span></span><br></pre></td></tr></table></figure><h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><ul><li><strong>计算可见区域</strong>：使用<code>convertRect:toView:</code>方法将<code>cell</code>的frame转换到<code>superview</code>的坐标系，然后计算交集区域。</li><li><strong>检查比例</strong>：判断交集区域的高度与<code>cell</code>的总高度的比例是否大于或等于50%。</li></ul><p>这个实现将确保在<code>UITableView</code>滚动时，对每个<code>cell</code>进行检查，并在其至少展现50%时执行打点操作。</p><p>打点规范，怎么快速找到某一个页面的所有点击点位</p><p>10.产品上的业务指标</p><p>11.读写安全，除了加锁还有哪些方法</p><p>12.算法：实现一个列表，复用，不卡顿，cell上是多个文本</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;京东&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="面试题" scheme="http://soso.wiki/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="京东" scheme="http://soso.wiki/tags/%E4%BA%AC%E4%B8%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>天眼查</title>
@@ -473,32 +497,6 @@
       <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
     
       <category term="墨迹天气" scheme="http://soso.wiki/tags/%E5%A2%A8%E8%BF%B9%E5%A4%A9%E6%B0%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>人人车面试题</title>
-    <link href="http://soso.wiki/%E4%BA%BA%E4%BA%BA%E8%BD%A6%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    <id>http://soso.wiki/人人车面试题/</id>
-    <published>2021-06-15T10:00:00.000Z</published>
-    <updated>2023-04-04T13:21:43.572Z</updated>
-    
-    <content type="html"><![CDATA[<p>人人车面试题<br><a id="more"></a></p><h3 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h3><p>1.了解哪些设计模式</p><p>2.MVVM 解决什么问题</p><p>3.性能优化</p><p>4.内存管理的理解</p><p>autoreleasePool 的结构，一个 autoreleasePoolPage 的大小</p><p>5.weak 的原理</p><p>6.class 的结构，cache 的结构，bucket_t 的结构，方法查找的顺序，是逐个遍历吗？</p><p>7.关联对象存在哪里</p><p>8.Category 的加载流程</p><p>9.Runtime 的应用，动态方法解析里返回 YES，但是并没有添加方法，会怎么样？</p><p>10.三次握手与四次挥手，四次挥手后会立马断开连接吗</p><p>11.Swift 解包方式</p><p>12.Swift 中计算属性和存储属性的区别</p><p>13.Swift 类和结构体的区别，使用属性的写法上的区别</p><p>14.数组和链表的区别</p><p>15.快速排序，快排时间复杂度</p><h3 id="二面"><a href="#二面" class="headerlink" title="二面"></a>二面</h3><p>介绍项目</p><p>1.webView 与 H5 交互，拦截协议 url 有长度限制，有安全问题，可能会被抓包，JSBridge</p><p>2.埋点</p><ul><li><p>埋点保存/删除数据的时机</p></li><li><p>内存里的最大容量，收到内存警告</p></li><li><p>上报网络请求发送失败后的处理，埋点的补偿机制</p></li></ul><p>3.支付</p><p>4.页面 A push B  A willDisappear didDisappear B willAppear didAppear 的执行顺序</p><p>5.Person 类继承自 NSObject 类，没有实现 age 方法。两个实例 p1,p2，怎么让 p1 响应 age 方法，p2 不响应 age 方法。</p><p>6.消息发送机制和消息转发。</p><p>7.KVO 的实现原理</p><p>8.多个分类实现了同一个方法，查找顺序</p><p>9.Swift 的 String 为什么设计成值类型？</p><p>安全，copy，快速</p><p>10.设计 LRU 最近最少使用</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;人人车面试题&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="面试题" scheme="http://soso.wiki/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    
-    
-      <category term="面试" scheme="http://soso.wiki/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-      <category term="58" scheme="http://soso.wiki/tags/58/"/>
-    
-      <category term="人人车" scheme="http://soso.wiki/tags/%E4%BA%BA%E4%BA%BA%E8%BD%A6/"/>
     
   </entry>
   
