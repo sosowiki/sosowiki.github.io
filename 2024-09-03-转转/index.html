@@ -19,7 +19,7 @@
 <meta property="og:description" content="转转">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://soso.wiki/images/og_image.png">
-<meta property="og:updated_time" content="2024-09-06T06:56:14.190Z">
+<meta property="og:updated_time" content="2025-04-09T12:25:55.933Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="转转">
 <meta name="twitter:description" content="转转">
@@ -157,7 +157,7 @@ var _hmt = _hmt || [];
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 223 个字)
+                    11 分钟 读完 (大约 1708 个字)
                 </span>
                 
                 
@@ -185,6 +185,173 @@ var _hmt = _hmt || [];
 <p>2.设计原生与 Flutter/H5 交互  上中下三层</p>
 <p>3.iOS 和 H5 交互方法，优缺点</p>
 <p>4.具体规划，目前待遇，offer，期望薪资</p>
+<h1 id="参考答案"><a href="#参考答案" class="headerlink" title="参考答案"></a>参考答案</h1><p>一面：</p>
+<p>1.活动页组件化，JSON 结构，跳转区分 Scheme 和 HTTP 是谁来处理的？</p>
+<p>2.加载速度优化</p>
+<p>3.检测无用代码是检测的 mach-o 的无用类还是方法？</p>
+<p>4.多个请求完成后通知除了 GCD 还有什么方法？</p>
+<p>5.webView 和原生的交互，设计一个监听原生页面声明周期，通知 H5，（有些需要监听，有些不需要监听）</p>
+<p>6.webView 加载速度优化，项目里用到的</p>
+<p>7.组件化怎么划分的模块，分层</p>
+<p>（1）Accessories App附属品</p>
+<p>Watch、Extension、Widget</p>
+<p>（2）Business 业务组件</p>
+<p>文库、网盘、性能监控、付费咨询、Feed、搜索等</p>
+<p>（3）Interface 接口层</p>
+<p>（4）Underlays 服务组件</p>
+<p>搜索工具、Feed通用业务，天气通用数据组件等</p>
+<p>（5）Services 服务组件</p>
+<p>IM、Talos、Performance、UBC、AFX等</p>
+<p>（6）Basics 基础组件</p>
+<p>BDPDevice、Cocoa（BBAFoundation、BBAUIKit、BDPWindow、BDPAppearance、AFX）、Network</p>
+<p>（7）Vendors 三方库</p>
+<p>AFNetworking、SDWebImage、YYModel等</p>
+<p>8.内存管理，项目里常见的循环引用，为什么用 NSProxy，和 NSObject 区别</p>
+<ul>
+<li><code>NSProxy</code> 主要用于代理和消息转发，它提供了一个机制来实现不直接处理方法调用的对象。</li>
+<li><code>NSObject</code> 是所有 Objective-C 对象的基础类，提供了对象管理和通用功能的实现。</li>
+</ul>
+<p>通常情况下，如果你需要实现一种代理模式或远程调用，<code>NSProxy</code> 是合适的选择。如果你在创建一个普通的对象，<code>NSObject</code> 是你通常会继承的类。</p>
+<p>二面：</p>
+<p>1.介绍项目亮点</p>
+<p>2.设计原生与 Flutter/H5 交互  上中下三层</p>
+<p>3.iOS 和 H5 交互方法，优缺点</p>
+<p>4.具体规划，目前待遇，offer，期望薪资</p>
+<h2 id="📘-iOS-面试通关手册（组件化-H5-性能-架构）"><a href="#📘-iOS-面试通关手册（组件化-H5-性能-架构）" class="headerlink" title="📘 iOS 面试通关手册（组件化 / H5 / 性能 / 架构）"></a>📘 iOS 面试通关手册（组件化 / H5 / 性能 / 架构）</h2><hr>
+<h3 id="🧩-一面核心题目详解"><a href="#🧩-一面核心题目详解" class="headerlink" title="🧩 一面核心题目详解"></a>🧩 一面核心题目详解</h3><h4 id="1-活动页组件化，JSON-结构，跳转区分-Scheme-和-HTTP-是谁来处理的？"><a href="#1-活动页组件化，JSON-结构，跳转区分-Scheme-和-HTTP-是谁来处理的？" class="headerlink" title="1. 活动页组件化，JSON 结构，跳转区分 Scheme 和 HTTP 是谁来处理的？"></a>1. 活动页组件化，JSON 结构，跳转区分 Scheme 和 HTTP 是谁来处理的？</h4><p><strong>答案要点：</strong></p>
+<ul>
+<li>JSON 描述跳转目标（如 URL、pageId、params）</li>
+<li><p><code>RouterManager</code>/<code>Navigator</code> 统一解析 URL，决定打开方式：</p>
+<figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">if</span> ([url.scheme isEqualToString:<span class="hljs-string">@"http"</span>] || [url.scheme isEqualToString:<span class="hljs-string">@"https"</span>]) &#123;</span><br><span class="line">    <span class="hljs-comment">// 打开 WebView</span></span><br><span class="line">&#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ([url.scheme isEqualToString:<span class="hljs-string">@"app"</span>]) &#123;</span><br><span class="line">    <span class="hljs-comment">// 原生跳转</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>分离跳转逻辑与页面结构，便于动态配置与热更新。</p>
+</li>
+</ul>
+<hr>
+<h4 id="2-加载速度优化"><a href="#2-加载速度优化" class="headerlink" title="2. 加载速度优化"></a>2. 加载速度优化</h4><p><strong>优化方式：</strong></p>
+<ul>
+<li>首屏优化：异步加载、骨架屏占位、按需加载</li>
+<li>图片优化：压缩、缓存（SDWebImage）、懒加载</li>
+<li>数据优化：合并请求、接口聚合、GZIP 压缩</li>
+<li>离线缓存：预加载 HTML、JS Bundle、资源包</li>
+<li>网络优化：HTTP2、多路复用、CDN 配置</li>
+</ul>
+<hr>
+<h4 id="3-检测无用代码是检测-Mach-O-的类还是方法？"><a href="#3-检测无用代码是检测-Mach-O-的类还是方法？" class="headerlink" title="3. 检测无用代码是检测 Mach-O 的类还是方法？"></a>3. 检测无用代码是检测 Mach-O 的类还是方法？</h4><p><strong>答法：</strong></p>
+<ul>
+<li>都可以，通过静态分析：<ul>
+<li><code>LinkMap</code> 文件分析未被引用的符号</li>
+<li><code>Clang 插桩</code>、<code>Swift Demangle</code> 查看未调用的方法</li>
+</ul>
+</li>
+<li>Mach-O 是最终产物，反映“未被链接进二进制”的部分</li>
+</ul>
+<hr>
+<h4 id="4-多请求完成通知除了-GCD，还有什么？"><a href="#4-多请求完成通知除了-GCD，还有什么？" class="headerlink" title="4. 多请求完成通知除了 GCD，还有什么？"></a>4. 多请求完成通知除了 GCD，还有什么？</h4><p><strong>方案：</strong></p>
+<ul>
+<li><code>NSOperationQueue + addDependency</code></li>
+<li>Promise/Future：PromiseKit、Combine、RxSwift</li>
+<li>KVO 监听属性变化，触发 UI 更新</li>
+<li>Dispatch Semaphore：手动控制信号</li>
+</ul>
+<hr>
+<h4 id="5-WebView-与原生交互，监听页面生命周期通知-H5"><a href="#5-WebView-与原生交互，监听页面生命周期通知-H5" class="headerlink" title="5. WebView 与原生交互，监听页面生命周期通知 H5"></a>5. WebView 与原生交互，监听页面生命周期通知 H5</h4><p><strong>设计：</strong></p>
+<ul>
+<li><p>原生页面生命周期调用 JS 通知：</p>
+<figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[webView evaluateJavaScript:<span class="hljs-string">@"window.onNativeLifeCycle('viewDidAppear')"</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>JS 注册：</p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">window</span>.onNativeLifeCycle = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">state</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">if</span> (state === <span class="hljs-string">'viewDidAppear'</span>) &#123; <span class="hljs-comment">/* 处理 */</span> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>可配置控制哪些生命周期需要同步（如通过 JSBridge 参数指定）</p>
+</li>
+</ul>
+<hr>
+<h4 id="6-WebView-加载速度优化（项目中用到的）"><a href="#6-WebView-加载速度优化（项目中用到的）" class="headerlink" title="6. WebView 加载速度优化（项目中用到的）"></a>6. WebView 加载速度优化（项目中用到的）</h4><p><strong>方法：</strong></p>
+<ul>
+<li>离线资源包（JS/CSS/HTML）打包在本地</li>
+<li>WKWebView 复用池（WebViewPool）减少初始化开销</li>
+<li>设置 cachePolicy，合理使用缓存</li>
+<li>禁用插件（如 JS 插件、自动检测）提高启动速度</li>
+</ul>
+<hr>
+<h4 id="7-组件化怎么划分模块-分层？"><a href="#7-组件化怎么划分模块-分层？" class="headerlink" title="7. 组件化怎么划分模块 / 分层？"></a>7. 组件化怎么划分模块 / 分层？</h4><p><strong>推荐结构：</strong></p>
+<ul>
+<li>Base 层：网络、工具类、日志、配置</li>
+<li>UI 层：通用 UI 组件（按钮、卡片、弹窗）</li>
+<li>Biz 层：独立业务模块（登录、支付、商城）</li>
+<li>Service 层：统一服务（埋点、权限、推送）</li>
+<li>Protocol 层：各模块之间解耦协议</li>
+</ul>
+<p><strong>关键词：</strong> 解耦、高内聚、低耦合、模块隔离、可热更新</p>
+<hr>
+<h4 id="8-内存管理：循环引用、NSProxy-与-NSObject-区别"><a href="#8-内存管理：循环引用、NSProxy-与-NSObject-区别" class="headerlink" title="8. 内存管理：循环引用、NSProxy 与 NSObject 区别"></a>8. 内存管理：循环引用、NSProxy 与 NSObject 区别</h4><p><strong>常见循环引用：</strong></p>
+<ul>
+<li>Timer 持有控制器</li>
+<li>Block 捕获 self</li>
+<li>delegate 强引用</li>
+</ul>
+<p><strong>NSProxy 使用：</strong></p>
+<ul>
+<li>中转代理（如 NSTimer）：<figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">NSTimer</span> *timer = [<span class="hljs-built_in">NSTimer</span> scheduledTimerWithTimeInterval:<span class="hljs-number">1</span> target:[WeakProxy proxyWithTarget:<span class="hljs-keyword">self</span>] selector:<span class="hljs-keyword">@selector</span>(run) userInfo:<span class="hljs-literal">nil</span> repeats:<span class="hljs-literal">YES</span>];</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>与 NSObject 区别：</strong></p>
+<ul>
+<li>NSProxy 是消息转发专用，不继承 NSObject，无默认行为</li>
+<li>NSObject 有默认的内存管理 / KVO / 响应链</li>
+</ul>
+<hr>
+<h3 id="🚀-二面核心题目详解"><a href="#🚀-二面核心题目详解" class="headerlink" title="🚀 二面核心题目详解"></a>🚀 二面核心题目详解</h3><h4 id="1-项目亮点介绍"><a href="#1-项目亮点介绍" class="headerlink" title="1. 项目亮点介绍"></a>1. 项目亮点介绍</h4><p><strong>答题建议：</strong></p>
+<ul>
+<li>选一个“有挑战/成果”的模块深入讲：<ul>
+<li>比如：活动页组件化、加载优化、自研 Bridge 桥接方案</li>
+<li>体现技术落地、团队协作、提效效果</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="2-原生与-Flutter-H5-交互设计（上下三层）"><a href="#2-原生与-Flutter-H5-交互设计（上下三层）" class="headerlink" title="2. 原生与 Flutter/H5 交互设计（上下三层）"></a>2. 原生与 Flutter/H5 交互设计（上下三层）</h4><p><strong>三层架构：</strong></p>
+<ul>
+<li>上层：业务 API（login、pay、share）</li>
+<li>中层：Bridge 协议定义、参数统一封装（JSON）</li>
+<li>底层：Native 实现，JS 调用处理、回调、权限判断等</li>
+</ul>
+<hr>
+<h4 id="3-iOS-与-H5-交互方法及优缺点"><a href="#3-iOS-与-H5-交互方法及优缺点" class="headerlink" title="3. iOS 与 H5 交互方法及优缺点"></a>3. iOS 与 H5 交互方法及优缺点</h4><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>evaluateJavaScript</code></td>
+<td>简单直接</td>
+<td>无回调、不安全</td>
+</tr>
+<tr>
+<td><code>WKScriptMessageHandler</code></td>
+<td>安全规范、结构清晰</td>
+<td>配置繁琐，不适合高频交互</td>
+</tr>
+<tr>
+<td>URL Scheme 拦截</td>
+<td>通用性强</td>
+<td>参数受限、安全差</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="4-当前待遇-amp-期望薪资"><a href="#4-当前待遇-amp-期望薪资" class="headerlink" title="4. 当前待遇 &amp; 期望薪资"></a>4. 当前待遇 &amp; 期望薪资</h4><p><strong>建议答法：</strong></p>
+<ul>
+<li>当前总包/薪资范围</li>
+<li>期望平台成长 + 技术深度 +回报匹配</li>
+<li>可接受一定灵活性，但看重发展潜力</li>
+</ul>
+<hr>
 
         </div>
         
@@ -237,7 +404,7 @@ var _hmt = _hmt || [];
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2024 SOSOWIKI&nbsp;
+                &copy; 2025 SOSOWIKI&nbsp;
                 All rights reserved.
                 
                 </p>
