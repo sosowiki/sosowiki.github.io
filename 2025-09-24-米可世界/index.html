@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html  lang="zh">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 3.8.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>米可世界 - SOSOWIKI</title>
+
+
+    <meta name="description" content="米可世界">
+<meta name="keywords" content="面试,米可世界">
+<meta property="og:type" content="article">
+<meta property="og:title" content="米可世界">
+<meta property="og:url" content="http://soso.wiki/2025-09-24-米可世界/index.html">
+<meta property="og:site_name" content="SOSOWIKI">
+<meta property="og:description" content="米可世界">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://soso.wiki/images/og_image.png">
+<meta property="og:updated_time" content="2025-09-25T14:25:23.055Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="米可世界">
+<meta name="twitter:description" content="米可世界">
+<meta name="twitter:image" content="http://soso.wiki/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.jpeg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-dark.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+<script>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?b07e5a4ee78cf8302e7e2cf5b9db7f2c";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-1-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo-2.png" alt="米可世界" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">首页</a>
+                
+                <a class="navbar-item"
+                href="/archives">归档</a>
+                
+                <a class="navbar-item"
+                href="/tags">标签</a>
+                
+                <a class="navbar-item"
+                href="/about">关于</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                
+                <a class="navbar-item search" title="搜索" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-12 has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2025-09-24T08:00:00.000Z">2025-09-24</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/面试题/">面试题</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    40 分钟 读完 (大约 6036 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                米可世界
+            
+        </h1>
+        <div class="content">
+            <p>米可世界<br><a id="more"></a></p>
+<p>1.Runloop 的流程，底层实现，项目里实际使用，监控卡顿监听的具体是哪个状态，Source0 和 Source1 区别</p>
+<p>2.局部对象的释放时机；autoreleasepool的实现，weak 存在哪里</p>
+<p>3.SDK 构建提效，有没有二进制化的经验，缓存</p>
+<p>4.feed 流滑动卡顿可能有哪些原因；离屏渲染为什么会影响；那些异步的库，不也是在另一个屏幕缓冲区处理的吗？</p>
+<p>5.首屏优化，有没有针对各个模块的，比如卡线程了，怎么检测，怎么优化</p>
+<p>6.IM Socket 的流程</p>
+<p>7.FMDB 的内部实现，是线程安全的吗？和其他如 WCDB 效率的比较；</p>
+<p>8.用过哪些锁？效率比较；@synchronized 的作用是什么？</p>
+<p>9.上传大图，怎么分片，怎么控制线程最大并发数，怎么告诉web上传进度？上传进度细颗粒度，每片都有哪些状态，现有上传单个图片的方法，怎么实时同步进度</p>
+<p>10.SDWebImage 加载图片的流程，缓存机制，LRU怎么实现的？加载图片传入了 UIImageView 下载完图片后怎么拿到这个对象，因为是异步的</p>
+<p>11.OOM 怎么避免？</p>
+<p>12.MVCS 与 SectionProvider 怎么实现的</p>
+<h3 id="参考答案"><a href="#参考答案" class="headerlink" title="参考答案"></a>参考答案</h3><p>1.Runloop 的流程，底层实现，项目里实际使用，监控卡顿监听的具体是哪个状态，Source0 和 Source1 区别</p>
+<p>（1）1. RunLoop 的流程</p>
+<p>RunLoop 是一个事件循环机制，内部主要流程可以简化为：</p>
+<ol>
+<li><strong>通知 Observers</strong>：进入 Loop 前，会发通知（如 kCFRunLoopEntry）。</li>
+<li><strong>处理 Timer</strong>：检查是否有已到期的 Timer 任务。</li>
+<li><strong>处理 Source0</strong>：非基于端口的事件（UI 事件、Block 回调等），需要主动唤醒。</li>
+<li><strong>处理 Source1</strong>：基于 Mach port 的事件（系统事件、IPC、触摸事件）。</li>
+<li><strong>进入休眠</strong>：调用 mach_msg_trap 等底层系统调用，线程进入休眠状态。</li>
+<li><strong>被唤醒</strong>：<ul>
+<li>有事件到来（Source、Timer、GCD dispatch）。</li>
+<li>外部手动唤醒（CFRunLoopWakeUp）。</li>
+</ul>
+</li>
+<li><strong>通知 Observers</strong>：将要处理事件（kCFRunLoopBeforeSources / kCFRunLoopBeforeWaiting / kCFRunLoopAfterWaiting）。</li>
+<li><strong>循环往复</strong>：直到 CFRunLoopStop 被调用。</li>
+</ol>
+<p>（2） 底层实现<br>    •    核心结构：CFRunLoop 和 CFRunLoopMode，每个线程对应一个 RunLoop（存储在 pthread 的 TLS 中）。<br>    •    事件驱动：通过 Mach port 和 内核态通信。比如触摸事件从 IOKit -&gt; SpringBoard -&gt; App -&gt; RunLoop Mach port。<br>    •    休眠/唤醒：利用系统调用 mach_msg_trap 进入内核，等待消息；有事件时唤醒。<br>    •    RunLoopObserver：内部维护一组回调，挂在不同状态点（Entry、BeforeTimers、BeforeSources、BeforeWaiting、AfterWaiting、Exit）。</p>
+<p>（3）项目里的实际使用</p>
+<ul>
+<li><strong>定时器</strong>：NSTimer / CADisplayLink / performSelector:afterDelay: 本质依赖 RunLoop。</li>
+<li><strong>常驻线程</strong>：如 AFNetworking 的网络请求线程，使用 RunLoop 保持线程不退出。</li>
+<li><strong>事件响应</strong>：触摸事件、UI 更新都跑在主线程 RunLoop 中。</li>
+<li><strong>GCD 与 RunLoop</strong>：dispatch_async 提交到主队列的 block，本质通过 CFRunLoopSource 执行。</li>
+<li><strong>性能优化</strong>：比如在 NSRunLoopCommonModes 下添加任务，避免因 UI 滑动（UITrackingRunLoopMode）而阻塞。</li>
+</ul>
+<p>（4）卡顿监控监听的状态</p>
+<p>常见的 卡顿监控（UI 卡顿监控） 原理就是利用 RunLoop Observer，在关键状态点打点：<br>    •    监听 kCFRunLoopBeforeSources 和 kCFRunLoopAfterWaiting。<br>    •    在 BeforeSources 说明即将处理事件。<br>    •    在 AfterWaiting 说明刚被唤醒，准备进入事件处理。<br>    •    如果这两个状态之间持续很久没有切换，说明 RunLoop 卡在某个任务（主线程卡住）。</p>
+<p>具体做法：</p>
+<pre><code>1.    在主线程 RunLoop 添加 Observer，监听这两个状态。
+2.    同时开一个子线程用 dispatch_semaphore_wait + 超时机制判断。
+3.    超过阈值（如 &gt; 200ms）没有状态切换，判定为卡顿。
+4.    结合堆栈采样（backtrace）就能定位具体卡住的位置。
+</code></pre><p>（5）source0 与 source1 区别</p>
+<ol>
+<li><p>Source0<br> •    定义：非基于内核端口（port）的事件源。<br> •    特点：<br> •    纯用户态，不会主动唤醒 RunLoop，需要外部手动唤醒。<br> •    常用于 App 内部事件分发，例如 performSelector:onThread:。<br> •    触发方式：<br> •    调用 CFRunLoopSourceSignal(source) 标记为待处理。<br> •    再调用 CFRunLoopWakeUp(runloop) 唤醒 RunLoop。<br> •    例子：<br> •    performSelector:onThread:<br> •    手动创建的 CFRunLoopSource0</p>
+</li>
+<li><p>Source1<br> •    定义：基于 Mach port 的事件源。<br> •    特点：<br> •    内核态驱动，系统事件到达时可以直接唤醒 RunLoop。<br> •    主要用来处理 系统消息（如触摸、系统回调、CFMachPort）。<br> •    触发方式：<br> •    当端口有消息时，内核会唤醒 RunLoop，执行对应的回调。<br> •    例子：<br> •    系统的触摸事件、屏幕旋转事件。<br> •    CFMachPort、CFSocket</p>
+</li>
+</ol>
+<p>2.局部对象的释放时机；autoreleasepool的实现，weak 存在哪里</p>
+<p>（1）局部对象的释放时机</p>
+<ul>
+<li><p>在 ARC 下，局部变量对象（比如方法里的 <code>NSObject *obj = [[NSObject alloc] init];</code>）的释放时机主要取决于 <strong>作用域 + 引用计数</strong>。</p>
+</li>
+<li><p>编译器会在合适的位置插入 objc_release。</p>
+</li>
+<li><p>通常规则：</p>
+<ol>
+<li>如果是强引用（strong），在超出作用域时编译器插入 release。</li>
+<li>如果放在了 @autoreleasepool 内，且对象通过 autorelease 创建（如 [NSString stringWithFormat:@”xx”]），则会在 pool 清空时统一 release。</li>
+<li>如果没有显式放进 autoreleasepool，那么局部对象的 autorelease 会挂在当前线程的默认 <strong>autoreleasepool page</strong> 上（RunLoop 每次循环会清理一次）。</li>
+</ol>
+</li>
+<li>所以：<ul>
+<li>alloc/init 的对象：离开作用域立即释放。</li>
+<li>工厂方法 (stringWith…) 返回的对象：通常是 autorelease，释放时机取决于最近的 autoreleasepool drain。</li>
+</ul>
+</li>
+</ul>
+<p>(2) autoreleasepool 的实现</p>
+<ul>
+<li>@autoreleasepool {} 在编译后会被转化为：<figure class="highlight cpp hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">void</span>* context = objc_autoreleasePoolPush();</span><br><span class="line">&#123;  <span class="hljs-comment">// pool 内部作用域</span></span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line">objc_autoreleasePoolPop(context);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>​    •    底层实现依赖 AutoreleasePoolPage：<br>​    •    每个线程维护一个栈状的双向链表结构。<br>​    •    objc_autorelease(obj) 会把对象的指针放入当前 page。<br>​    •    pool 被 pop 时，会遍历这个 page，依次对对象发送 release。<br>​    •    RunLoop 机制：<br>​    •    主线程的 RunLoop 每次事件循环开始会 push 一个 pool，结束时 pop。<br>​    •    这保证了常见的 UIKit API 里 autorelease 对象能在一次事件处理后被释放。</p>
+<p>（3）weak 的存储位置<br>    •    weak 指针并不是单纯的内存地址，它需要 运行时的弱引用表（weak_table_t） 管理：<br>    •    weak_table_t 是一个 hash 表，key 是对象地址（被引用的对象），value 是指向该对象的所有 weak 指针地址集合。<br>    •    当对象的引用计数归零时，dealloc 流程会调用 objc_destroyWeak，把所有指向该对象的 weak 指针置为 nil。<br>    •    所以 weak 指针存储在：<br>    •    指针本身依然在栈上 / 堆上（取决于变量声明位置），<br>    •    但 runtime 维护了一份全局的弱引用表，用来统一管理 对象 ↔ weak 指针列表 的关系。<br>    •    注意：<br>    •    weak 本身是一个普通指针，只不过 runtime 在对象销毁时会把它自动清空。<br>    •    所以 weak 查找和赋值都会经过 runtime 的弱引用表操作，有一定性能开销。</p>
+<p>3.SDK 构建提效，有没有二进制化的经验，缓存</p>
+<p>模块化/组件化<br>SDK 内部拆分为稳定依赖（binary、SPM precompiled）+ 高频改动部分（源码），避免全量编译。</p>
+<p>构建缓存<br>  CI 里缓存 DerivedData、Pods、SPM 构建产物。</p>
+<p>4.Feed 流滑动卡顿可能有哪些原因；离屏渲染为什么会影响；那些异步的库，不也是在另一个屏幕缓冲区处理的吗？</p>
+<p>（1） Feed 流滑动卡顿的常见原因<br>卡顿一般是因为 <strong>主线程在 16.67ms（60fps 下）或者 8.3ms（120fps 下）没有完成一次绘制提交</strong>。常见原因：</p>
+<ul>
+<li><strong>布局计算过重</strong><ul>
+<li>大量 autoLayout 约束计算</li>
+<li>cell 高度动态计算不缓存</li>
+</ul>
+</li>
+<li><p><strong>主线程阻塞</strong></p>
+<ul>
+<li>大量 JSON 解析、IO、图片解码放在主线程</li>
+<li>复杂业务逻辑或锁竞争</li>
+</ul>
+</li>
+<li><p><strong>绘制负担过重</strong></p>
+<ul>
+<li>大量圆角、阴影、mask、group opacity 等触发离屏渲染</li>
+<li>大图缩放、解码延迟</li>
+</ul>
+</li>
+<li><p><strong>频繁创建/销毁对象</strong></p>
+<ul>
+<li>cell 重复 init，而不是重用</li>
+</ul>
+</li>
+<li><p><strong>图片处理问题</strong></p>
+<ul>
+<li>未做预解码、下采样，导致 GPU/CPU 开销大</li>
+</ul>
+</li>
+</ul>
+<p>（2）为什么离屏渲染会影响滑动流畅度</p>
+<ul>
+<li><p><strong>什么是离屏渲染 (Offscreen Rendering)</strong></p>
+<ul>
+<li><p>GPU 本来在 <strong>On-Screen Buffer</strong>（屏幕缓冲区）里画东西，顺序执行即可。</p>
+</li>
+<li><p>一旦遇到圆角 + mask、阴影、layer.shouldRasterize 等情况，GPU 会：</p>
+<ol>
+<li>先新建一个 <strong>Offscreen Buffer</strong></li>
+<li>把内容画到这个 buffer</li>
+<li>再拷贝回 On-Screen Buffer</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>开销在哪</strong></p>
+<ul>
+<li>新建 buffer 本身消耗内存</li>
+<li>GPU 切换上下文（Context Switch）有性能开销</li>
+<li>结果要 copy 回主屏幕 buffer，增加带宽占用</li>
+</ul>
+</li>
+<li><p><strong>为什么会卡顿</strong></p>
+<ul>
+<li>这不是“异步”的，而是 GPU 的额外工作，依然要卡在 <strong>渲染管线</strong>（Display Link vsync 同步）。</li>
+<li>如果离屏渲染量大，GPU 跟不上 vsync 节奏，就掉帧 → feed 滑动卡顿。</li>
+</ul>
+</li>
+</ul>
+<p>（3）“异步绘制库” 和离屏渲染的区别</p>
+<p>你说的 “异步的库”（比如 YYAsyncLayer, Texture (AsyncDisplayKit)）其实跟 Core Animation 的 Offscreen Rendering 不一样：</p>
+<ul>
+<li><p><strong>异步绘制库</strong></p>
+<ul>
+<li>把文本排版、图片合成、UI 绘制逻辑放到 <strong>后台线程的 CGContext</strong> 里完成</li>
+<li>得到一张最终的位图（Bitmap）</li>
+<li>主线程只把这张图交给 layer.contents</li>
+<li>→ 避免了主线程阻塞 &amp; 避免 GPU 临时建 buffer</li>
+</ul>
+</li>
+<li><p><strong>GPU 离屏渲染</strong></p>
+<ul>
+<li>是 <strong>渲染阶段</strong> GPU 为了实现特效而“不得不”建一个临时 buffer</li>
+<li>发生在绘制提交之后、硬件管线中</li>
+<li>→ 无法用“放后台线程”解决，因为是 GPU 硬件的需求</li>
+</ul>
+</li>
+</ul>
+<p>可以这样理解：</p>
+<ul>
+<li><strong>异步绘制库：CPU 先画好 → 减轻主线程 &amp; GPU 压力</strong></li>
+<li><strong>离屏渲染：GPU 临时建 buffer → 加重 GPU 压力</strong></li>
+</ul>
+<p>总结：</p>
+<ul>
+<li>Feed 卡顿大多是 <strong>主线程阻塞 + GPU 负担过重</strong>。</li>
+<li>离屏渲染会卡，是因为 <strong>GPU 在渲染管线上多了额外 buffer 开销</strong>。</li>
+<li>异步绘制库的“异步 buffer”不是 GPU 的 Offscreen Buffer，而是 <strong>CPU 侧先生成位图</strong>，两者概念完全不同。</li>
+</ul>
+<p>5.首屏优化，有没有针对各个模块的，比如卡线程了，怎么检测，怎么优化<br>卡线程检测方法</p>
+<pre><code>1.    Runloop 卡顿监控
+•    利用 CFRunLoopObserver 监听主线程 RunLoop 的状态（kCFRunLoopBeforeSources、kCFRunLoopAfterWaiting 等）。
+•    当 RunLoop 某次循环超过阈值（如 &gt;200ms）还未完成，就认为发生了卡顿。
+•    工具类库：YYAsyncLayer、FBRetainCycleDetector + 自己封装卡顿监控。
+2.    堆栈采样 (Stack Sampling)
+•    使用子线程定时采样主线程调用栈（比如每 50ms 取一次）。
+•    当检测到主线程长时间无响应时，打印采样栈，可快速定位阻塞点。
+•    开源方案：KSCrash、PLCrashReporter。
+3.    系统工具
+•    Instruments → Time Profiler：定位函数耗时。
+•    Instruments → Main Thread Checker：发现 UI API 是否在子线程调用。
+•    Instruments → System Trace：更底层地看线程调度与锁等待。
+</code></pre><p>常见模块的首屏优化点：<br>（1）启动阶段（冷启动）</p>
+<ul>
+<li><strong>优化检测</strong></li>
+<li><p>利用 DYLD_PRINT_STATISTICS 环境变量观察动态库加载耗时。</p>
+<ul>
+<li>Xcode 的 App Launch 模板可分析启动阶段。</li>
+</ul>
+</li>
+<li><p><strong>优化手段</strong></p>
+<ul>
+<li>减少动态库数量，合并 Pod。</li>
+<li>用 App Clips 或延迟加载来减少首次启动体积。</li>
+<li>+load 和 +initialize 里避免做耗时操作。</li>
+</ul>
+</li>
+</ul>
+<p>（2） 主线程耗时操作</p>
+<ul>
+<li><p><strong>检测</strong></p>
+<ul>
+<li>Runloop 卡顿监控 + Instruments。</li>
+</ul>
+</li>
+<li><p><strong>优化</strong></p>
+<ul>
+<li>UI 布局计算移到子线程（AutoLayout 的约束尽量减少层级）。</li>
+<li>图片解码、JSON 解析放子线程（YYImage / YYModel 的异步方案）。</li>
+<li>渲染复杂 UI 时用 CALayer 或离屏渲染优化。</li>
+</ul>
+</li>
+</ul>
+<p>（3）网络模块</p>
+<ul>
+<li><p><strong>检测</strong></p>
+<ul>
+<li>在首屏接口加埋点（发起时间 - 响应时间）。</li>
+<li>Charles / Wireshark 抓包分析耗时。</li>
+</ul>
+</li>
+<li><p><strong>优化</strong></p>
+<ul>
+<li><p>核心数据接口提前并发请求，不要串行。</p>
+</li>
+<li><p>使用缓存（磁盘缓存、内存缓存、预加载）。</p>
+</li>
+<li><p>大图延迟加载，必要时用占位图。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>（4） 图片加载</p>
+<ul>
+<li><p><strong>检测</strong></p>
+<ul>
+<li>Instruments → Allocations/Time Profiler 观察解码与内存情况。</li>
+</ul>
+</li>
+<li><p><strong>优化</strong></p>
+<ul>
+<li>预解码（SDWebImage、YYImage）。</li>
+<li>降低分辨率，避免原图直接展示。</li>
+<li>使用 WebP/HEIF 格式。</li>
+</ul>
+</li>
+</ul>
+<p>（5）渲染与绘制</p>
+<ul>
+<li><strong>检测</strong></li>
+<li><p>Instruments → Core Animation 检测 FPS、离屏渲染。</p>
+<ul>
+<li>GPU Driver template 观察 GPU 是否被打满。</li>
+</ul>
+</li>
+<li><p><strong>优化</strong></p>
+<ul>
+<li>减少视图层级，避免过度使用透明度/圆角/阴影。</li>
+<li>尽量用 CAShapeLayer 替代复杂绘制。</li>
+<li>提前渲染静态页面的快照。</li>
+</ul>
+</li>
+</ul>
+<p>（6）数据处理 &amp; 本地 IO</p>
+<ul>
+<li><p><strong>检测</strong></p>
+<ul>
+<li>Time Profiler 定位磁盘/数据库耗时。</li>
+</ul>
+</li>
+<li><p><strong>优化</strong></p>
+<ul>
+<li>首页不要做大量磁盘读写。</li>
+<li>CoreData/SQLite 的查询下沉到子线程。</li>
+<li>UserDefaults 批量写时要避免阻塞。</li>
+</ul>
+</li>
+</ul>
+<p>6.IM Socket 的流程</p>
+<p>1.建立连接</p>
+<ul>
+<li><p>使用 CFStream（CoreFoundation）、CFSocket、或者三方库（如 <a href="https://github.com/robbiehanson/CocoaAsyncSocket" target="_blank" rel="noopener">CocoaAsyncSocket</a>）来建立 TCP 连接。</p>
+</li>
+<li><p>或者直接用 <strong>WebSocket</strong>（iOS 13+ 推荐 URLSessionWebSocketTask，早期可用 SocketRocket）。</p>
+</li>
+<li><p>流程：</p>
+<ol>
+<li>客户端发起连接请求（IP + 端口）。</li>
+<li>服务器返回是否成功。</li>
+<li>成功后，进入可读写状态。</li>
+</ol>
+</li>
+</ul>
+<p>2.登录/鉴权</p>
+<ul>
+<li>建立连接后，通常第一步是发送 <strong>登录包 / 鉴权信息</strong>（例如 userId、token、设备信息）。</li>
+<li>服务器验证通过后，会返回 <strong>登录成功 ACK</strong>。</li>
+<li>只有在鉴权成功后，Socket 才允许继续收发消息。</li>
+</ul>
+<p>3.维持长连接</p>
+<ul>
+<li>长连接需要保持心跳（心跳包 ping/pong）。</li>
+<li>客户端定时（如 30s/60s）发送 <strong>心跳包</strong>，服务器回应 <strong>心跳 ACK</strong>。</li>
+<li>如果心跳超时（连续几次未响应），认为连接断开，需要自动重连。</li>
+</ul>
+<p>4.消息收发</p>
+<ul>
+<li><p><strong>发送消息：</strong></p>
+<ul>
+<li>将消息序列化成约定的数据格式（JSON / Protobuf / 二进制协议）。</li>
+<li>封装消息头（包含消息类型、长度、消息 ID 等）。</li>
+<li>通过 Socket write/send 发出。</li>
+</ul>
+</li>
+<li><p><strong>接收消息：</strong></p>
+<ul>
+<li>Socket 输入流回调或代理触发。</li>
+<li>先读消息头，解析数据包长度。</li>
+<li>再按协议读取完整消息体。</li>
+<li>反序列化成业务层可用的模型对象。</li>
+</ul>
+</li>
+</ul>
+<p>5.消息确认（ACK机制）</p>
+<ul>
+<li><p>为了保证消息可靠性，通常采用 <strong>消息回执机制</strong>：</p>
+<ul>
+<li>客户端发送消息 → 服务器收到后，返回 ACK（确认包，包含消息 ID）。</li>
+</ul>
+</li>
+<li>如果客户端在一定时间内未收到 ACK，则重发消息。</li>
+</ul>
+<p>6.断线重连</p>
+<ul>
+<li><p>网络变化（WiFi/4G切换）、App 后台 → 前台，都会导致连接中断。</p>
+</li>
+<li><p>需要实现 <strong>自动重连机制</strong>：</p>
+<ul>
+<li>发现连接断开 → 进入重连流程。</li>
+<li>指数退避重试（如 1s → 2s → 4s → 8s…，有上限）。</li>
+<li>连接成功后，重新鉴权、同步离线消息。</li>
+</ul>
+</li>
+</ul>
+<p>7.离线消息同步</p>
+<ul>
+<li>断线期间可能会有消息未收到。</li>
+<li>重新连接成功后，客户端需要调用接口获取 <strong>离线消息</strong>，再和本地消息队列合并。</li>
+</ul>
+<p>8.退出/释放</p>
+<ul>
+<li>用户主动退出登录时，发送 <strong>退出包</strong>。</li>
+<li>关闭 Socket，释放资源。</li>
+</ul>
+<p>7.FMDB 的内部实现，是线程安全的吗？和其他如 WCDB 效率的比较；</p>
+<p>（1）FMDB 的线程安全性</p>
+<ol>
+<li><strong>FMDatabase</strong></li>
+</ol>
+<ul>
+<li>FMDatabase 本身 <strong>不是线程安全的</strong>。<ul>
+<li>官方明确建议：<strong>一个 FMDatabase 实例只能在单一线程中使用</strong>，不能跨线程共享。</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li><strong>FMDatabaseQueue</strong></li>
+</ol>
+<ul>
+<li><p>为了保证线程安全，FMDB 提供了 FMDatabaseQueue。</p>
+</li>
+<li><p>内部实现方式：</p>
+<ul>
+<li>维护一个 dispatch_queue（串行队列）。<ul>
+<li>通过 inDatabase: 或 inTransaction: 方法，将所有对数据库的操作 block 串行提交到这个队列里执行。</li>
+</ul>
+</li>
+<li>这样可以保证同一时间只有一个线程在访问数据库，从而避免 SQLite 的并发写入问题（SQLite 本身写操作也是串行化的）。</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li><strong>FMDatabasePool</strong><ul>
+<li>为了优化多读场景，FMDB 还提供 FMDatabasePool。</li>
+<li>内部维护多个数据库连接（通常用于读操作）。</li>
+<li>读操作可以并发分配给不同的连接，写操作仍然会被串行化。</li>
+</ul>
+</li>
+</ol>
+<p>结论：</p>
+<ul>
+<li><strong>单独使用 FMDatabase → 线程不安全</strong></li>
+<li><strong>使用 FMDatabaseQueue/Pool → 线程安全</strong></li>
+</ul>
+<p>8.用过哪些锁？效率比较；@synchronized 的作用是什么？</p>
+<ol>
+<li><strong>OSSpinLock（已废弃）</strong><ul>
+<li>自旋锁，忙等，会不断轮询等待锁释放。</li>
+<li>性能很高，但存在优先级反转问题（高优先级线程可能被低优先级线程“饿死”），Apple 已经不推荐使用。</li>
+<li>iOS 10+ 建议用 os_unfair_lock 代替。</li>
+</ul>
+</li>
+<li><strong>os_unfair_lock</strong><ul>
+<li>自旋锁的替代品，会在等待时挂起线程，避免优先级反转。</li>
+<li>适合短时间、高频加锁的场景。</li>
+<li>性能比 pthread_mutex 更好。</li>
+</ul>
+</li>
+<li><strong>pthread_mutex（互斥锁）</strong><ul>
+<li>POSIX 标准互斥锁。</li>
+<li>比较通用，支持递归锁（PTHREAD_MUTEX_RECURSIVE）。</li>
+<li>开销比 os_unfair_lock 大一些，因为需要进入内核等待。</li>
+</ul>
+</li>
+<li><strong>NSLock</strong><ul>
+<li>Objective-C 封装，内部基于 pthread_mutex。</li>
+<li>提供了面向对象的 API，简单易用。</li>
+<li>性能略低于 os_unfair_lock。</li>
+</ul>
+</li>
+<li><strong>NSRecursiveLock</strong><ul>
+<li>递归锁，允许同一线程多次获得同一把锁，避免死锁。</li>
+<li>底层也是 pthread_mutex(recursive)。</li>
+</ul>
+</li>
+<li><strong>NSCondition / NSConditionLock</strong><ul>
+<li>条件锁，用于线程间的条件同步（等待某个条件满足才继续）。</li>
+<li>常用于“生产者—消费者”模型。</li>
+</ul>
+</li>
+<li><strong>dispatch_semaphore</strong><ul>
+<li>GCD 提供的信号量机制。</li>
+<li>可用于资源计数、并发数控制，也可以当成锁来用。</li>
+<li>性能和可控性较好。</li>
+</ul>
+</li>
+<li><strong>@synchronized</strong><ul>
+<li>Objective-C 关键字，基于 objc_sync_enter/objc_sync_exit 实现。</li>
+<li>内部使用哈希表管理对象锁。</li>
+<li>使用简单，但性能比 NSLock 差一些，因为额外做了对象管理和异常处理。</li>
+<li>适合快速实现线程安全，但不推荐在性能敏感场景中使用。</li>
+</ul>
+</li>
+</ol>
+<p>9.上传大图，怎么分片，怎么控制线程最大并发数，怎么告诉web上传进度？上传进度细颗粒度，每片都有哪些状态，现有上传单个图片的方法，怎么实时同步进度</p>
+<p>（1）分片策略</p>
+<ul>
+<li><p><strong>分片大小</strong>：一般 2MB5MB 一片比较合理（20M → 104 片）。</p>
+<ul>
+<li>分片太小：请求数太多，开销大；</li>
+<li>分片太大：失败重传成本高。</li>
+</ul>
+</li>
+<li><p><strong>分片切割</strong>：用 NSData 的 subdataWithRange: 或者 InputStream，把整张图片按顺序拆成多个 NSData。</p>
+</li>
+</ul>
+<p>示例：<br><figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">NSData</span> *imageData = <span class="hljs-built_in">UIImageJPEGRepresentation</span>(image, <span class="hljs-number">0.9</span>);</span><br><span class="line"><span class="hljs-built_in">NSUInteger</span> chunkSize = <span class="hljs-number">2</span> * <span class="hljs-number">1024</span> * <span class="hljs-number">1024</span>; <span class="hljs-comment">// 2MB</span></span><br><span class="line"><span class="hljs-built_in">NSUInteger</span> length = [imageData length];</span><br><span class="line"><span class="hljs-built_in">NSUInteger</span> offset = <span class="hljs-number">0</span>;</span><br><span class="line"><span class="hljs-built_in">NSMutableArray</span> *chunks = [<span class="hljs-built_in">NSMutableArray</span> array];</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">while</span> (offset &lt; length) &#123;</span><br><span class="line">    <span class="hljs-built_in">NSUInteger</span> thisChunkSize = MIN(chunkSize, length - offset);</span><br><span class="line">    <span class="hljs-built_in">NSData</span>* chunk = [imageData subdataWithRange:<span class="hljs-built_in">NSMakeRange</span>(offset, thisChunkSize)];</span><br><span class="line">    [chunks addObject:chunk];</span><br><span class="line">    offset += thisChunkSize;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>（2）控制并发数</p>
+<ul>
+<li><strong>不要一次性全部并发上传</strong>（可能耗尽带宽/内存/线程）。</li>
+<li>推荐用 <strong>NSOperationQueue</strong> 或 <strong>GCD 信号量</strong>来限制最大并发数。</li>
+</ul>
+<p>例子：最多并发 3 个分片上传</p>
+<figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">dispatch_semaphore_t semaphore = dispatch_semaphore_create(<span class="hljs-number">3</span>); <span class="hljs-comment">// 最大并发 3</span></span><br><span class="line"><span class="hljs-built_in">dispatch_queue_t</span> queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, <span class="hljs-number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">for</span> (<span class="hljs-built_in">NSData</span> *chunk <span class="hljs-keyword">in</span> chunks) &#123;</span><br><span class="line">    <span class="hljs-built_in">dispatch_async</span>(queue, ^&#123;</span><br><span class="line">        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);</span><br><span class="line">        </span><br><span class="line">        [<span class="hljs-keyword">self</span> uploadChunk:chunk completion:^&#123;</span><br><span class="line">            dispatch_semaphore_signal(semaphore);</span><br><span class="line">        &#125;];</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果要更优雅，可以用 NSOperationQueue，设置 maxConcurrentOperationCount = 3。</p>
+<p>（3）上传进度<br>方式 A: NSURLSessionUploadTask + progress</p>
+<ul>
+<li>每个分片创建一个 NSURLSessionUploadTask，监听其 NSProgress 对象。</li>
+<li>NSProgress 能返回当前上传的字节数，结合所有分片，汇总出整体进度。</li>
+</ul>
+<p>方式B: NSURLSession delegate (更灵活)</p>
+<p>汇总整体进度 所有分片进度的加权平均</p>
+<ul>
+<li>每个分片有状态（Pending/Uploading/Success/Failed）。</li>
+<li>上传时监听 NSURLSession 的进度回调，实时拿到字节数。</li>
+<li>汇总所有分片进度得到整体进度。</li>
+<li>再把整体进度同步给 UI 或 Web。</li>
+</ul>
+<p>10.SDWebImage 加载图片的流程，缓存机制，LRU怎么实现的？加载图片传入了 UIImageView 下载完图片后怎么拿到这个对象，因为是异步的</p>
+<p>（1）SDWebImage 加载图片的流程</p>
+<ol>
+<li>入口：<figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[imageView sd_setImageWithURL:url placeholderImage:<span class="hljs-literal">nil</span> options:<span class="hljs-number">0</span> completed:<span class="hljs-literal">nil</span>];</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>传入 UIImageView 和 URL 后，会走到 SDWebImageManager 的 loadImageWithURL。</p>
+<ol start="2">
+<li>检查缓存：<br>•    先查 内存缓存（SDImageCache.memoryCache，底层是 NSCache + LRU）<br>•    内存没有，再查 磁盘缓存（通过 key -&gt; 文件路径 / SQLite 索引）</li>
+<li>下载图片（如果缓存都没有）：<br>•    调用 SDWebImageDownloader，内部基于 NSURLSession 创建下载任务，异步下载数据。<br>•    支持下载队列、并发控制、请求去重、进度回调。</li>
+<li>解码 &amp; 缓存：<br>•    图片数据下载完成后，会进行 解码（decode），避免主线程卡顿。<br>•    然后写入 内存缓存 + 磁盘缓存。</li>
+<li>回调 UI：<br>•    下载完成后，主线程回调，把 UIImage 设置到传入的 UIImageView.image 上。</li>
+</ol>
+<p>（2）缓存机制</p>
+<p>SDWebImage 的缓存分两级：</p>
+<ol>
+<li><strong>内存缓存</strong></li>
+</ol>
+<ul>
+<li><p>使用 NSCache 封装（带自动清理机制，内存紧张时会自动回收）。</p>
+</li>
+<li><p>内部实现了 <strong>LRU (Least Recently Used)</strong> 算法：</p>
+</li>
+</ul>
+<pre><code>- 每次访问一个图片，会把它放到链表头。
+- 淘汰时从链表尾部移除最久未使用的对象。
+- 在 SD 里，具体用的是 SDMemoryCache，基于 YYMemoryCache 的思想，维护了一个 **双向链表 + 哈希表** 结构。
+</code></pre><ol start="2">
+<li><strong>磁盘缓存</strong></li>
+</ol>
+<ul>
+<li><p>旧版本用 NSKeyedArchiver 直接存二进制文件。</p>
+</li>
+<li><p>新版本用 sqlite + 文件混合存储：</p>
+</li>
+</ul>
+<pre><code>- 小文件直接存 sqlite。
+- 大文件写到磁盘，sqlite 里保存路径索引。
+</code></pre><ul>
+<li>有过期策略、容量控制（例如超过 1 周 / 超过 500MB 自动清理）。<br>（3）LRU 实现思路（简化版）<figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// LRU 的核心：哈希表 + 双向链表</span></span><br><span class="line"><span class="hljs-keyword">class</span> LRUCache &#123;</span><br><span class="line">    <span class="hljs-built_in">NSMutableDictionary</span> *dict; <span class="hljs-comment">// key -&gt; node</span></span><br><span class="line">    Node *head, *tail;         <span class="hljs-comment">// 双向链表</span></span><br><span class="line"></span><br><span class="line">    - (<span class="hljs-keyword">id</span>)get:(<span class="hljs-built_in">NSString</span> *)key &#123;</span><br><span class="line">        Node *node = dict[key];</span><br><span class="line">        <span class="hljs-keyword">if</span> (node) &#123;</span><br><span class="line">            [<span class="hljs-keyword">self</span> moveToHead:node]; <span class="hljs-comment">// 最近使用过，移动到头部</span></span><br><span class="line">            <span class="hljs-keyword">return</span> node.value;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    - (<span class="hljs-keyword">void</span>)put:(<span class="hljs-built_in">NSString</span> *)key value:(<span class="hljs-keyword">id</span>)value &#123;</span><br><span class="line">        Node *node = dict[key];</span><br><span class="line">        <span class="hljs-keyword">if</span> (node) &#123;</span><br><span class="line">            node.value = value;</span><br><span class="line">            [<span class="hljs-keyword">self</span> moveToHead:node];</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">            node = [[Node alloc] initWithKey:key value:value];</span><br><span class="line">            dict[key] = node;</span><br><span class="line">            [<span class="hljs-keyword">self</span> addToHead:node];</span><br><span class="line">            <span class="hljs-keyword">if</span> (dict.count &gt; capacity) &#123;</span><br><span class="line">                Node *removed = [<span class="hljs-keyword">self</span> removeTail]; <span class="hljs-comment">// 淘汰最久没用的</span></span><br><span class="line">                [dict removeObjectForKey:removed.key];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>（4）UIImageView 与异步回调<br>UIImageView 是通过 AssociatedObject 绑定 URL 的，所以异步回调时 SDWebImage 能知道要给哪个 imageView 设置图。</p>
+<p>11.OOM 怎么避免？</p>
+<p>避免 OOM 的核心就是 减少单次内存峰值 + 控制整体内存占用 + 及时释放资源。实际项目中通常要针对业务做专项优化，比如：<br>    •    大图 -&gt; 缩放解码<br>    •    视频 -&gt; 硬解码，流式处理<br>    •    数据 -&gt; 分页加载，NSCache 管理<br>    •    缓存 -&gt; 收到内存警告立即清理</p>
+<p>12.MVCS 与 SectionProvider 怎么实现的</p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/米可世界/">米可世界</a>, <a class="has-link-grey -link" href="/tags/面试/">面试</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2025-09-24-好未来/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">好未来</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2025-09-23-京东金融/">
+                <span class="level-item">京东金融</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo-2.png" alt="米可世界" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2025 SOSOWIKI&nbsp;
+                All rights reserved.
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-CN");</script>
+
+<script>
+var IcarusThemeSettings = {
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="回到顶端" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="搜索公司、题目、关键字" />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '关于',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
