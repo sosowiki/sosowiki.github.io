@@ -19,7 +19,7 @@
 <meta property="og:description" content="米可世界">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://soso.wiki/images/og_image.png">
-<meta property="og:updated_time" content="2025-09-25T14:25:23.055Z">
+<meta property="og:updated_time" content="2025-09-28T12:43:58.111Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="米可世界">
 <meta name="twitter:description" content="米可世界">
@@ -157,7 +157,7 @@ var _hmt = _hmt || [];
                 <span class="level-item has-text-grey">
                     
                     
-                    40 分钟 读完 (大约 6036 个字)
+                    1 小时 读完 (大约 9744 个字)
                 </span>
                 
                 
@@ -183,6 +183,18 @@ var _hmt = _hmt || [];
 <p>10.SDWebImage 加载图片的流程，缓存机制，LRU怎么实现的？加载图片传入了 UIImageView 下载完图片后怎么拿到这个对象，因为是异步的</p>
 <p>11.OOM 怎么避免？</p>
 <p>12.MVCS 与 SectionProvider 怎么实现的</p>
+<p>二面：</p>
+<p>项目：</p>
+<p>1.构建提效，怎么定位的是头文件导入的问题</p>
+<p>2.封装父类沉淀气泡动画与事件分发能力，怎么做的？</p>
+<p>3.随版转为非随实现怎么做的？活动页组件化，组件之间怎么交互</p>
+<p>4.画一下贝壳的架构，平级组件通信，传值</p>
+<p>场景：</p>
+<p>1.没法复现的crash，怎么去处理，如果是内部反馈的，有设备，怎么处理</p>
+<p>2.有没有处理卡顿的经验，性能平台来了个卡顿，你会怎么处理</p>
+<p>3.快封板了，产品要加一个紧急的功能，评估有风险，你会怎么做？</p>
+<p>4.有没有经历过严重的线上问题，假如现在有个线上问题，你会怎么做？</p>
+<p>5.领导交给你一个没有接触过的领域的问题，你会怎么做</p>
 <h3 id="参考答案"><a href="#参考答案" class="headerlink" title="参考答案"></a>参考答案</h3><p>1.Runloop 的流程，底层实现，项目里实际使用，监控卡顿监听的具体是哪个状态，Source0 和 Source1 区别</p>
 <p>（1）1. RunLoop 的流程</p>
 <p>RunLoop 是一个事件循环机制，内部主要流程可以简化为：</p>
@@ -700,6 +712,221 @@ var _hmt = _hmt || [];
 <p>11.OOM 怎么避免？</p>
 <p>避免 OOM 的核心就是 减少单次内存峰值 + 控制整体内存占用 + 及时释放资源。实际项目中通常要针对业务做专项优化，比如：<br>    •    大图 -&gt; 缩放解码<br>    •    视频 -&gt; 硬解码，流式处理<br>    •    数据 -&gt; 分页加载，NSCache 管理<br>    •    缓存 -&gt; 收到内存警告立即清理</p>
 <p>12.MVCS 与 SectionProvider 怎么实现的</p>
+<p>二面：</p>
+<p>1.构建提效，怎么定位的是头文件导入的问题</p>
+<ul>
+<li>Xcode 里加上编译参数 -ftime-trace（Clang 10+ 支持），会输出每个编译单元里函数/头文件的编译耗时，可以用 Chrome 打开 .json 文件可视化。</li>
+<li>或者加 -Xclang -ftime-trace 看更详细的时间线。</li>
+</ul>
+<p>2.封装父类沉淀气泡动画与事件分发能力，怎么做的？</p>
+<p>3.随版转为非随实现怎么做的？活动页组件化，组件之间怎么交互</p>
+<p>4.画一下贝壳的架构，平级组件通信，传值</p>
+<p>场景：</p>
+<p>1.没法复现的crash，怎么去处理，如果是内部反馈的，有设备，怎么处理</p>
+<p>（1）收集更多上下文信息</p>
+<ul>
+<li><p>Crash 日志（Crash Report）</p>
+<ul>
+<li>通过 Xcode Organizer（连接 TestFlight/符号化）或第三方平台（如 Firebase Crashlytics、Bugly、友盟）获取。</li>
+<li>确保符号化，得到可读的堆栈。</li>
+</ul>
+</li>
+<li><p>埋点/日志</p>
+<ul>
+<li>在关键逻辑、崩溃堆栈附近增加埋点，把上下文（参数、线程状态、业务数据）上传到日志系统。</li>
+<li>尝试记录 NSError、response 数据、关键对象是否为 nil、线程调用情况。</li>
+</ul>
+</li>
+<li><p>Breadcrumb（面包屑日志）</p>
+<ul>
+<li>记录用户操作轨迹，能帮助复现 crash 前的路径。</li>
+</ul>
+</li>
+</ul>
+<p>（2）分析崩溃堆栈</p>
+<ul>
+<li><p>崩溃类型</p>
+<ul>
+<li>EXC_BAD_ACCESS → 野指针、提前释放对象、越界访问。</li>
+</ul>
+</li>
+<li><p>SIGABRT → 主动调用 abort()，例如断言失败。</p>
+<ul>
+<li>NSInvalidArgumentException → 对象方法找不到。</li>
+<li>Deadlock / Watchdog → UI 卡死，主线程被阻塞。</li>
+</ul>
+</li>
+<li><p>崩溃频率/机型分布</p>
+<ul>
+<li>是集中在特定系统版本、设备、机型？</li>
+</ul>
+</li>
+<li>如果只有个别用户/机型，可能是硬件差异或极端场景。</li>
+</ul>
+<p>（3）推测可能场景</p>
+<p>无法复现的 crash 大多和以下因素相关：</p>
+<ul>
+<li>多线程并发：数据竞争、非线程安全容器（如 NSMutableArray）、UI 更新不在主线程。</li>
+<li>弱网/超时场景：下载/上传中途取消、断点续传异常。</li>
+<li>生命周期问题：VC 已销毁，但异步回调还在访问它。</li>
+<li>三方库 Bug：检查是否依赖版本过低。</li>
+<li>内存压力：大图加载、缓存策略不当。</li>
+</ul>
+<p>（4）间接定位方法</p>
+<ul>
+<li>符号化 Crash 日志 + 版本代码行号 → 锁定出错代码位置。</li>
+<li>异常保护：加入容错机制（比如防越界、防 nil、KVO 移除检查）。</li>
+<li>增加断言/保护：让 crash 更早、更明确地暴露（例如 debug 环境直接 assert）。</li>
+<li>Mock 极端场景：弱网、低内存、后台切前台、旋转、快速频繁操作等。</li>
+</ul>
+<p>（5）修复和验证</p>
+<ul>
+<li>根据堆栈定位加日志、加 guard 判断。</li>
+<li>在本地写小 demo 尝试模拟类似调用链。</li>
+<li>修复后用灰度发布观察 crash 是否下降。</li>
+</ul>
+<p>2.有没有处理卡顿的经验，性能平台来了个卡顿，你会怎么处理</p>
+<p>iOS 上“卡顿”其实就是主线程掉帧，通常是 CPU 或 GPU 在某一帧渲染/计算超时导致的。面试或实际工作里，如果性能平台上报了卡顿，我会按以下步骤来处理：</p>
+<p>（1）先定位问题</p>
+<ul>
+<li><p>确认复现路径：在性能平台（如 Matrix、火焰图、Instruments 采集）找到具体的卡顿堆栈和发生场景。</p>
+</li>
+<li><p>确认卡顿类型：是</p>
+<ul>
+<li>CPU 卡顿（大量计算、JSON 解析、排序、加解密、CoreData、IO）</li>
+<li>GPU 卡顿（视图层级过深、离屏渲染、过多阴影圆角、图片过大缩放）</li>
+<li>I/O 卡顿（大文件读写、数据库慢查询、主线程访问磁盘/网络）</li>
+</ul>
+</li>
+</ul>
+<p>（2） 工具分析</p>
+<ul>
+<li>Instruments → Time Profiler：看 CPU 占用和热点函数。</li>
+<li>Instruments → Core Animation：看是否掉帧，GPU 渲染瓶颈。</li>
+<li>Performance Platform Flame Graph（火焰图）：确认是哪个方法阻塞了主线程。</li>
+<li>Runloop 监控：分析 Runloop 卡住的原因，是否死锁、长任务。</li>
+</ul>
+<p>（3）常见优化方向</p>
+<p><strong>CPU 优化</strong></p>
+<ul>
+<li>耗时操作下放到子线程（JSON 解析、图片解码、CoreData）。</li>
+<li>使用更高效的数据结构和算法。</li>
+<li>尽量减少频繁的对象创建与销毁。</li>
+<li>图片提前解码（YYImage / SDWebImage 已有优化）。</li>
+</ul>
+<p><strong>GPU 优化</strong></p>
+<ul>
+<li>控制视图层级，不要超过必要深度。</li>
+<li>避免频繁离屏渲染：圆角/阴影/遮罩可以通过 cornerRadius+maskToBounds=NO + shadowPath 或使用预处理图片解决。</li>
+<li>图片资源按需缩放到合适分辨率，避免大图直接缩放。</li>
+<li>合理使用异步绘制（比如 YYText、AsyncDisplayKit）。</li>
+</ul>
+<p><strong>I/O 优化</strong></p>
+<ul>
+<li>文件读写/数据库操作放在后台线程。</li>
+<li>SQLite 加索引，CoreData 分批查询。</li>
+<li>网络请求分批、避免主线程等待。</li>
+</ul>
+<p>（4）实际案例处理思路</p>
+<p>假设性能平台报某个页面“进入卡顿”：</p>
+<ol>
+<li><p>打开火焰图，看是不是 viewDidLoad/viewWillAppear 阶段执行了大量计算。</p>
+<ul>
+<li>如果是 JSON/字典转模型 → 下放子线程，或用更快的序列化库（YYModel）。</li>
+<li>如果是 UI 初始化太多 → 分批加载、懒加载、不在首屏就不要一次性建完。</li>
+</ul>
+</li>
+<li><p>如果是滑动列表卡顿：</p>
+<ul>
+<li>检查 Cell 的绘制，是否有圆角 + 阴影导致离屏渲染。</li>
+<li>图片是否未压缩，直接用大图缩放。</li>
+<li>AutoLayout 是否约束复杂，可以改成 frame/手写布局。  </li>
+</ul>
+</li>
+<li><p>如果堆栈显示 MainThread 被某个同步锁阻塞 → 优化并发，避免主线程等待异步结果。</p>
+</li>
+</ol>
+<p>先定位卡顿位置（堆栈/火焰图/Runloop），再根据类型（CPU、GPU、I/O）针对性优化，确保主线程尽量“轻、快、短”。   </p>
+<p>3.快封板了，产品要加一个紧急的功能，评估有风险，你会怎么做？</p>
+<ol>
+<li><strong>确认需求背景</strong><ul>
+<li>我会先和产品确认，这个功能的紧急性和业务价值，判断是否真的必须在当前版本上线。</li>
+</ul>
+</li>
+<li><strong>快速风险评估</strong><ul>
+<li>从代码改动范围、对核心流程的影响、测试时间是否充足、苹果审核时间等方面快速评估风险。</li>
+</ul>
+</li>
+<li><strong>提出多种方案</strong><ul>
+<li><strong>立即实现方案</strong>：风险大，但能满足业务。</li>
+<li><strong>降级/临时方案</strong>：比如通过远程配置、埋点或弱化版本先满足部分诉求。</li>
+<li><strong>延期方案</strong>：保证当前版本质量，把功能放到下个迭代。</li>
+</ul>
+</li>
+<li><strong>沟通与决策</strong><ul>
+<li>把风险和后果客观告知产品和项目负责人，让他们和我一起权衡利弊做决定，而不是我单方面拍板。</li>
+</ul>
+</li>
+<li><strong>技术兜底措施</strong><ul>
+<li>如果最终决定紧急上线，我会尽量把功能设计成可控的，比如加开关、最小化改动，留出核心流程的冒烟测试时间，确保不影响主要用户路径。</li>
+</ul>
+</li>
+</ol>
+<p>4.有没有经历过严重的线上问题，假如现在有个线上问题，你会怎么做？</p>
+<p>1) 立刻要做的（0–30 分钟）——缓解与信息同步（必须）</p>
+<ul>
+<li>报警确认：查看监控 &amp; 崩溃平台（Crashlytics/Sentry/Bugly/AppCenter）确认影响范围/趋势（用户数、错误率、版本、国家）。</li>
+<li>抢占沟通渠道：在 Slack/企业微信/紧急群 建立 incident channel（@oncall、PM、QA、后端、客服、运营、法务）。</li>
+<li>临时公告（外部/内部）：给客服和用户团队一条标准状态消息（示例见下）。</li>
+<li>立即开启指标快照：请求产品/数据同学导出最近 1h/24h 的关键指标（崩溃率、活跃用户、错误事件、留存、支付失败率）。</li>
+<li>如果能做<strong>无代码的快速缓解</strong>（后端开关、feature-flag、下发配置）立即执行并记录时间。</li>
+</ul>
+<p>示例内部消息（Slack/企业群）：</p>
+<blockquote>
+<p>【INCIDENT】iOS 主流程崩溃激增，开始响应。影响：约 X% 活跃用户，版本 vX.Y.Z 占比 Z%。负责人：@xxx（iOS），@yyy（后端）。当前操作：1) 收集日志 2) 尝试后端开关 3) 立刻准备 hotfix。请各组保留通道畅通。</p>
+</blockquote>
+<p>2) 快速诊断（30 分钟内完成初步判断）<br>    •    收集崩溃样本：筛选最频繁的崩溃堆栈（按版本/机型/系统版本分组）。<br>    •    符号化 &amp; 分析：<br>    •    使用 dSYM + Crashlytics/Sentry 自动符号化。<br>    •    查找回归范围：是哪次提交/哪个 release 引入（git bisect / 对照 release note）。<br>    •    判断是否是客户端 bug、SDK 问题、还是后端变更导致。<br>3) 应急缓解（并行进行：30–90 分钟）<br>    •    如果能用后端/配置开关解决（例如禁用某特性、回退后端接口），优先做：<br>    •    请求后端下线/回滚相关接口或加速降级逻辑。<br>    •    如果必须在客户端修复：<br>    •    创建 hotfix 分支并 cherry-pick 修复 commit。<br>    •    本地与 CI 快跑 smoke tests；如果公司有内部企业签名/MDM，优先发内测/灰度：<br>    •    TestFlight 内部 + 外部分组（如果 Apple 审核不可控，使用企业签名或私有分发先行）。<br>    •    若无法快速上新：考虑在服务器侧做兼容性保护或向客户端下发最新配置来绕开 bug。<br>4) 发布策略（1–4 小时）<br>    •    紧急修复后优先做 灰度/阶段发布：<br>    •    TestFlight → 小比例外部用户 → Phased Release（App Store）或按地区分批上架。<br>    •    提交 App Store 时写清楚 Release Notes &amp; Contact（加快审核时常用“critical bug fix”）。<br>    •    在发布前必须做回归验证（关键路径、支付、登录、崩溃率采样）。</p>
+<p>5) 复盘与长期修复（事故结束后 24–72 小时）<br>    •    召开 postmortem：记录时间线（detection → mitigation → fix → release）、根因、影响、教训、责任与改进计划。<br>    •    输出可执行改进项（例如：增加监控阈值、改善异常处理、引入 feature flags、扩展自动化回滚、完善 CI 流程）。<br>    •    更新 runbook，把此次步骤写成可重复的 playbook。<br>6) 工具 &amp; 技术点清单（作为 Senior iOS 要会的）<br>    •    崩溃分析：Crashlytics、Sentry、Bugly、App Center；dSYM 管理（Bitcode 环境需注意 dSYM 对应）。<br>    •    日志收集：自定义日志 + 采样（可用 OSLog、ELK、Datadog）、网络抓包（Charles/Proxyman）。<br>    •    回滚手段：后端开关、feature-flag（LaunchDarkly/Unleash）、灰度发布。<br>    •    发布渠道：TestFlight、企业签名、App Store Phased Release；熟悉 Apple 审核时间与加速审批渠道。<br>    •    Git 流程：hotfix 分支、cherry-pick、CI 快跑、tag/release。<br>    •    常用命令/操作：symbolicatecrash、atos、xcrun、导出 dSYM、批量下载崩溃日志脚本。</p>
+<p>5.领导交给你一个没有接触过的领域的问题，你会怎么做</p>
+<p>（1）明确目标</p>
+<ul>
+<li><p>和领导对齐需求：弄清楚调研的范围、重点和预期产出。</p>
+<ul>
+<li>是写一个调研报告？</li>
+<li>还是给出可行性方案？</li>
+<li>还是要做 PoC（验证性 demo）？</li>
+</ul>
+</li>
+<li><p>了解业务背景：为什么要调研这项技术，它要解决什么问题。</p>
+</li>
+</ul>
+<p>（2）快速建立基本认知</p>
+<ul>
+<li>官方文档、白皮书、开源项目主页 → 搞清楚基本概念和定位。</li>
+<li>行业文章、技术博客、会议演讲视频 → 获取发展趋势和实际案例。</li>
+<li>如果有竞品或友商应用场景 → 看他们是如何应用的。</li>
+</ul>
+<p>（3）梳理核心问题</p>
+<p>围绕调研目标，提炼出关键点，比如：</p>
+<ul>
+<li>技术特性：优缺点、适用场景、技术原理。</li>
+<li>使用成本：学习成本、迁移成本、运维成本。</li>
+<li>风险点：稳定性、性能、社区活跃度、安全性。</li>
+<li>替代方案：和现有技术的对比。</li>
+</ul>
+<p>（4）实践验证</p>
+<ul>
+<li>搭建最小可运行的 Demo（能跑起来最关键的功能）。</li>
+<li>尝试集成到现有项目中的某个小模块，看看兼容性和实际表现。</li>
+<li>记录踩坑点，避免团队后续重复。</li>
+</ul>
+<p>（5）整理成果并汇报</p>
+<ul>
+<li>写调研文档（背景、结论、对比、风险、建议）。</li>
+<li>结论要有 定性分析（优劣势）+ 定量指标（性能、内存、开发工时等）。</li>
+<li>提供清晰的建议：是否引入、如何引入、替代方案是什么。</li>
+</ul>
+<p>核心思路是 先明确目标 → 快速建立知识框架 → 针对核心问题深挖 → 实践验证 → 形成可落地的结论。</p>
 
         </div>
         
