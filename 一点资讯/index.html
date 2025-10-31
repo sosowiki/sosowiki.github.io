@@ -7,21 +7,22 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>标签: 一点资讯 - SOSOWIKI</title>
+<title>一点资讯 - SOSOWIKI</title>
 
 
-    <meta name="description" content="SOSOWIKI">
-<meta name="keywords" content="soso,sosowiki,Objective-C,iOS,objc,ObjC,Swift,搜搜题,搜搜文档,搜搜知识库,搜搜库,搜库">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SOSOWIKI">
-<meta property="og:url" content="http://soso.wiki/tags/一点资讯/index.html">
+    <meta name="description" content="一点资讯">
+<meta name="keywords" content="面试,一点资讯">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一点资讯">
+<meta property="og:url" content="http://soso.wiki/一点资讯/index.html">
 <meta property="og:site_name" content="SOSOWIKI">
-<meta property="og:description" content="SOSOWIKI">
+<meta property="og:description" content="一点资讯">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://soso.wiki/images/og_image.png">
+<meta property="og:updated_time" content="2025-10-31T07:29:00.211Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SOSOWIKI">
-<meta name="twitter:description" content="SOSOWIKI">
+<meta name="twitter:title" content="一点资讯">
+<meta name="twitter:description" content="一点资讯">
 <meta name="twitter:image" content="http://soso.wiki/images/og_image.png">
 
 
@@ -102,7 +103,7 @@ var _hmt = _hmt || [];
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo-2.png" alt="SOSOWIKI" height="28">
+                <img src="/images/logo-2.png" alt="一点资讯" height="28">
             
             </a>
         </div>
@@ -141,17 +142,6 @@ var _hmt = _hmt || [];
         <div class="container">
             <div class="columns">
                 <div class="column is-12 has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/tags">标签</a></li>
-            <li class="is-active"><a href="#" aria-current="page">一点资讯</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    <div class="card">
     
     <div class="card-content article ">
         
@@ -176,21 +166,85 @@ var _hmt = _hmt || [];
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/一点资讯/">一点资讯</a>
+                一点资讯
             
         </h1>
         <div class="content">
             <p>一点资讯</p>
+<a id="more"></a>
+<p>1.用过 SwiftUI 吗？</p>
+<p>2.组件化</p>
+<p>3.内存管理？</p>
+<p>（1）TaggedPointer 是值类型还是指针类型？ Tag 和值是怎么区分的？</p>
+<p>（2）union 共用体里还有哪些？</p>
+<p>（3）autorelease 和 Runloop 是怎么协作的？</p>
+<p>4.[UIView a]; 是否能调用成功？</p>
+<figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">@interface</span> <span class="hljs-title">NSObject</span> (<span class="hljs-title">Ext</span>)</span></span><br><span class="line"></span><br><span class="line">- (<span class="hljs-keyword">void</span>)a;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">@end</span></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">@implementation</span> <span class="hljs-title">NSObject</span> (<span class="hljs-title">Ext</span>)</span></span><br><span class="line"></span><br><span class="line">- (<span class="hljs-keyword">void</span>)a &#123;</span><br><span class="line">    <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"aaaa"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">@end</span></span><br></pre></td></tr></table></figure>
+<p>5.问是否能打印 aaaa。</p>
+<figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">@interface</span> <span class="hljs-title">A</span> : <span class="hljs-title">NSObject</span></span></span><br><span class="line"></span><br><span class="line">- (<span class="hljs-keyword">void</span>)a;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">@end</span></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">@implementation</span> <span class="hljs-title">A</span></span></span><br><span class="line"></span><br><span class="line">- (<span class="hljs-keyword">void</span>)a &#123;</span><br><span class="line">    <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"aaaa"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">@end</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">@interface</span> <span class="hljs-title">B</span> : <span class="hljs-title">A</span></span></span><br><span class="line"></span><br><span class="line">- (<span class="hljs-keyword">void</span>)a;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">@end</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">@implementation</span> <span class="hljs-title">B</span></span></span><br><span class="line"></span><br><span class="line">- (<span class="hljs-keyword">void</span>)a &#123;</span><br><span class="line">    [<span class="hljs-keyword">super</span> performSelector:<span class="hljs-keyword">@selector</span>(a)];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">@end</span></span><br><span class="line"></span><br><span class="line">B *b = [[B alloc] init];</span><br><span class="line">[b a];</span><br></pre></td></tr></table></figure>
+<p>6.Swift<br>（1）defer 关键字的作用<br>（2）gard  else的作用</p>
+<p>7.接触过 AI 吗？</p>
+<h3 id="参考答案"><a href="#参考答案" class="headerlink" title="参考答案"></a>参考答案</h3><p>1.用过 SwiftUI 吗？</p>
+<p>2.组件化</p>
+<p>3.内存管理？</p>
+<p>（1）TaggedPointer 是值类型还是指针类型？ Tag 和值是怎么区分的？</p>
+<p>Tagged Pointer 的“指针”其实是 <strong>一个经过编码的值（Value Encoding）</strong>，</p>
+<p>但在 <strong>类型系统层面</strong>（Objective-C / Swift Runtime）它仍然是一个 <strong>指针类型（id）</strong>。</p>
+<p>TaggedPointer 的结构（以 64 位为例）</p>
+<table>
+<thead>
+<tr>
+<th><strong>位段</strong></th>
+<th><strong>含义</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[63]</td>
+<td>是否为 Tagged Pointer 的标志位（通常为 1）</td>
+</tr>
+<tr>
+<td>[62..60]</td>
+<td>tag 值，用于区分类型（NSNumber、NSDate、NSString等）</td>
+</tr>
+<tr>
+<td>[59..0]</td>
+<td>存储的实际数据（value bits）</td>
+</tr>
+</tbody>
+</table>
+<p>Tag 与 Value 如何区分</p>
+<p>关键就在 最高位（bit 63）：</p>
+<ul>
+<li>普通对象：指针最高位为 0，表示它是一个真正的内存地址。</li>
+<li>Tagged Pointer： 最高位为 1，表示它不是地址，而是编码值。</li>
+</ul>
+<p>（2）union 共用体里还有哪些？</p>
+<p>（3）autorelease 和 Runloop 是怎么协作的？</p>
+<p>autorelease 延迟对象释放，RunLoop 决定释放的时机。</p>
+<p>4.[UIView a]; 是否能调用成功？</p>
+<p>不能</p>
+<p>5.问是否能打印 aaaa。</p>
+<p>[super performSelector:@selector(a)] 实际上是先用 performSelector: 发送消息给 <strong>self</strong>，也就是当前对象 b，然后 runtime 会根据 <strong>self 的类</strong> 查找实现。   </p>
+<ul>
+<li>这里 self 的类是 B。</li>
+<li>所以它会找到 B 自己的 -a 方法，再次执行 [super performSelector:@selector(a)]。</li>
+</ul>
+<p>不会打印 aaaa，而是导致无限递归崩溃。</p>
+<p>6.Swift<br>（1）defer 关键字的作用<br>（2）gard  else的作用</p>
+<p>7.接触过 AI 吗？</p>
+
         </div>
         
-        
-        <div class="level is-mobile">
+        <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/一点资讯/#more">阅读全文</a>
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/一点资讯/">一点资讯</a>, <a class="has-link-grey -link" href="/tags/面试/">面试</a>
                 </div>
             </div>
         </div>
+        
         
         
     </div>
@@ -200,65 +254,19 @@ var _hmt = _hmt || [];
 
 
 
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/一点资讯面试题/" class="image is-7by1">
-            <img class="thumbnail" src="/images/sosowiki-logo.png" alt="一点资讯面试题">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2021-06-08T04:00:00.000Z">2021-06-08</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/面试题/">面试题</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 336 个字)
-                </span>
-                
-                
-            </div>
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/网易/">
+                <span class="level-item">网易</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
         </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/一点资讯面试题/">一点资讯面试题</a>
-            
-        </h1>
-        <div class="content">
-            <p>一点资讯面试题<br></p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/一点资讯面试题/#more">阅读全文</a>
-                </div>
-            </div>
-        </div>
-        
         
     </div>
 </div>
-
-
-
-
-
-
 
 
 </div>
@@ -273,7 +281,7 @@ var _hmt = _hmt || [];
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo-2.png" alt="SOSOWIKI" height="28">
+                    <img src="/images/logo-2.png" alt="一点资讯" height="28">
                 
                 </a>
                 <p class="is-size-7">
