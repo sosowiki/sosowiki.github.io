@@ -19,7 +19,7 @@
 <meta property="og:description" content="网易">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://soso.wiki/images/og_image.png">
-<meta property="og:updated_time" content="2025-10-31T05:44:59.562Z">
+<meta property="og:updated_time" content="2025-12-01T14:21:46.319Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网易">
 <meta name="twitter:description" content="网易">
@@ -181,7 +181,7 @@ var _hmt = _hmt || [];
 <figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">int</span> a[<span class="hljs-number">5</span>] = &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>&#125;;</span><br><span class="line"><span class="hljs-keyword">int</span> *ptr = (<span class="hljs-keyword">int</span> *)(&amp;a + <span class="hljs-number">1</span>);</span><br><span class="line"><span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d, %d"</span>, *(a+<span class="hljs-number">1</span>), *(ptr - <span class="hljs-number">1</span>));</span><br></pre></td></tr></table></figure>
 <p>4.下面代码运行的结果是</p>
 <figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="hljs-keyword">void</span>)viewDidLoad &#123;</span><br><span class="line">  	[<span class="hljs-keyword">super</span> viewDidLoad];</span><br><span class="line">  	<span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"1"</span>)</span><br><span class="line">    <span class="hljs-built_in">dispatch_sync</span>(dispatch_get_main_queue(), ^&#123;</span><br><span class="line">        <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"2"</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"3"</span>);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-<p>如果把sync换成async，打印结果有什么不同，如果执行非常多的次数，会出现1,2,3吗？</p>
+<p>如果把 sync 换成 async，打印结果有什么不同，如果执行非常多的次数，会出现1,2,3吗？</p>
 <p>5.下面代码的执行结果是？</p>
 <figure class="highlight objc hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">NSMutableString</span> *a = [<span class="hljs-built_in">NSMutableString</span> string];</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">NSMutableString</span> *b = [a <span class="hljs-keyword">copy</span>];</span><br><span class="line"></span><br><span class="line">[b stringByAppendingString:<span class="hljs-string">@"test"</span>];</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"%p"</span>, &amp;a);</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@"%p"</span>, &amp;b);</span><br></pre></td></tr></table></figure>
 <p>a和b的地址一样吗？</p>
@@ -202,14 +202,14 @@ var _hmt = _hmt || [];
 <p>了解 Socket 吗？</p>
 <p>算法：</p>
 <p>1.爬楼梯</p>
-<p>2.两数之和二  一个非降序数组，和target，不使用额外空间，只遍历一次</p>
+<p>2.两数之和二  一个非降序数组，和 target，不使用额外空间，只遍历一次</p>
 <p>介绍项目里有挑战的</p>
 <p>二面：</p>
-<p>1.iOS方向了解的比较深入的东西</p>
+<p>1.iOS 方向了解的比较深入的东西</p>
 <p>2.这段代码执行后，打印顺序是什么？为什么？</p>
 <figure class="highlight swift hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">let</span> group = <span class="hljs-type">DispatchGroup</span>()</span><br><span class="line"></span><br><span class="line">group.notify(queue: .global()) &#123;</span><br><span class="line">    <span class="hljs-built_in">print</span>(<span class="hljs-string">"1"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">group.enter()</span><br><span class="line"></span><br><span class="line">group.notify(queue: .global()) &#123;</span><br><span class="line">    <span class="hljs-built_in">print</span>(<span class="hljs-string">"2"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">group.leave()</span><br><span class="line"></span><br><span class="line">group.enter()</span><br><span class="line"></span><br><span class="line">group.notify(queue: .global()) &#123;</span><br><span class="line">    <span class="hljs-built_in">print</span>(<span class="hljs-string">"3"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>gcd. group notify 如果让你实现一个类似 gcd group enter  leave 如何实现</p>
-<p>3.tableView cell 复用，你怎么实现一个类似的复用池  有identifer和Cell类型</p>
+<p>3.tableView cell 复用，你怎么实现一个类似的复用池  有 identifer 和 Cell 类型</p>
 <p>4.今年 WWDC 有哪些新东西？</p>
 <p>5.做过 iPad 和 Mac 的适配吗？自动布局，图片按16:9怎么写约束，左侧 label 超出屏幕宽度一半时，把右侧 label 放在下一行。为什么要把视图添加到 cell.contentView 上，而不是直接添加到 cell 上？</p>
 <p>6.写过 python 吗？</p>
