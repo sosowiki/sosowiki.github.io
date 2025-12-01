@@ -19,7 +19,7 @@
 <meta property="og:description" content="米可世界">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://soso.wiki/images/og_image.png">
-<meta property="og:updated_time" content="2025-09-28T12:43:58.111Z">
+<meta property="og:updated_time" content="2025-12-01T14:41:33.699Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="米可世界">
 <meta name="twitter:description" content="米可世界">
@@ -172,7 +172,7 @@ var _hmt = _hmt || [];
         <div class="content">
             <p>米可世界<br><a id="more"></a></p>
 <p>1.Runloop 的流程，底层实现，项目里实际使用，监控卡顿监听的具体是哪个状态，Source0 和 Source1 区别</p>
-<p>2.局部对象的释放时机；autoreleasepool的实现，weak 存在哪里</p>
+<p>2.局部对象的释放时机；autoreleasepool 的实现，weak 存在哪里</p>
 <p>3.SDK 构建提效，有没有二进制化的经验，缓存</p>
 <p>4.feed 流滑动卡顿可能有哪些原因；离屏渲染为什么会影响；那些异步的库，不也是在另一个屏幕缓冲区处理的吗？</p>
 <p>5.首屏优化，有没有针对各个模块的，比如卡线程了，怎么检测，怎么优化</p>
@@ -190,7 +190,7 @@ var _hmt = _hmt || [];
 <p>3.随版转为非随实现怎么做的？活动页组件化，组件之间怎么交互</p>
 <p>4.画一下贝壳的架构，平级组件通信，传值</p>
 <p>场景：</p>
-<p>1.没法复现的crash，怎么去处理，如果是内部反馈的，有设备，怎么处理</p>
+<p>1.没法复现的 crash，怎么去处理，如果是内部反馈的，有设备，怎么处理</p>
 <p>2.有没有处理卡顿的经验，性能平台来了个卡顿，你会怎么处理</p>
 <p>3.快封板了，产品要加一个紧急的功能，评估有风险，你会怎么做？</p>
 <p>4.有没有经历过严重的线上问题，假如现在有个线上问题，你会怎么做？</p>
@@ -235,7 +235,7 @@ var _hmt = _hmt || [];
 <li><p>Source1<br> •    定义：基于 Mach port 的事件源。<br> •    特点：<br> •    内核态驱动，系统事件到达时可以直接唤醒 RunLoop。<br> •    主要用来处理 系统消息（如触摸、系统回调、CFMachPort）。<br> •    触发方式：<br> •    当端口有消息时，内核会唤醒 RunLoop，执行对应的回调。<br> •    例子：<br> •    系统的触摸事件、屏幕旋转事件。<br> •    CFMachPort、CFSocket</p>
 </li>
 </ol>
-<p>2.局部对象的释放时机；autoreleasepool的实现，weak 存在哪里</p>
+<p>2.局部对象的释放时机；autoreleasepool 的实现，weak 存在哪里</p>
 <p>（1）局部对象的释放时机</p>
 <ul>
 <li><p>在 ARC 下，局部变量对象（比如方法里的 <code>NSObject *obj = [[NSObject alloc] init];</code>）的释放时机主要取决于 <strong>作用域 + 引用计数</strong>。</p>
